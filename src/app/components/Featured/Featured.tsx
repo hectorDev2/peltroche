@@ -1,3 +1,4 @@
+import Image from "next/image";
 import TitleRed from "../../../../public/images/who-we-are/title-bg.svg";
 
 import MainButton from "../MainButton";
@@ -15,15 +16,15 @@ function Featured() {
           {/* title */}
           <div className="flex flex-col text-center items-center relative ">
             <p className="font-semibold text-white text-[15px] relative uppercase z-10 ">
-              OUR FEATURED CLASS
+              por semana
             </p>
-            <img
+            <Image
               src={TitleRed}
               alt="text_bg"
               className="w-[24rem] absolute -top-[10px]"
             />
             <h2 className="text-[3.6rem] text-black font-bold my-10">
-              We Are Offering Best Flexible Classes
+              Nuestras clases
             </h2>
           </div>
           {/* grid */}
@@ -33,7 +34,7 @@ function Featured() {
               <div className="absolute z-10 bottom-10 left-10">
                 <p className="text-white text-[3rem] font-bold">Cycling</p>
                 <p className="text-white bg-[#FF0336] text-[16px] mt-3 py-1 px-5">
-                  Wednesday: 9:00am-10:00am
+                  miercoles: 9:00pm-10:00pm
                 </p>
               </div>
             </div>
@@ -43,7 +44,7 @@ function Featured() {
               <div className="absolute z-10 bottom-10 left-10">
                 <p className="text-white text-[3rem] font-bold">Karate</p>
                 <p className="text-white bg-[#FF0336] text-[16px] mt-3 py-1 px-5">
-                  Friday: 10:00am-11:00am
+                  viernes: 9:00pm-10:00pm
                 </p>
               </div>
             </div>
@@ -53,7 +54,7 @@ function Featured() {
               <div className="absolute z-10 bottom-10 left-10">
                 <p className="text-white text-[3rem] font-bold">Power</p>
                 <p className="text-white bg-[#FF0336] text-[16px] mt-3 py-1 px-5">
-                  Saturday: 9:00am-10:00am
+                  sabado: 9:00am-10:00am
                 </p>
               </div>
             </div>
@@ -95,7 +96,7 @@ function Featured() {
         <div className="container page-padding ">
           <div className="flex items-center md1000:flex-col md1000:gap-12  md1000:text-center">
             <h2 className="text-white font-bold text-[3.7rem] md1000:text-[3rem] max-w-6xl px-7 leading-[1.2] min450:text-[2.4rem] ">
-              We Are Always Providing Best Fitness Service For You
+              Siempre estamos brindando el mejor servicio para usted.
             </h2>
             {/* <MainButton
               color={`text-black`}

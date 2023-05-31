@@ -29,21 +29,22 @@ function ChooseUs() {
 
           <div className="relative w-[50%] md1000:flex md1000:flex-col md1000:items-center md1000:text-center md1000:w-[85%]">
             <p className="text-white relative z-10 text-[16px] uppercase font-bold mb-14">
-              why choose us
+              porque elegirnos?
             </p>
-            <img
+            <Image
               src={TitleRed}
               alt="text_bg"
               className="w-[22rem] absolute -top-[6px] -left-14 md1000:hidden "
             />
             <h2 className=" text-[3.6rem] text-white font-bold leading-[1.2] max-w-3xl md1000:max-w-[80%]">
-              We Can Give A Shape Of Your Body Here!
+              ¡Podemos alcanzar tu objetivo fisico aquí!
             </h2>
             <p className="text-[16.5px] text-[#b4b4b4] mt-7 max-w-3xl md1000:max-w-[80%]">
-              At <b>Gymate</b>, we are dedicated to helping you achieve the body
-              of your dreams. Our expert trainers and nutritionists will work
-              with you to create a personalized fitness and nutrition plan that
-              helps you reach your specific goals.
+              En Peltroche Gym, estamos dedicados a ayudarte a lograr el cuerpo
+              de tus sueños. Nuestros entrenadores y nutricionistas expertos
+              trabajarán con usted para crear un plan personalizado de
+              acondicionamiento físico y nutrición que lo ayude a alcanzar sus
+              objetivos específicos.
             </p>
 
             <div className="grid grid-cols-2 grid-rows-2 gap-14 max-w-[44rem] mt-14 min450:flex min450:flex-col">

@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import Logo from "../../../../public/images/logo/logo.svg";
+import Logo from "../../../../public/logo.png";
 import LogoSide from "../../../../public/images/logo/logo-footer.svg";
 import SideImg1 from "../../../../public/images/sidebar/1.jpg";
 import SideImg2 from "../../../../public/images/sidebar/2.jpg";
@@ -66,11 +66,13 @@ function Navbar() {
         }`}
       >
         <Link href="/">
-          <img
+          <Image
             src={Logo}
             alt="logo_img"
             onClick={goTop}
             className="w-full h-auto"
+            width={150}
+            height={120}
           />
         </Link>
         <div className="navlist-nav">
@@ -93,22 +95,20 @@ function Navbar() {
 
               {/* links */}
               <ul className="text-center flex flex-col gap-10 absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%]">
-                <li onClick={hamburgerMenu}>
-                  <a
-                    onClick={() => goTop}
+                <li>
+                  <Link
                     className="text-[2rem] font-medium hover:text-[#ff0336] ease-in duration-200"
-                    href="/#home"
+                    href="/"
                   >
                     Home
-                  </a>
+                  </Link>
                 </li>
-                <li onClick={hamburgerMenu}>
+                <li>
                   <Link
-                    onClick={() => goTop}
                     className="text-[2rem] font-medium hover:text-[#ff0336] ease-in duration-200"
                     href="/about"
                   >
-                    About
+                    sobre Nosotros
                   </Link>
                 </li>
                 <li onClick={hamburgerMenu}>
@@ -120,7 +120,7 @@ function Navbar() {
                     Schedule
                   </Link>
                 </li>
-                <li onClick={hamburgerMenu}>
+                {/* <li onClick={hamburgerMenu}>
                   <Link
                     onClick={() => goTop}
                     className="text-[2rem] font-medium hover:text-[#ff0336] ease-in duration-200"
@@ -164,7 +164,7 @@ function Navbar() {
                   >
                     Classes
                   </Link>
-                </li>
+                </li> */}
               </ul>
             </div>
 

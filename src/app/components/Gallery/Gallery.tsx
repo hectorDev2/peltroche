@@ -17,7 +17,7 @@ function Gallery() {
           {/* title div -- */}
           <div className="flex flex-col text-center relative items-center ">
             <p className="text-white relative z-10 text-[15px] uppercase font-bold mb-10">
-              GYMAT GALLERY
+              Peltroche Galeria
             </p>
             <Image
               src={TitleRed}
@@ -26,12 +26,12 @@ function Gallery() {
             />
 
             <h2 className="text-[3.4rem] font-bold mb-4">
-              Our Workplace Gallery
+              Galería de nuestro lugar de trabajo
             </h2>
             <p className="text-[#646464] font-medium text-[15px] ">
-              Our Workplace Gallery features modern office, team collaboration,
-              and fun culture.
-              <br /> Attracts talents and showcases company's work atmosphere.
+              Esta seccion presenta una oficina moderna, colaboración en equipo
+              <br /> y una cultura divertida. Atrae talentos y muestra el
+              ambiente de trabajo de la empresa
             </p>
           </div>
 

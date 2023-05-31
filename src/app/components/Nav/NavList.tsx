@@ -13,21 +13,21 @@ function NavList() {
           style={{ transition: "all 0.3s" }}
           className=" cursor-pointer hover:text-[#ff0336]"
         >
-          <a href="/">Home</a>
+          <Link href="/">Home</Link>
         </li>
         <li
           style={{ transition: "all 0.3s" }}
           className=" cursor-pointer hover:text-[#ff0336]"
         >
-          <Link href={"/about"}>About</Link>
+          <Link href={"/about"}>Sobre Nosotros</Link>
         </li>
         <li
           style={{ transition: "all 0.3s" }}
           className=" cursor-pointer hover:text-[#ff0336]"
         >
-          <Link href={"/gallery/page-1"}>Gallery</Link>
+          <Link href={"/galeria"}>Galeria</Link>
         </li>
-        <li
+        {/* <li
           style={{ transition: "all 0.3s" }}
           className=" cursor-pointer hover:text-[#ff0336]"
         >
@@ -56,7 +56,7 @@ function NavList() {
           className=" cursor-pointer hover:text-[#ff0336]"
         >
           <Link href={"/contact"}>Contact</Link>
-        </li>
+        </li> */}
       </ul>
     </>
   );

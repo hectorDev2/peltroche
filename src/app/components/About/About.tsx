@@ -29,20 +29,20 @@ function About() {
             {/* about text */}
             <div className="mt-[10.5rem] relative md1000:items-center md1000:flex md1000:flex-col md1000:text-center md1000:w-[full]">
               <p className="text-white font-semibold text-[15px] relative uppercase z-10 pl-16 md1000:pl-0 mb-12">
-                who we are
+                tu poder
               </p>
-              <img
+              <Image
                 src={TitleRed}
                 alt="text_bg"
                 className="w-[31%] absolute -top-[6px] md1000:w-[22rem]"
               />
               <h2 className="text-[35px] font-bold leading-tight mb-6 w-[60rem] min800:w-[100%]">
-                Take Your Health And Body To Next Level
+                Llevar tu salud y su cuerpo al siguiente nivel
               </h2>
               <p className="text-[16px] text-[#646464] font-medium ">
-                Take your health and body to the next level with our
-                comprehensive program designed to help you reach your fitness
-                goals.
+                Lleve tu salud y su cuerpo al siguiente nivel con nuestro
+                programa integral diseñado para ayudarlo a alcanzar sus
+                objetivos de acondicionamiento físico.
               </p>
               {/* about text icons */}
               <div className="flex mt-12 mb-[7rem] gap-[2px] min620:flex-col ">
@@ -64,7 +64,7 @@ function About() {
                     className={`w-[5.4rem] mb-6 h-auto`}
                   />
                   <h3 className="uppercase font-bold text-[20px] leading-snug">
-                    modern <br /> equipments
+                    modernas <br /> maquinas
                   </h3>
                 </div>
 
@@ -75,8 +75,7 @@ function About() {
                     className={`w-[5.4rem] mb-6 h-auto`}
                   />
                   <h3 className="uppercase font-bold text-[20px] leading-snug">
-                    fancy gym <br />
-                    machines
+                    mantenimiento <br /> de equipos
                   </h3>
                 </div>
               </div>

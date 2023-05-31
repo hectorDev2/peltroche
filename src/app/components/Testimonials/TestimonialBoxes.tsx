@@ -5,25 +5,9 @@ function TestimonialBoxes() {
   return (
     <>
       <TestimonialBox
-        text=" “I've been a member of Gymate for the past 6 months and it has been an amazing experience. The trainers are knowledgeable and supportive, the
-                  equipment is top-notch, and the community of members is friendly and
-                  encouraging.”"
-        name="John Wick"
-        job="Starbucks Employee"
-      />
-      <TestimonialBox
-        text=" “I've been a member of Gymate for the past 6 months and it has been an amazing experience. The trainers are knowledgeable and supportive, the
-                  equipment is top-notch, and the community of members is friendly and
-                  encouraging.”"
-        name="Harry Potter"
-        job="CEO of Hogwarts"
-      />
-      <TestimonialBox
-        text=" “I've been a member of Gymate for the past 6 months and it has been an amazing experience. The trainers are knowledgeable and supportive, the
-                  equipment is top-notch, and the community of members is friendly and
-                  encouraging.”"
-        name="Bill Gates"
-        job="Founder of Microsoft"
+        text=" “He sido miembro de Gymate durante los últimos 6 meses y ha sido una experiencia increíble. Los capacitadores están bien informados y brindan apoyo, el equipo es de primera categoría y la comunidad de miembros es amigable y alentadora.”"
+        name="Luisa Fernanda perez"
+        job="Fitness Coach"
       />
     </>
   );

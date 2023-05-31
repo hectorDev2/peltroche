@@ -17,7 +17,7 @@ function Pricing() {
           {/* title div -- */}
           <div className="flex flex-col text-center relative items-center">
             <p className="text-white relative z-10 text-[15px] uppercase font-bold mb-8">
-              PRICING CHART
+              Precios
             </p>
             <Image
               src={TitleRed}
@@ -26,11 +26,10 @@ function Pricing() {
             />
 
             <h2 className="text-[3.4rem] font-bold mb-4">
-              Exclusive Pricing Plan
+              Plan de precios exclusivo
             </h2>
             <p className="text-[#646464] font-medium text-[15px] ">
-              Gymat an unknown printer took a galley of type and scrambled
-              <br /> make a type specimen book.
+              Planes para todos los gustos
             </p>
           </div>
           {/* pricing boxes */}

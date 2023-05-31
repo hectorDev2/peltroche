@@ -1,3 +1,4 @@
+import Image from "next/image";
 import TitleRed from "../../../../public/images/who-we-are/title-bg.svg";
 
 import BlogBox from "./BlogBox";
@@ -10,18 +11,17 @@ function Blog() {
           {/* title div -- */}
           <div className="flex flex-col text-center relative items-center">
             <p className="text-white relative z-10 text-[15px] uppercase font-bold mb-8">
-              latest blog
+              Nuestro blog
             </p>
-            <img
+            <Image
               src={TitleRed}
               alt="text_bg"
               className="w-[23rem] absolute -top-[10px]"
             />
 
-            <h2 className="text-[3.4rem] font-bold mb-4">Our Recent News</h2>
+            <h2 className="text-[3.4rem] font-bold mb-4">Recientes Noticias</h2>
             <p className="text-[#646464] font-medium text-[15px] ">
-              Gymat an unknown printer took a galley of type and scrambled
-              <br /> make a type specimen book.
+              Peltroche post
             </p>
           </div>
 
