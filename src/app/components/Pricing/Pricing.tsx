@@ -1,24 +1,25 @@
-import TitleRed from "../../images/who-we-are/title-bg.svg";
-import BgText from "../../images/pricing/bg-text.png";
-import BgDumbell from "../../images/pricing/bg-dumbell.png";
-import PricingBox from "./PricingBox";
+import TitleRed from "../../../../public/images/who-we-are/title-bg.svg";
+import BgText from "../../../../public/images/pricing/bg-text.png";
+import BgDumbell from "../../../../public/images/pricing/bg-dumbell.png";
 
-import Img1 from "../../images/pricing/img1.jpg";
-import Img2 from "../../images/pricing/img2.jpg";
-import Img3 from "../../images/pricing/img3.jpg";
+import Img1 from "../../../../public/images/pricing/img1.jpg";
+import Img2 from "../../../../public/images/pricing/img2.jpg";
+import Img3 from "../../../../public/images/pricing/img3.jpg";
+import Image from "next/image";
+import PricingBox from "./PricingBox";
 
 function Pricing() {
   return (
     <>
       <section id="pricing" className="pricing-section relative">
         <div className="container page-padding py-[12rem] ">
-          <img src={BgText} className="left-0 absolute" alt="bg_img" />
+          <Image src={BgText} className="left-0 absolute" alt="bg_img" />
           {/* title div -- */}
           <div className="flex flex-col text-center relative items-center">
             <p className="text-white relative z-10 text-[15px] uppercase font-bold mb-8">
               PRICING CHART
             </p>
-            <img
+            <Image
               src={TitleRed}
               alt="text_bg"
               className="w-[23rem] absolute -top-[10px] "
@@ -38,7 +39,7 @@ function Pricing() {
             <PricingBox img={Img2} price="65" />
             <PricingBox img={Img3} price="100" />
           </div>
-          <img
+          <Image
             src={BgDumbell}
             alt="bg_icon"
             className="right-0 bottom-0 absolute z-[1]"
