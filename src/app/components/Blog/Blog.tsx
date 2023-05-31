@@ -1,4 +1,5 @@
-import TitleRed from "../../images/who-we-are/title-bg.svg";
+import TitleRed from "../../../../public/images/who-we-are/title-bg.svg";
+
 import BlogBox from "./BlogBox";
 
 function Blog() {

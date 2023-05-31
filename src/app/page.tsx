@@ -24,6 +24,7 @@ export default function Home() {
       <Gallery />
       <BmiCalc />
       <Pricing />
+      <Blog />
       {/* <About />
       <Featured />
       <ChooseUs />

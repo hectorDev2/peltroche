@@ -1,10 +1,19 @@
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
-function BlogBox({ date, title, description }) {
+function BlogBox({
+  date,
+  title,
+  description,
+}: {
+  date: string;
+  title: string;
+  description: string;
+  bgClass?: string;
+}) {
   const goTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: "none",
+      behavior: "smooth",
     });
   };
   return (
@@ -20,8 +29,7 @@ function BlogBox({ date, title, description }) {
         <p className="text-[15px] text-[#646464] font-medium">{description}</p>
         {/* blog cta */}
         <Link
-          to="/blog"
-          onClick={goTop}
+          href="/blog"
           className="text-[15px] uppercase font-bold mt-10 w-[16rem] h-[5rem] bg-[#FF0336] text-white text-center pt-[14px]"
         >
           Read more &nbsp; <i className="fa-solid fa-arrow-right"></i>
