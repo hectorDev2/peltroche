@@ -1,4 +1,5 @@
-import TitleRed from "../../images/who-we-are/title-bg.svg";
+import TitleRed from "../../../../public/images/who-we-are/title-bg.svg";
+
 import MainButton from "../MainButton";
 
 function Featured() {
@@ -96,13 +97,13 @@ function Featured() {
             <h2 className="text-white font-bold text-[3.7rem] md1000:text-[3rem] max-w-6xl px-7 leading-[1.2] min450:text-[2.4rem] ">
               We Are Always Providing Best Fitness Service For You
             </h2>
-            <MainButton
+            {/* <MainButton
               color={`text-black`}
               bg={`bg-white`}
               text="Join With Us"
               arrowColor={`text-black`}
               goTo="/contact"
-            />
+            /> */}
           </div>
         </div>
       </div>
