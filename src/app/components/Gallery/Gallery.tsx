@@ -1,11 +1,13 @@
-import TitleRed from "../../images/who-we-are/title-bg.svg";
-import BgIcon from "../../images/gallery/bg-icon.png";
+import TitleRed from "../../../../public/images/who-we-are/title-bg.svg";
+import BgIcon from "../../../../public/images/gallery/bg-icon.png";
+
+import Image from "next/image";
 
 function Gallery() {
   return (
     <>
       <section id="gallery" className="relative min450:hidden">
-        <img
+        <Image
           src={BgIcon}
           alt="bg_img"
           className="absolute top-[30px] right-0"
@@ -17,7 +19,7 @@ function Gallery() {
             <p className="text-white relative z-10 text-[15px] uppercase font-bold mb-10">
               GYMAT GALLERY
             </p>
-            <img
+            <Image
               src={TitleRed}
               alt="text_bg"
               className="w-[23rem] absolute -top-[10px]  "
