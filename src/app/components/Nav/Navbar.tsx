@@ -76,7 +76,7 @@ function Navbar() {
         <div className="navlist-nav">
           <NavList />
         </div>
-        <div className="flex items-center gap-10">
+        <div className="hidden items-center gap-10">
           <div className="flex gap-10">
             {/* mobile menu -------------- */}
 
