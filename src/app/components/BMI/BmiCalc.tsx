@@ -1,3 +1,4 @@
+"use client";
 import { useState } from "react";
 
 function BmiCalc() {
@@ -6,7 +7,7 @@ function BmiCalc() {
   const [bmi, setBmi] = useState("");
   const [message, setMessage] = useState("");
 
-  let calcBmi = (e) => {
+  let calcBmi = (e: any) => {
     e.preventDefault();
     if (weight === 0 || height === 0) {
       alert("Please enter a valid weight and height");
@@ -41,13 +42,13 @@ function BmiCalc() {
             <div className="flex flex-col">
               <form className="flex w-full gap-6 h-[50px] mt-10 ">
                 <input
-                  onChange={(e) => setWeight(e.target.value)}
+                  onChange={(e: any) => setWeight(e.target.value)}
                   className="w-[50%] bg-transparent text-[14px] border-2 border-[#ffffff7d] pl-6 min450:bg-white min450:text-black"
                   type="text"
                   placeholder="Weight / kg"
                 ></input>
                 <input
-                  onChange={(e) => setHeight(e.target.value)}
+                  onChange={(e: any) => setHeight(e.target.value)}
                   className="w-[50%] bg-transparent text-[14px] border-2 border-[#ffffff7d] pl-6 min450:bg-white min450:text-black"
                   type="text"
                   placeholder="Height / cm"
