@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Footer from "../components/Footer/Footer";
 
 import GirlRunning from "../../../public/images/who-we-are/girl-run.png";
 import GirlRedBg from "../../../public/images/who-we-are/girl-redbg.svg";
@@ -17,10 +16,10 @@ export default function About() {
       <section className="login-section">
         <div className="login-banner relative justify-center flex">
           <h1 className="text-white absolute bottom-[25px] text-[3rem] font-bold">
-            About Us
+            Sobre Peltroche
           </h1>
         </div>
-        <div className="container page-padding py-[5rem]">
+        <div className="container page-padding ">
           <div className="grid grid-cols-[1fr_1fr] h-[60rem] md1000:grid-cols-1">
             {/* title div -- */}
             <div className="flex flex-col !text-left relative items-right justify-center md1000:items-center md1000:!text-center">
@@ -104,7 +103,6 @@ export default function About() {
             </div>
           </div>
         </div>
-        <Footer />
       </section>
     </>
   );

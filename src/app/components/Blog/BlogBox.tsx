@@ -9,6 +9,7 @@ function BlogBox({
   title: string;
   description: string;
   bgClass?: string;
+  img?: string;
 }) {
   const goTop = () => {
     window.scrollTo({

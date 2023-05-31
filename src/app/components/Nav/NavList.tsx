@@ -27,6 +27,18 @@ function NavList() {
         >
           <Link href={"/galeria"}>Galeria</Link>
         </li>
+        <li
+          style={{ transition: "all 0.3s" }}
+          className=" cursor-pointer hover:text-[#ff0336]"
+        >
+          <Link href={"/calendario/lunes"}>Calendario</Link>
+        </li>
+        <li
+          style={{ transition: "all 0.3s" }}
+          className=" cursor-pointer hover:text-[#ff0336]"
+        >
+          <Link href={"/blog"}>Blog</Link>
+        </li>
         {/* <li
           style={{ transition: "all 0.3s" }}
           className=" cursor-pointer hover:text-[#ff0336]"

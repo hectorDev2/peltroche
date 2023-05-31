@@ -3,6 +3,7 @@ import Trainer1 from "../../../../public/images/trainers/trainer1.png";
 import Trainer2 from "../../../../public/images/trainers/trainer2.png";
 import Trainer3 from "../../../../public/images/trainers/trainer3.png";
 import TrainerBg from "../../../../public/images/trainers/trainer-bg.png";
+import TrainerBgGold from "../../../../public/images/trainers/trainer-bg-gold.png";
 
 import Shape from "../../../../public/images/trainers/shape.png";
 import { useState } from "react";
@@ -50,7 +51,8 @@ function TrainerBox() {
             {/* trainer bg */}
             <Image
               style={{ transition: "all 0.3s" }}
-              src={TrainerBg}
+              src={TrainerBgGold}
+              // src={TrainerBg}
               alt="trainer_background"
               className={`absolute top-[4px] w-full scale-[1] `}
             />
