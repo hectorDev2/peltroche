@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Hero from "./components/Hero/Hero";
 import About from "./components/About/About";
-import Trainers from "./components/Trainers/Trainers";
 import Testimonials from "./components/Testimonials/Testimonials";
 import Gallery from "./components/Gallery/Gallery";
 import BmiCalc from "./components/BMI/BmiCalc";
@@ -11,6 +10,7 @@ import CtaBanner from "./components/CtaBanner/CtaBanner";
 import Footer from "./components/Footer/Footer";
 import Featured from "./components/Featured/Featured";
 import ChooseUs from "./components/ChooseUs/ChooseUs";
+import Trainers from "./components/Trainers/Trainers";
 
 export default function Home() {
   return (
@@ -20,6 +20,7 @@ export default function Home() {
       <Featured />
       <ChooseUs />
       <Trainers />
+      <Testimonials />
       {/* <About />
       <Featured />
       <ChooseUs />

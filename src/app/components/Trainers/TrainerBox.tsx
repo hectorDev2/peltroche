@@ -1,9 +1,12 @@
-import Trainer1 from "../../images/trainers/trainer1.png";
-import Trainer2 from "../../images/trainers/trainer2.png";
-import Trainer3 from "../../images/trainers/trainer3.png";
-import TrainerBg from "../../images/trainers/trainer-bg.png";
-import Shape from "../../images/trainers/shape.png";
+"use client";
+import Trainer1 from "../../../../public/images/trainers/trainer1.png";
+import Trainer2 from "../../../../public/images/trainers/trainer2.png";
+import Trainer3 from "../../../../public/images/trainers/trainer3.png";
+import TrainerBg from "../../../../public/images/trainers/trainer-bg.png";
+
+import Shape from "../../../../public/images/trainers/shape.png";
 import { useState } from "react";
+import Image from "next/image";
 
 function TrainerBox() {
   const [imgHover, setImgHover] = useState(false);
@@ -36,7 +39,7 @@ function TrainerBox() {
             className="relative cursor-pointer w-[35rem] min450:w-full flex flex-col select-none"
           >
             {/* trainer img */}
-            <img
+            <Image
               src={train.img}
               alt="trainer"
               style={{ transition: "all 0.3s" }}
@@ -45,7 +48,7 @@ function TrainerBox() {
               }`}
             />
             {/* trainer bg */}
-            <img
+            <Image
               style={{ transition: "all 0.3s" }}
               src={TrainerBg}
               alt="trainer_background"
@@ -53,7 +56,7 @@ function TrainerBox() {
             />
             {/* trainer description */}
             <div className="box-desc bg-white w-full text-center shadow-lg z-20 rounded-[6px] px-[20px] py-[30px] absolute -bottom-[31px]">
-              <img
+              <Image
                 alt="shape"
                 src={Shape}
                 className="absolute -top-[25px] left-[113px]"

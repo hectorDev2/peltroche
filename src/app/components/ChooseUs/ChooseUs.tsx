@@ -1,11 +1,12 @@
-import VideoImg from "../../images/choose-us/main-img.png";
-import TitleRed from "../../images/who-we-are/title-bg.svg";
-import TrainingIcon from "../../images/choose-us/training.png";
-import EquipmentsIcon from "../../images/choose-us/bench-press.png";
-import BagIcon from "../../images/choose-us/gym-bag.png";
-import BottleIcon from "../../images/choose-us/bottle-of-water.png";
-import PlayImg from "../../images/choose-us/play.png";
-import MainButton from "../MainButton";
+import VideoImg from "../../../../public/images/choose-us/main-img.png";
+import TitleRed from "../../../../public/images/who-we-are/title-bg.svg";
+import TrainingIcon from "../../../../public/images/choose-us/training.png";
+import EquipmentsIcon from "../../../../public/images/choose-us/bench-press.png";
+import BagIcon from "../../../../public/images/choose-us/gym-bag.png";
+import BottleIcon from "../../../../public/images/choose-us/bottle-of-water.png";
+import PlayImg from "../../../../public/images/choose-us/play.png";
+
+import Image from "next/image";
 
 function ChooseUs() {
   return (
@@ -13,12 +14,12 @@ function ChooseUs() {
       <section className="choose-section py-[12rem] ">
         <div className="container page-padding flex flex-row md1000:flex-col md1000:items-center gap-[7rem]">
           <div className="video-div relative w-[50%] md1000:w-[85%] md1000:flex md1000:justify-center">
-            <img
+            <Image
               src={VideoImg}
               alt="video_img"
               className="relative w-[94%] h-auto"
             />
-            <img
+            <Image
               src={PlayImg}
               alt="play_img"
               className="absolute w-[2.4rem] top-[42%] left-[44%] z-10 cursor-pointer min450:left-[47%] min450:top-[44%] "
@@ -47,7 +48,7 @@ function ChooseUs() {
 
             <div className="grid grid-cols-2 grid-rows-2 gap-14 max-w-[44rem] mt-14 min450:flex min450:flex-col">
               <div className="flex items-center gap-6">
-                <img
+                <Image
                   className="bg-[#2b2b2b] hover:bg-[#ff0336] ease-in duration-200 w-[6.5rem] rounded-full p-4"
                   src={TrainingIcon}
                   alt="icon"
@@ -58,7 +59,7 @@ function ChooseUs() {
               </div>
 
               <div className="flex items-center gap-6">
-                <img
+                <Image
                   className="bg-[#2b2b2b] hover:bg-[#ff0336] ease-in duration-200 w-[6.5rem] rounded-full p-4"
                   src={EquipmentsIcon}
                   alt="icon"
@@ -69,7 +70,7 @@ function ChooseUs() {
               </div>
 
               <div className="flex items-center gap-6">
-                <img
+                <Image
                   className="bg-[#2b2b2b] hover:bg-[#ff0336] ease-in duration-200 w-[6.5rem] rounded-full p-4"
                   src={BagIcon}
                   alt="icon"
@@ -80,16 +81,16 @@ function ChooseUs() {
               </div>
 
               <div className="flex items-center gap-6">
-                <img
+                <Image
                   className="bg-[#2b2b2b] hover:bg-[#ff0336] ease-in duration-200 w-[6.5rem] rounded-full p-4"
                   src={BottleIcon}
                   alt="icon"
                 />
                 <p className="text-white font-bold text-[18px] max-w-[150px]">
-                  Fresh Bottle Watter
+                  ducha
                 </p>
               </div>
-              <MainButton
+              {/* <MainButton
                 color={`!text-white`}
                 bg={`bg-[#595959]`}
                 text="our classes"
@@ -97,7 +98,7 @@ function ChooseUs() {
                 cN="choose-cta"
                 hover={`hover:bg-[#ff0336]`}
                 goTo="/classes"
-              />
+              /> */}
             </div>
           </div>
         </div>
