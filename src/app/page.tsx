@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Hero from "./components/Hero/Hero";
 import About from "./components/About/About";
-import ChooseUs from "./components/ChooseUs/ChooseUs";
 import Trainers from "./components/Trainers/Trainers";
 import Testimonials from "./components/Testimonials/Testimonials";
 import Gallery from "./components/Gallery/Gallery";
@@ -11,6 +10,7 @@ import Blog from "./components/Blog/Blog";
 import CtaBanner from "./components/CtaBanner/CtaBanner";
 import Footer from "./components/Footer/Footer";
 import Featured from "./components/Featured/Featured";
+import ChooseUs from "./components/ChooseUs/ChooseUs";
 
 export default function Home() {
   return (
@@ -18,6 +18,8 @@ export default function Home() {
       <Hero />
       <About />
       <Featured />
+      <ChooseUs />
+      <Trainers />
       {/* <About />
       <Featured />
       <ChooseUs />
