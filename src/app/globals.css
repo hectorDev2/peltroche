@@ -765,7 +765,8 @@ body {
 
 /* MEDIA QUERIES --------------------------------*/
 
-@media (max-width: 1200px) {
+
+@media (max-width: 768px) {
   .navlist-nav {
     display: none;
   }

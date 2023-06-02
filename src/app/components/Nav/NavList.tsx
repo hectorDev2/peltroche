@@ -1,74 +1,78 @@
 import Link from "next/link";
+export const routes = [
+  {
+    title: "Home",
+    path: "/",
+  },
+  {
+    title: "Sobre Nosotros",
+    path: "/about",
+  },
+  {
+    title: "Galeria",
+    path: "/galeria",
+  },
+  {
+    title: "Calendario",
+    path: "/calendario/lunes",
+  },
+  {
+    title: "Blog",
+
+    path: "/blog",
+  },
+  {
+    title: "Precios",
+    path: "/pricing",
+  },
+  {
+    title: "Contacto",
+    path: "/contacto",
+  },
+];
 function NavList() {
-  const goTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
+  const routes = [
+    {
+      title: "Home",
+      path: "/",
+    },
+    {
+      title: "Sobre Nosotros",
+      path: "/about",
+    },
+    {
+      title: "Galeria",
+      path: "/galeria",
+    },
+    {
+      title: "Calendario",
+      path: "/calendario/lunes",
+    },
+    {
+      title: "Blog",
+
+      path: "/blog",
+    },
+    {
+      title: "Precios",
+      path: "/pricing",
+    },
+    {
+      title: "Contacto",
+      path: "/contacto",
+    },
+  ];
   return (
     <>
       <ul className="flex gap-9 text-white text-[16px] font-medium xl:none">
-        <li
-          style={{ transition: "all 0.3s" }}
-          className=" cursor-pointer hover:text-[#ff0336]"
-        >
-          <Link href="/">Home</Link>
-        </li>
-        <li
-          style={{ transition: "all 0.3s" }}
-          className=" cursor-pointer hover:text-[#ff0336]"
-        >
-          <Link href={"/about"}>Sobre Nosotros</Link>
-        </li>
-        <li
-          style={{ transition: "all 0.3s" }}
-          className=" cursor-pointer hover:text-[#ff0336]"
-        >
-          <Link href={"/galeria"}>Galeria</Link>
-        </li>
-        <li
-          style={{ transition: "all 0.3s" }}
-          className=" cursor-pointer hover:text-[#ff0336]"
-        >
-          <Link href={"/calendario/lunes"}>Calendario</Link>
-        </li>
-        <li
-          style={{ transition: "all 0.3s" }}
-          className=" cursor-pointer hover:text-[#ff0336]"
-        >
-          <Link href={"/blog"}>Blog</Link>
-        </li>
-        {/* <li
-          style={{ transition: "all 0.3s" }}
-          className=" cursor-pointer hover:text-[#ff0336]"
-        >
-          <Link href={"/schedule/monday"}>Schedule</Link>
-        </li>
-        <li
-          style={{ transition: "all 0.3s" }}
-          className=" cursor-pointer hover:text-[#ff0336]"
-        >
-          <Link href={"/blog"}>Blog</Link>
-        </li>
-        <li
-          style={{ transition: "all 0.3s" }}
-          className=" cursor-pointer hover:text-[#ff0336]"
-        >
-          <Link href={"/pricing"}>Pricing</Link>
-        </li>
-        <li
-          style={{ transition: "all 0.3s" }}
-          className=" cursor-pointer hover:text-[#ff0336]"
-        >
-          <Link href={"/classes"}>Classes</Link>
-        </li>
-        <li
-          style={{ transition: "all 0.3s" }}
-          className=" cursor-pointer hover:text-[#ff0336]"
-        >
-          <Link href={"/contact"}>Contact</Link>
-        </li> */}
+        {routes.map((route, index) => (
+          <li
+            style={{ transition: "all 0.3s" }}
+            className=" cursor-pointer hover:text-[#ff0336]"
+          >
+            <Link href={route.path}>{route.title}</Link>
+          </li>
+        ))}
       </ul>
     </>
   );

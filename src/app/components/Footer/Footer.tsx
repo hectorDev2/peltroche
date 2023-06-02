@@ -1,5 +1,5 @@
 import Image from "next/image";
-import FooterLogo from "../../../../public/logo.png";
+import FooterLogo from "../../../../public/logo-w.png";
 
 function Footer() {
   return (
@@ -41,7 +41,7 @@ function Footer() {
                 <a
                   target="_blank"
                   rel="noreferrer"
-                  href="https://www.radiustheme.com/"
+                  href="https://hector-dev-phi.vercel.app/"
                 >
                   HectorDev
                 </a>
@@ -50,12 +50,14 @@ function Footer() {
 
             {/* middle div */}
             <div className="flex flex-col gap-8 relative">
-              <p className="text-[22px] font-bold footer-main">Our Classes</p>
+              <p className="text-[22px] font-bold footer-main">
+                Nuestras clases
+              </p>
 
               <span className="top-[33px] absolute w-[7rem] h-[4px] bg-[#ff0366]"></span>
 
               <p className="text-[16px] hover:text-[#ff0366] cursor-pointer text-[#646464] font-medium hover:font-bold">
-                Fitness Classes
+                FullBody
               </p>
               <p className="text-[16px] hover:text-[#ff0366] cursor-pointer text-[#646464] font-medium hover:font-bold">
                 Aerobics Classes

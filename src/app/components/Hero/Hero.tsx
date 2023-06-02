@@ -1,6 +1,7 @@
 import Image from "next/image";
 import TitleBg from "../../../../public/images/pricing/titlebg.svg";
 import MainButton from "../MainButton";
+import { Nav } from "../Nav/components/Nav";
 
 function Hero() {
   return (

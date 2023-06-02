@@ -2,6 +2,8 @@
 import Trainer1 from "../../../../public/images/trainers/trainer1.png";
 import Trainer2 from "../../../../public/images/trainers/trainer2.png";
 import Trainer3 from "../../../../public/images/trainers/trainer3.png";
+import Trainer4 from "../../../../public/images/trainers/trainer4.png";
+
 import TrainerBg from "../../../../public/images/trainers/trainer-bg.png";
 import TrainerBgGold from "../../../../public/images/trainers/trainer-bg-gold.png";
 
@@ -21,9 +23,9 @@ function TrainerBox() {
   };
 
   const trainers = [
-    { img: Trainer1, name: "John Lewis", job: "Yoga Trainer" },
     { img: Trainer2, name: "Jonathan Doe", job: "Crossfit Trainer" },
-    { img: Trainer3, name: "Ana June", job: "Personal Trainer" },
+    { img: Trainer1, name: "John Lewis", job: "Yoga Trainer" },
+    { img: Trainer4, name: "Ana June", job: "Personal Trainer" },
   ];
 
   return (
@@ -51,7 +53,7 @@ function TrainerBox() {
             {/* trainer bg */}
             <Image
               style={{ transition: "all 0.3s" }}
-              src={TrainerBgGold}
+              src={TrainerBg}
               // src={TrainerBg}
               alt="trainer_background"
               className={`absolute top-[4px] w-full scale-[1] `}

@@ -37,7 +37,7 @@ function About() {
                 className="w-[31%] absolute -top-[6px] md1000:w-[22rem]"
               />
               <h2 className="text-[35px] font-bold leading-tight mb-6 w-[60rem] min800:w-[100%]">
-                Llevar tu salud y su cuerpo al siguiente nivel
+                Llevar tu salud y tu cuerpo al siguiente nivel
               </h2>
               <p className="text-[16px] text-[#646464] font-medium ">
                 Lleve tu salud y su cuerpo al siguiente nivel con nuestro
