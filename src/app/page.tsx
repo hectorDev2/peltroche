@@ -10,7 +10,6 @@ import Trainers from "./components/Trainers/Trainers";
 import Gallery from "./components/Gallery/Gallery";
 import BmiCalc from "./components/BMI/BmiCalc";
 import CtaBanner from "./components/CtaBanner/CtaBanner";
-import Footer from "./components/Footer/Footer";
 
 export default function Home() {
   return (

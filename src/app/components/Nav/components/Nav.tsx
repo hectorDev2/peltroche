@@ -25,7 +25,7 @@ const sidebar = {
   },
 };
 export const Nav = () => {
-  const [isOpen, toggleOpen] = useCycle(false, false);
+  const [isOpen, toggleOpen] = useCycle(false, true);
   const containerRef = useRef(null);
   const { height } = useDimensions(containerRef);
 
