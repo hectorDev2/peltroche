@@ -1,6 +1,5 @@
-"use client";
 import { motion, useCycle } from "framer-motion";
-import React, { useEffect, useRef } from "react";
+import React, { useRef } from "react";
 import { MenuToggle } from "./MenuToggle";
 import { Navigation } from "./Navigation";
 import { useDimensions } from "./useDimensions";
@@ -29,7 +28,6 @@ export const Nav = () => {
   const [isOpen, toggleOpen] = useCycle(true, false);
   const containerRef = useRef(null);
   const { height } = useDimensions(containerRef);
-  useEffect(() => {}, []);
 
   return (
     <motion.nav

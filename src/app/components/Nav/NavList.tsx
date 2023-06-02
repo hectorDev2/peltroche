@@ -69,6 +69,7 @@ function NavList() {
           <li
             style={{ transition: "all 0.3s" }}
             className=" cursor-pointer hover:text-[#ff0336]"
+            key={index}
           >
             <Link href={route.path}>{route.title}</Link>
           </li>
