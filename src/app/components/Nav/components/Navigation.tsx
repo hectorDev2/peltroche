@@ -12,12 +12,13 @@ const variants = {
   },
 };
 
-export const Navigation = () => (
-  <motion.ul className="listNavigation" variants={variants}>
-    {itemIds.map((i) => (
-      <MenuItem route={i} key={i} />
-    ))}
-  </motion.ul>
-);
+export const Navigation = ({ isOpen }: { isOpen: any }) =>
+  isOpen && (
+    <motion.ul className="listNavigation" variants={variants}>
+      {itemIds.map((i) => (
+        <MenuItem route={i} key={i} />
+      ))}
+    </motion.ul>
+  );
 
 const itemIds = routes;

@@ -18,7 +18,7 @@ nav {
 button svg{
   margin:auto;
 }
-button {
+.button {
   outline: none;
   border: none;
   -webkit-user-select: none;
