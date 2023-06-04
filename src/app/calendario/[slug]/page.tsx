@@ -44,6 +44,7 @@ export default function DetailsSchedule({ params }: any) {
       <div className="flex flex-wrap gap-4 my-8 justify-center">
         {days.map((day) => (
           <Link
+            key={day.slug}
             href={day.route}
             className={`text-[15px] font-bold border-solid border border-[#d7d7d7] py-[9px] px-[32px] rounded-[23px]  ease-in duration-200 hover:shadow-2xl text-gray ${
               slug == day.slug && "bg-[#ff0336] text-white"
