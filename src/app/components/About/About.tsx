@@ -1,4 +1,4 @@
-// import AboutCarts from "./AboutCarts";
+"use client";
 import TitleRed from "../../../../public/images/who-we-are/title-bg.svg";
 import TrainersIcon from "../../../../public/images/who-we-are/weightlifter.png";
 import ModernIcon from "../../../../public/images/who-we-are/equpments.png";
@@ -10,6 +10,7 @@ import GirlWind from "../../../../public/images/who-we-are/wind.png";
 
 // import MainButton from "../MainButton";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 function About() {
   return (
@@ -28,14 +29,16 @@ function About() {
           >
             {/* about text */}
             <div className="mt-[10.5rem] relative md1000:items-center md1000:flex md1000:flex-col md1000:text-center md1000:w-[full]">
-              <p className="text-white font-semibold text-[15px] relative uppercase z-10 pl-16 md1000:pl-0 mb-12">
-                tu poder
-              </p>
-              <Image
-                src={TitleRed}
-                alt="text_bg"
-                className="w-[31%] absolute -top-[6px] md1000:w-[22rem]"
-              />
+              <div className="flex flex-row-reverse">
+                <p className="pr-5 text-white font-semibold text-[15px] relative uppercase z-10 pl-16 md1000:pl-0 mb-12">
+                  tu poder
+                </p>
+                <Image
+                  src={TitleRed}
+                  alt="text_bg"
+                  className="w-[31%] absolute -top-[6px] md1000:w-[22rem]"
+                />
+              </div>
               <h2 className="text-[35px] font-bold leading-tight mb-6 w-[60rem] min800:w-[100%]">
                 Llevar tu salud y tu cuerpo al siguiente nivel
               </h2>
@@ -91,16 +94,24 @@ function About() {
               /> */}
             </div>
             {/* img side */}
-            <div className="relative md1000:hidden">
+            <motion.div
+              animate={{ x: -100 }}
+              transition={{
+                ease: "linear",
+                duration: 2,
+                x: { duration: 1 },
+              }}
+              className="grid mx-auto relative mt-[10em] w-[300px]  md:mt-[20em]  lg:mt-0"
+            >
               <Image
                 src={GirlRunning}
                 alt="girl_running"
-                className="girl-running"
+                className="girl-running  object-cover "
               />
               <Image src={GirlRedBg} alt="bg-red" className="girl-bg" />
               <Image src={GirlText} alt="bg-text" className="girl-text" />
               <Image src={GirlWind} alt="bg-wind" className="girl-wind" />
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>

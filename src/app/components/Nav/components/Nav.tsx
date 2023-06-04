@@ -1,10 +1,10 @@
 import { motion, useCycle } from "framer-motion";
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { MenuToggle } from "./MenuToggle";
-import { Navigation } from "./Navigation";
 import { useDimensions } from "./useDimensions";
 import "./style.css";
-
+import { usePathname } from "next/navigation";
+import { Navigation } from "./Navigation";
 const sidebar = {
   open: (height = 1000) => ({
     clipPath: `circle(${height * 1 - 200}px at 20px 20px)`,
@@ -17,7 +17,7 @@ const sidebar = {
   closed: {
     clipPath: "circle(20px at 40px 40px)",
     transition: {
-      delay: 0.5,
+      delay: 0,
       type: "spring",
       stiffness: 200,
       damping: 40,
@@ -25,10 +25,17 @@ const sidebar = {
   },
 };
 export const Nav = () => {
+  const pathname = usePathname();
   const [isOpen, toggleOpen] = useCycle(false, true);
   const containerRef = useRef(null);
   const { height } = useDimensions(containerRef);
+  useEffect(() => {
+    if (pathname === "/") {
+      return;
+    }
 
+    toggleOpen();
+  }, [pathname]);
   return (
     <motion.nav
       initial={false}

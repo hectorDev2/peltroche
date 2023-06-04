@@ -19,13 +19,14 @@ const variants = {
   },
 };
 
-export const MenuItem = ({ route }: any) => {
+export const MenuItem = ({ route, className }: any) => {
   return (
     <motion.li
       style={{ textAlign: "center" }}
       variants={variants}
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.95 }}
+      className={className}
     >
       <Link href={route.path}>
         <h1>{route.title}</h1>

@@ -2,6 +2,7 @@ import * as React from "react";
 import { motion } from "framer-motion";
 import { MenuItem } from "./MenuItem";
 import { routes } from "../NavList";
+import { usePathname } from "next/navigation";
 
 const variants = {
   open: {
@@ -11,14 +12,18 @@ const variants = {
     transition: { staggerChildren: 0.05, staggerDirection: -1 },
   },
 };
+const itemIds = routes;
 
-export const Navigation = ({ isOpen }: { isOpen: any }) =>
-  isOpen && (
+export const Navigation = ({ isOpen }: { isOpen: boolean }) => {
+  const path = usePathname();
+
+  return isOpen ? (
     <motion.ul className="listNavigation" variants={variants}>
-      {itemIds.map((i) => (
-        <MenuItem route={i} key={i} />
+      {itemIds?.map((i) => (
+        <MenuItem route={i} key={i.title} />
       ))}
     </motion.ul>
+  ) : (
+    <></>
   );
-
-const itemIds = routes;
+};

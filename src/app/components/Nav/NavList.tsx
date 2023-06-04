@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 export const routes = [
   {
     title: "Home",
@@ -31,6 +32,7 @@ export const routes = [
   },
 ];
 function NavList() {
+  const path = usePathname();
   const routes = [
     {
       title: "Home",
@@ -68,7 +70,9 @@ function NavList() {
         {routes.map((route, index) => (
           <li
             style={{ transition: "all 0.3s" }}
-            className=" cursor-pointer hover:text-[#ff0336]"
+            className={`${
+              route.path == path ? "text-red-500" : "text-white"
+            } hover:text-[#ff0336] cursor-pointer `}
             key={index}
           >
             <Link href={route.path}>{route.title}</Link>

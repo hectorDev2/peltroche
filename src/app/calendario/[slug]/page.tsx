@@ -1,11 +1,39 @@
 "use client";
 
 import Link from "next/link";
+import { useParams } from "next/navigation";
 
+const days = [
+  {
+    slug: "lunes",
+    route: "/calendario/lunes",
+  },
+  {
+    slug: "martes",
+    route: "/calendario/martes",
+  },
+  {
+    slug: "miercoles",
+    route: "/calendario/miercoles",
+  },
+  {
+    slug: "jueves",
+    route: "/calendario/jueves",
+  },
+  {
+    slug: "viernes",
+    route: "/calendario/viernes",
+  },
+  {
+    slug: "sabado",
+    route: "/calendario/sabado",
+  },
+];
 export default function DetailsSchedule({ params }: any) {
-  console.log(params);
+  const { slug } = useParams();
+
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen py-2">
+    <div className="flex flex-col items-center justify-center ">
       <div className="login-banner relative justify-center flex">
         <h1 className="text-white absolute bottom-[25px] text-[3rem] font-bold">
           Calendario para el {params.slug}
@@ -13,51 +41,18 @@ export default function DetailsSchedule({ params }: any) {
       </div>
 
       {/* fiter buttons */}
-      <div className="flex flex-wrap gap-4 my-4 justify-center">
-        <Link
-          href="/calendario/lunes"
-          className="text-[15px] font-bold border-solid border border-[#d7d7d7] py-[9px] px-[32px] rounded-[23px] bg-[#ff0336] ease-in duration-200 hover:shadow-2xl text-white "
-        >
-          Lunes
-        </Link>
-
-        <Link
-          href="/calendario/martes"
-          className="text-[15px] font-bold border-solid border border-[#d7d7d7] py-[9px] px-[32px] rounded-[23px] hover:bg-[#ff0336] ease-in duration-200 hover:shadow-2xl hover:text-white "
-        >
-          Martes
-        </Link>
-
-        <Link
-          href="/calendario/miercoles"
-          className="text-[15px] font-bold border-solid border border-[#d7d7d7] py-[9px] px-[32px] rounded-[23px] hover:bg-[#ff0336] ease-in duration-200 hover:shadow-2xl hover:text-white "
-        >
-          Miercoles
-        </Link>
-
-        <Link
-          href="/calendario/jueves"
-          className="text-[15px] font-bold border-solid border border-[#d7d7d7] py-[9px] px-[32px] rounded-[23px] hover:bg-[#ff0336] ease-in duration-200 hover:shadow-2xl hover:text-white "
-        >
-          Jueves
-        </Link>
-
-        <Link
-          href="/calendario/viernes"
-          className="text-[15px] font-bold border-solid border border-[#d7d7d7] py-[9px] px-[32px] rounded-[23px] hover:bg-[#ff0336] ease-in duration-200 hover:shadow-2xl hover:text-white "
-        >
-          Viernes
-        </Link>
-
-        <Link
-          href="/calendario/sabado"
-          className="text-[15px] font-bold border-solid border border-[#d7d7d7] py-[9px] px-[32px] rounded-[23px] hover:bg-[#ff0336] ease-in duration-200 hover:shadow-2xl hover:text-white "
-        >
-          Sabado
-        </Link>
+      <div className="flex flex-wrap gap-4 my-8 justify-center">
+        {days.map((day) => (
+          <Link
+            href={day.route}
+            className={`text-[15px] font-bold border-solid border border-[#d7d7d7] py-[9px] px-[32px] rounded-[23px]  ease-in duration-200 hover:shadow-2xl text-gray ${
+              slug == day.slug && "bg-[#ff0336] text-white"
+            }`}
+          >
+            {day.slug}
+          </Link>
+        ))}
       </div>
-
-      {/* ---- */}
 
       {/* boxes */}
       <div className="mt-[5rem]">
