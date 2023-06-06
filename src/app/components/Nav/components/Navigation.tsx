@@ -15,8 +15,6 @@ const variants = {
 const itemIds = routes;
 
 export const Navigation = ({ isOpen }: { isOpen: boolean }) => {
-  const path = usePathname();
-
   return isOpen ? (
     <motion.ul className="listNavigation" variants={variants}>
       {itemIds?.map((i) => (

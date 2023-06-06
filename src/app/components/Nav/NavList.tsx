@@ -71,7 +71,7 @@ function NavList() {
           <li
             style={{ transition: "all 0.3s" }}
             className={`${
-              route.path == path ? "text-red-500" : "text-white"
+              route.path == path ? "text-[#E0120A]" : "text-white"
             } hover:text-[#ff0336] cursor-pointer `}
             key={index}
           >

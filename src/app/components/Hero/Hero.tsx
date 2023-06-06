@@ -27,12 +27,6 @@ function Hero() {
               <span className="font-thin">fit & perfecto</span>
             </h1>
 
-            {/* <MainButton
-              color={`text-black`}
-              bg={`bg-white`}
-              text="our classes"
-              goTo="/classes"
-            /> */}
             <button className={`fa-solid fa-arrow-right text-[#FF0336] `}>
               nuestras clases
             </button>

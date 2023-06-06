@@ -1,15 +1,4 @@
 import Image from "next/image";
-import Footer from "../components/Footer/Footer";
-
-import GirlRunning from "../../../public/images/who-we-are/girl-run.png";
-import GirlRedBg from "../../../public/images/who-we-are/girl-redbg.svg";
-import GirlText from "../../../public/images/who-we-are/girl-side-text.png";
-import GirlWind from "../../../public/images/who-we-are/wind.png";
-import TitleRed from "../../../public/images/who-we-are/title-bg.svg";
-import Img3 from "../../../public/images/AboutPage/3.jpg";
-import Img4 from "../../../public/images/AboutPage/4.jpg";
-import Target from "../../../public/images/AboutPage/target.png";
-import Mountain from "../../../public/images/AboutPage/mountain.png";
 import Link from "next/link";
 import { galleryImg } from "./GalleryFiles";
 
@@ -58,7 +47,6 @@ export default function Gallery() {
             </Link>
           </div>
         </div>
-        <Footer />
       </section>
     </>
   );

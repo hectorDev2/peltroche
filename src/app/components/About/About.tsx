@@ -30,14 +30,9 @@ function About() {
             {/* about text */}
             <div className="mt-[10.5rem] relative md1000:items-center md1000:flex md1000:flex-col md1000:text-center md1000:w-[full]">
               <div className="flex flex-row-reverse">
-                <p className="pr-5 text-white font-semibold text-[15px] relative uppercase z-10 pl-16 md1000:pl-0 mb-12">
+                <p className="pr-5 background-[#E0120A] font-semibold text-[15px] relative uppercase z-10 pl-16  md1000:pl-0 mb-12">
                   tu poder
                 </p>
-                <Image
-                  src={TitleRed}
-                  alt="text_bg"
-                  className="w-[31%] absolute -top-[6px] md1000:w-[22rem]"
-                />
               </div>
               <h2 className="text-[35px] font-bold leading-tight mb-6 w-[60rem] min800:w-[100%]">
                 Llevar tu salud y tu cuerpo al siguiente nivel
@@ -82,27 +77,9 @@ function About() {
                   </h3>
                 </div>
               </div>
-              {/* cta button */}
-              {/* <MainButton
-                color={`!text-white`}
-                bg={`bg-[#3f3f3f]`}
-                cN="about-cta"
-                arrowColor={`!text-white`}
-                hover={`hover:bg-[#FF0336]`}
-                text="take a tour"
-                goTo="/classes"
-              /> */}
             </div>
             {/* img side */}
-            <motion.div
-              animate={{ x: -100 }}
-              transition={{
-                ease: "linear",
-                duration: 2,
-                x: { duration: 1 },
-              }}
-              className="grid mx-auto relative mt-[10em] w-[300px]  md:mt-[20em]  lg:mt-0"
-            >
+            <motion.div className="grid mx-auto relative mt-[10em] w-[300px]  md:mt-[20em]  lg:mt-0">
               <Image
                 src={GirlRunning}
                 alt="girl_running"
