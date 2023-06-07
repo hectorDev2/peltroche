@@ -66,7 +66,7 @@ function About() {
                   </h3>
                 </div>
 
-                <div className="flex flex-col items-center text-center py-10 px-14 pr-2 min620:px-0">
+                <div className="w-[280px] flex flex-col items-center text-center py-10 px-14 pr-2 min620:px-0">
                   <Image
                     src={LiftIcon}
                     alt="icon_img"

@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <Navbar />
-      <body style={{ position: "relative" }} className={inter.className}>
+      <body className={inter.className}>
         {children}
         <Analytics />
         <IconWhatsapp />

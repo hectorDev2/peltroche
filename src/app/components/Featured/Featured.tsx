@@ -2,11 +2,6 @@ import Image from "next/image";
 import TitleRed from "../../../../public/images/who-we-are/title-bg.svg";
 
 function Featured() {
-  const goTop = () => {
-    window.scrollTo({
-      top: 0,
-    });
-  };
   return (
     <>
       <section id="featured" className="page-padding py-[12.5rem] bg-white">
