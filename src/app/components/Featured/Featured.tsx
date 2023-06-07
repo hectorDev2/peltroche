@@ -1,8 +1,6 @@
 import Image from "next/image";
 import TitleRed from "../../../../public/images/who-we-are/title-bg.svg";
 
-import MainButton from "../MainButton";
-
 function Featured() {
   const goTop = () => {
     window.scrollTo({
