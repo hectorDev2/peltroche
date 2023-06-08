@@ -136,7 +136,7 @@ body {
   width: 100%;
   height: auto;
   top: 60%;
-  right: 46%;
+  right: 56%;
   transform: translate(50%, -50%);
   position: absolute;
   z-index: 5;
@@ -808,4 +808,15 @@ body {
 
 *::-webkit-scrollbar-thumb:active {
   background-color: #A0A0A0;
+}
+
+.icon-whatsapp{
+  right: 10px;
+  bottom: 10px;
+  position: fixed;
+}
+.icon-whatsapp:hover{
+  transform: scale(1.2);
+  cursor: pointer;
+  transition: all 500ms ease;
 }

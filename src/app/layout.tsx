@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import Navbar from "./components/Nav/Navbar";
 import Footer from "./components/Footer/Footer";
 import { Analytics } from "@vercel/analytics/react";
+import IconWhatsapp from "./components/IconWhatsapp";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,8 +24,8 @@ export default function RootLayout({
       <body className={inter.className}>
         {children}
         <Analytics />
+        <IconWhatsapp />
       </body>
-
       <Footer />
     </html>
   );
