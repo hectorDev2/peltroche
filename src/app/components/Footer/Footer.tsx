@@ -98,9 +98,6 @@ function Footer() {
                 Sunday - Closed
               </p>
             </div>
-
-            {/* middle div */}
-            <span></span>
           </div>
         </div>
       </footer>
