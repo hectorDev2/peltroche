@@ -33,37 +33,7 @@ export const routes = [
 ];
 function NavList() {
   const path = usePathname();
-  const routes = [
-    {
-      title: "Home",
-      path: "/",
-    },
-    {
-      title: "Sobre Nosotros",
-      path: "/about",
-    },
-    {
-      title: "Galeria",
-      path: "/galeria",
-    },
-    {
-      title: "Calendario",
-      path: "/calendario/lunes",
-    },
-    {
-      title: "Blog",
 
-      path: "/blog",
-    },
-    {
-      title: "Precios",
-      path: "/pricing",
-    },
-    {
-      title: "Contacto",
-      path: "/contacto",
-    },
-  ];
   return (
     <>
       <ul className="flex gap-9 text-white text-[16px] font-medium xl:none">

@@ -9,7 +9,6 @@ import { Nav } from "./components/Nav";
 
 function Navbar() {
   const [sticky, setSticky] = useState(false);
-  const [sidebar, setSideBar] = useState(false);
 
   // sticky navbar - bg black
   const handleScroll = () => {

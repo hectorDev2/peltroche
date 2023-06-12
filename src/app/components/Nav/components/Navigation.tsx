@@ -2,7 +2,6 @@ import * as React from "react";
 import { motion } from "framer-motion";
 import { MenuItem } from "./MenuItem";
 import { routes } from "../NavList";
-import { usePathname } from "next/navigation";
 
 const variants = {
   open: {

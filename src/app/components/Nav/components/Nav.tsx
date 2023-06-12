@@ -31,9 +31,10 @@ export const Nav = () => {
   const { height } = useDimensions(containerRef);
   useEffect(() => {
     if (pathname === "/") {
+      toggleOpen();
+
       return;
     }
-
     toggleOpen();
   }, [pathname]);
   return (
