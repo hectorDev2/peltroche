@@ -1,8 +1,9 @@
+import { PageWrapper } from "../components/PageWrapper";
 import Pricing from "../components/Pricing/Pricing";
 
 export default function PricingPage() {
   return (
-    <section>
+    <PageWrapper>
       <div className="login-banner relative justify-center flex">
         <h1 className="text-white absolute bottom-[25px] text-[3rem] font-bold">
           Contact Us
@@ -125,6 +126,6 @@ export default function PricingPage() {
         title="map"
         style={{ width: "100%", height: "45rem", border: "0px" }}
       ></iframe>
-    </section>
+    </PageWrapper>
   );
 }
