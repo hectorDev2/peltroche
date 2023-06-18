@@ -9,10 +9,11 @@ import Img3 from "../../../public/images/AboutPage/3.jpg";
 import Img4 from "../../../public/images/AboutPage/4.jpg";
 import Target from "../../../public/images/AboutPage/target.png";
 import Mountain from "../../../public/images/AboutPage/mountain.png";
+import { PageWrapper } from "../components/PageWrapper";
 
 export default function About() {
   return (
-    <>
+    <PageWrapper>
       <section className="login-section">
         <div className="login-banner relative justify-center flex">
           <h1 className="text-white absolute bottom-[25px] text-[3rem] font-bold">
@@ -24,7 +25,7 @@ export default function About() {
             {/* title div -- */}
             <div className="flex flex-col !text-left relative items-right justify-center md1000:items-center md1000:!text-center">
               <p className="text-white relative z-10 text-[15px] uppercase font-bold mb-8 ml-20 md1000:ml-3 ">
-                who we are
+                quienes somos
               </p>
               <Image
                 src={TitleRed}
@@ -33,7 +34,7 @@ export default function About() {
               />
 
               <h2 className="text-[3.6rem] max-w-[53rem] font-bold mb-4">
-                We Will Give You Strength and Health
+                Nosotros te brindaremos el mejor equipo
               </h2>
               <p className="text-[#646464] font-medium text-[15px] max-w-[50rem] ">
                 At Gymate, we are dedicated to helping you achieve the body of
@@ -93,7 +94,7 @@ export default function About() {
               {/*  */}
               <div className="w-full bg-white h-[43rem] flex flex-col justify-center items-center text-center px-[100px] min800:px-[10px]">
                 <Image src={Mountain} alt="target_img" className="w-[9rem]" />
-                <h2 className="text-[36px] font-bold mt-3">Our History</h2>
+                <h2 className="text-[36px] font-bold mt-3">Nuestras metas</h2>
                 <p className="text-[16px] font-medium text-[#646464] mt-5">
                   Amet minim mollit non deserunt ullamco est sit aliqua dolor do
                   amet sint. Velit officia consequat duis enim velit mollit
@@ -104,6 +105,6 @@ export default function About() {
           </div>
         </div>
       </section>
-    </>
+    </PageWrapper>
   );
 }

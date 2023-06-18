@@ -9,10 +9,11 @@ import Trainers from "./components/Trainers/Trainers";
 import Gallery from "./components/Gallery/Gallery";
 import BmiCalc from "./components/BMI/BmiCalc";
 import CtaBanner from "./components/CtaBanner/CtaBanner";
+import { PageWrapper } from "./components/PageWrapper";
 
 export default function Home() {
   return (
-    <>
+    <PageWrapper>
       <Hero />
       <About />
       <Featured />
@@ -24,6 +25,6 @@ export default function Home() {
       <Pricing />
       <Blog />
       <CtaBanner />
-    </>
+    </PageWrapper>
   );
 }
