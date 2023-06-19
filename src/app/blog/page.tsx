@@ -17,13 +17,16 @@ import { PageWrapper } from "../components/PageWrapper";
 
 export default function BlogPage() {
   return (
-    <PageWrapper>
+    <>
       <section>
         <div className="login-banner relative justify-center flex">
           <h1 className="text-white absolute bottom-[25px] text-[3rem] font-bold">
             Blog
           </h1>
         </div>
+      </section>
+
+      <PageWrapper>
         {/* blog */}
         <div className="py-[10rem] container gap-16 page-padding grid grid-cols-[64fr_35fr] md1000:grid-cols-1 md1000:gap-32">
           {/* blog */}
@@ -248,7 +251,7 @@ export default function BlogPage() {
             </div>
           </div>
         </div>
-      </section>
-    </PageWrapper>
+      </PageWrapper>
+    </>
   );
 }
