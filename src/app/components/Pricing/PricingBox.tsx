@@ -41,15 +41,6 @@ function PricingBox({
           <button className="mt-[30px] bg-gradient-to-b w-max mx-auto text-red-600 font-semibold from-slate-50 to-red-200 px-10 py-3  shadow-red-400 shadow-md border-b-4 hover border-b border-red-200 hover:shadow-sm transition-all duration-500">
             suscribete
           </button>
-
-          {/* <MainButton
-            color={`!text-white`}
-            bg={`bg-[#ff0336]`}
-            text="purchase now"
-            arrowColor={`!text-white`}
-            cN="pricing-cta"
-            goTo="/contact"
-          /> */}
         </div>
       </div>
     </>

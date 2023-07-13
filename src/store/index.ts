@@ -66,4 +66,47 @@ const formatFakeBlog = fakeBlog.map((blog) => {
   };
 });
 
-export { formatFakeBlog };
+const fakeVideosFit = [
+  {
+    id: 1,
+    title: "RUTINA DE ABDOMINALES (¡Todas las zonas!)",
+    urlCode: "7vZ01bUH_q0",
+  },
+  {
+    id: 2,
+    title: "RUTINA DE Piernas 🦵 (¡gluteos!)",
+    urlCode: "x9hUaSohDSQ",
+  },
+  {
+    id: 1,
+    title: "RUTINA DE ABDOMINALES (¡Todas las zonas!)",
+    urlCode: "7vZ01bUH_q0",
+  },
+  {
+    id: 2,
+    title: "RUTINA DE Piernas 🦵 (¡gluteos!)",
+    urlCode: "x9hUaSohDSQ",
+  },
+  {
+    id: 1,
+    title: "RUTINA DE ABDOMINALES (¡Todas las zonas!)",
+    urlCode: "7vZ01bUH_q0",
+  },
+  {
+    id: 2,
+    title: "RUTINA DE Piernas 🦵 (¡gluteos!)",
+    urlCode: "x9hUaSohDSQ",
+  },
+  {
+    id: 1,
+    title: "RUTINA DE ABDOMINALES (¡Todas las zonas!)",
+    urlCode: "7vZ01bUH_q0",
+  },
+  {
+    id: 2,
+    title: "RUTINA DE Piernas 🦵 (¡gluteos!)",
+    urlCode: "x9hUaSohDSQ",
+  },
+];
+
+export { formatFakeBlog, fakeVideosFit };

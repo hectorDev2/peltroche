@@ -1,3 +1,4 @@
+import YoutubeEmbed from "@/app/clases/EmbedYoutube";
 import { toSlug } from "@/utils";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";

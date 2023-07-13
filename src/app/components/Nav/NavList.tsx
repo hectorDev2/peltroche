@@ -30,6 +30,14 @@ export const routes = [
     title: "Contacto",
     path: "/contacto",
   },
+  {
+    title: "Clases",
+    path: "/clases",
+  },
+  {
+    title: "Trabaja con nosotros",
+    path: "/trabajo",
+  },
 ];
 function NavList() {
   const path = usePathname();
