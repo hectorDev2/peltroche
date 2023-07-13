@@ -30,9 +30,14 @@ function About() {
             {/* about text */}
             <div className="mt-[10.5rem] relative md1000:items-center md1000:flex md1000:flex-col md1000:text-center md1000:w-[full]">
               <div className="flex flex-row-reverse">
-                <p className="pr-5 background-[#E0120A] font-semibold text-[15px] relative uppercase z-10 pl-16  md1000:pl-0 mb-12">
-                  tu poder
+                <p className="font-semibold text-white text-[15px] relative uppercase z-10 ">
+                  por semana
                 </p>
+                <Image
+                  src={TitleRed}
+                  alt="text_bg"
+                  className="w-[24rem] absolute -top-[10px]"
+                />
               </div>
               <h2 className="text-[35px] font-bold leading-tight mb-6 w-[60rem] min800:w-[100%]">
                 Llevar tu salud y tu cuerpo al siguiente nivel
