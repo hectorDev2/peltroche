@@ -1,8 +1,12 @@
 import { formatFakeBlog } from "@/store";
+import { useStoreBlog } from "@/store/storeBlog";
 import React from "react";
 import RecentBlog from "./Recent-blog";
 
 export const SideBarBlog = () => {
+  const { getCategories } = useStoreBlog();
+  const categories = getCategories();
+
   return (
     <div>
       {/* form */}
@@ -78,7 +82,7 @@ export const SideBarBlog = () => {
         <div className="flex flex-col gap-7">
           {/*  */}
           {formatFakeBlog.map((blog) => (
-            <RecentBlog blog={blog} />
+            <RecentBlog key={blog.id} blog={blog} />
           ))}
         </div>
       </div>

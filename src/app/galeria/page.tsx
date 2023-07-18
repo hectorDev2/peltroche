@@ -6,8 +6,6 @@ import { galleryImg } from "./GalleryFiles";
 import { motion } from "framer-motion";
 import { images, variants } from "@/animations";
 export default function Gallery() {
-  const firstPageImgs = galleryImg.filter((item) => item.id <= 8);
-
   return (
     <>
       <div className="login-banner relative justify-center flex">
@@ -24,11 +22,11 @@ export default function Gallery() {
               animate="show"
               className="grid grid-cols-3 gap-7 md1000:grid-cols-2 min540:grid-cols-1"
             >
-              {firstPageImgs.map((image) => (
+              {galleryImg.map((image) => (
                 <motion.div variants={images} key={image.id}>
                   <Image
                     alt="gallery_img"
-                    className="w-full h-auto"
+                    className="w-full h-auto hover:scale-110 transition-all ease-out cursor-pointer"
                     src={image.img}
                   />
                 </motion.div>
@@ -47,12 +45,6 @@ export default function Gallery() {
                 className="text-black inline-flex items-center justify-center text-center text-[18px] border border-solid border-[#dee2e6] w-[48px] h-[45px] font-medium rounded-md bg-white "
               >
                 2
-              </Link>
-              <Link
-                href="/gallery/page-2"
-                className="text-black inline-flex items-center justify-center text-center text-[18px] border border-solid border-[#dee2e6] w-[48px] h-[45px] font-medium rounded-md bg-white "
-              >
-                <i className="fa-solid fa-angles-right"></i>
               </Link>
             </div>
           </div>

@@ -8,6 +8,8 @@ import emailjs from "@emailjs/browser";
 import useField from "@/hooks/useField";
 import Image from "next/image";
 import successImg from "../../../public/images/success.png";
+import { Modal } from "@/shared/Modal";
+import { NetWorks } from "@/shared/NetWorks";
 
 export default function WorkWithUs() {
   const [showModal, setShowModal] = useState(false);
@@ -167,31 +169,11 @@ export default function WorkWithUs() {
               <div className="flex flex-col relative">
                 <h3 className="text-[2rem] font-bold mb-10">Siguenos</h3>
                 <span className="bg-[#ff0336] w-[50px] h-[4px] absolute top-[33px]"></span>
-                <div className="flex gap-7 text-[18px] text-[#646464] min540:justify-center">
-                  <Link
-                    target="_blank"
-                    href="https://www.instagram.com/peltroche_gym_lacultura/"
-                  >
-                    <AiOutlineInstagram />
-                  </Link>
-                  <Link
-                    target="_blank"
-                    href="https://www.facebook.com/Peltrochegymfitnes.lacultura"
-                  >
-                    <AiOutlineFacebook />
-                  </Link>
-                  <Link
-                    target="_blank"
-                    href="https://www.tiktok.com/tag/peltroche"
-                  >
-                    <BsTiktok />
-                  </Link>
-                </div>
+                <NetWorks />
               </div>
             </div>
           </div>
         </div>
-
         <div
           id="modal"
           className={`fixed top-0 left-0 w-screen h-screen flex items-center justify-center bg-red-500 bg-opacity-50 transform ${
