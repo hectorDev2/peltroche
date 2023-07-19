@@ -1,11 +1,23 @@
 "use client";
 import { useStoreBlog } from "@/store/storeBlog";
 import { SideBarBlog } from "../components/Blog/SideBarBlog";
-import BlogBox from "../components/BlogBox/BlogBox";
 import { PageWrapper } from "../components/PageWrapper";
 
+import dynamic from "next/dynamic";
+import { useStore } from "zustand";
+
+const BlogBox = dynamic(() => import("../components/BlogBox/BlogBox"), {
+  ssr: false,
+});
+
 export default function BlogPage() {
-  const blogs = useStoreBlog((state: any) => state.blogs);
+  const allBlogs = useStore(useStoreBlog, (state: any) => state.blogs);
+
+  const filteredBlogs = useStore(
+    useStoreBlog,
+    (state: any) => state.filteredBlogs
+  );
+  const blogs = filteredBlogs.length == 0 ? allBlogs : filteredBlogs;
 
   return (
     <>

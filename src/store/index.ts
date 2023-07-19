@@ -48,7 +48,7 @@ const fakeBlog = [
       "Aprende estrategias efectivas para mantener la motivación y superar los obstáculos en tu camino hacia una vida fitness. Descubre técnicas de establecimiento de metas, seguimiento del progreso y recompensas para mantener un enfoque constante en tu rutina de ejercicio.",
     description:
       "Aprende estrategias efectivas para mantener la motivación en tu rutina de ejercicio.",
-    category: "Programas de entrenamiento",
+    category: "programas de entrenamiento",
   },
   {
     image: Img5,
@@ -61,6 +61,29 @@ const fakeBlog = [
     description:
       "Descubre qué alimentos son ideales para la recuperación después del entrenamiento y cómo pueden ayudar a tu cuerpo a recuperarse y repararse.",
     category: "nutricion",
+  },
+  {
+    image: Img5,
+    id: 6,
+    title:
+      "Los mejores alimentos para la recuperación después del entrenamiento",
+    date: "2023-07-13",
+    content:
+      "Descubre qué alimentos son ideales para la recuperación muscular y la rehidratación después del ejercicio intenso. Obtén información sobre las propiedades nutritivas de alimentos como batidos de proteínas, frutas y alimentos ricos en nutrientes para ayudar a tu cuerpo a recuperarse y repararse después del entrenamiento.",
+    description:
+      "Descubre qué alimentos son ideales para la recuperación después del entrenamiento y cómo pueden ayudar a tu cuerpo a recuperarse y repararse.",
+    category: "fitness",
+  },
+  {
+    image: Img4,
+    id: 7,
+    title: "Cómo mantener la motivación en tu rutina de ejercicio",
+    date: "2023-07-13",
+    content:
+      "Aprende estrategias efectivas para mantener la motivación y superar los obstáculos en tu camino hacia una vida fitness. Descubre técnicas de establecimiento de metas, seguimiento del progreso y recompensas para mantener un enfoque constante en tu rutina de ejercicio.",
+    description:
+      "Aprende estrategias efectivas para mantener la motivación en tu rutina de ejercicio.",
+    category: "programas de entrenamiento",
   },
 ];
 

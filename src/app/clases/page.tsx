@@ -6,8 +6,6 @@ import { PageWrapper } from "../components/PageWrapper";
 import VideoBox from "./VideoBox";
 
 export default function BlogPage() {
-  const blogs = useStoreBlog((state: any) => state.blogs);
-
   return (
     <>
       <section>

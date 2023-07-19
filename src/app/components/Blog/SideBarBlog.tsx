@@ -1,77 +1,45 @@
 import { formatFakeBlog } from "@/store";
 import { useStoreBlog } from "@/store/storeBlog";
-import React from "react";
 import RecentBlog from "./Recent-blog";
 
 export const SideBarBlog = () => {
-  const { getCategories } = useStoreBlog();
-  const categories = getCategories();
+  const filterBlogs = useStoreBlog((state: any) => state.filterBlogs);
 
   return (
     <div>
-      {/* form */}
-      <form className="flex">
-        <input
-          className="border-solid border-[1px] text-[#444] text-[16px] font-medium h-[60px] py-[5px] px-[20px] w-full rounded-tl-xl rounded-bl-xl outline-none"
-          type="search"
-          placeholder="Search..."
-        ></input>
-        <button type="submit">
-          <i className="fa-solid fa-magnifying-glass bg-[#ff0336] text-white text-[23px] h-[60px] w-[60px] rounded-br-xl rounded-tr-xl pt-[18px]"></i>
-        </button>
-      </form>
-
       {/* categories */}
       <div className="flex flex-col bg-[#f8f8f8] my-[35px] p-[30px]">
         <p className="text-[18px] text-black font-bold mb-5">Categories</p>
         <span className="w-[40px] h-[3.5px] bg-[#ff0336]"></span>
         <ul className="text-[16px] text-[#7e7e7e] font-medium mt-10">
-          <li className="cursor-pointer flex justify-between border-b border-[#dcd9d9] pb-6 mb-10 hover:text-[#ff0336] ease-in duration-200">
+          <li
+            onClick={() => filterBlogs("fitness", "")}
+            className="cursor-pointer flex justify-between border-b border-[#dcd9d9] pb-6 mb-10 hover:text-[#ff0336] ease-in duration-200"
+          >
             <p>
               <i className="text-[13px]  fa-solid fa-chevron-right"></i>
-              &nbsp; Body Building
+              &nbsp; fitness
             </p>
-            <span>(4)</span>
           </li>
 
-          <li className="cursor-pointer flex justify-between border-b border-[#dcd9d9] pb-6 mb-10 hover:text-[#ff0336] ease-in duration-200">
+          <li
+            onClick={() => filterBlogs("nutricion", "")}
+            className="cursor-pointer flex justify-between border-b border-[#dcd9d9] pb-6 mb-10 hover:text-[#ff0336] ease-in duration-200"
+          >
             <p>
               <i className="text-[13px]  fa-solid fa-chevron-right"></i>
-              &nbsp; Boxing
+              &nbsp; Nutricion
             </p>
-            <span>(4)</span>
           </li>
 
-          <li className="cursor-pointer flex justify-between border-b border-[#dcd9d9] pb-6 mb-10 hover:text-[#ff0336] ease-in duration-200">
+          <li
+            onClick={() => filterBlogs("clases", "")}
+            className="cursor-pointer flex justify-between border-b border-[#dcd9d9] pb-6 mb-10 hover:text-[#ff0336] ease-in duration-200"
+          >
             <p>
               <i className="text-[13px]  fa-solid fa-chevron-right"></i>
-              &nbsp; Crossfit
+              &nbsp; Clases
             </p>
-            <span>(4)</span>
-          </li>
-
-          <li className="cursor-pointer flex justify-between border-b border-[#dcd9d9] pb-6 mb-10 hover:text-[#ff0336] ease-in duration-200">
-            <p>
-              <i className="text-[13px]  fa-solid fa-chevron-right"></i>
-              &nbsp; Fitness
-            </p>
-            <span>(4)</span>
-          </li>
-
-          <li className="flex justify-between border-b border-[#dcd9d9] pb-6 mb-10 hover:text-[#ff0336] ease-in duration-200">
-            <p>
-              <i className="text-[13px] fa-solid fa-chevron-right"></i>
-              &nbsp; Meditation
-            </p>
-            <span>(4)</span>
-          </li>
-
-          <li className="cursor-pointer flex justify-between border-b border-[#dcd9d9] pb-6 mb-10 hover:text-[#ff0336] ease-in duration-200">
-            <p>
-              <i className="text-[13px]  fa-solid fa-chevron-right"></i>
-              &nbsp; Yoga
-            </p>
-            <span>(4)</span>
           </li>
         </ul>
       </div>
