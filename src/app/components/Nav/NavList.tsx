@@ -15,7 +15,7 @@ export const routes = [
   },
   {
     title: "Calendario",
-    path: "/calendario/lunes",
+    path: "/calendario",
   },
   {
     title: "Blog",
