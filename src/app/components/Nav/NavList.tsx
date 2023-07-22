@@ -15,7 +15,7 @@ export const routes = [
   },
   {
     title: "Calendario",
-    path: "/calendario/lunes",
+    path: "/calendario",
   },
   {
     title: "Blog",
@@ -30,16 +30,24 @@ export const routes = [
     title: "Contacto",
     path: "/contacto",
   },
+  {
+    title: "Clases",
+    path: "/clases",
+  },
+  {
+    title: "Trabaja con nosotros",
+    path: "/trabajo",
+  },
 ];
 function NavList() {
   const path = usePathname();
 
   return (
     <>
-      <ul className="flex gap-9 text-white text-[16px] font-medium xl:none">
+      <ul className="flex items-center gap-9 text-white text-[16px] font-medium xl:none">
         {routes.map((route, index) => (
           <li
-            style={{ transition: "all 0.3s" }}
+            style={{ transition: "all 0.3s", margin: "0" }}
             className={`${
               route.path == path ? "text-[#E0120A]" : "text-white"
             } hover:text-[#ff0336] cursor-pointer `}

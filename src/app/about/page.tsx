@@ -43,14 +43,6 @@ export default function About() {
                   with you to create a personalized fitness and nutrition plan
                   that helps you reach your specific goals.
                 </p>
-                {/* <MainButton
-                color={`!text-white`}
-                bg={`bg-[#ff0336]`}
-                goTo="/contact"
-                text="contact us"
-                arrowColor={`!text-white`}
-                cN="pricing-cta blog-cta"
-              /> */}
               </div>
               {/*  */}
               <div className="relative w-[80%] -top-[90px] left-[40px] md1000:hidden">

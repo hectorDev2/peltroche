@@ -34,9 +34,9 @@ function Pricing() {
           </div>
           {/* pricing boxes */}
           <div className="flex gap-10 mt-32 relative z-[2] md1000:flex-col md1000:items-center ">
-            <PricingBox img={Img1} price="39" />
-            <PricingBox img={Img2} price="65" />
-            <PricingBox img={Img3} price="100" />
+            <PricingBox img={Img1} price="39" title="Plan mensual" />
+            <PricingBox img={Img2} price="65" title="Plan semestral" />
+            <PricingBox img={Img3} price="100" title="Plan anual" />
           </div>
           <Image
             src={BgDumbell}

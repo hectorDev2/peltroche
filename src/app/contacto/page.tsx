@@ -1,3 +1,4 @@
+import { NetWorks } from "@/shared/NetWorks";
 import { PageWrapper } from "../components/PageWrapper";
 
 export default function PricingPage() {
@@ -5,7 +6,7 @@ export default function PricingPage() {
     <>
       <div className="login-banner relative justify-center flex">
         <h1 className="text-white absolute bottom-[25px] text-[3rem] font-bold">
-          Contact Us
+          Contactanos
         </h1>
       </div>
       <PageWrapper>
@@ -67,12 +68,7 @@ export default function PricingPage() {
               <div className="flex flex-col relative">
                 <h3 className="text-[2rem] font-bold mb-10">Follow Us On</h3>
                 <span className="bg-[#ff0336] w-[50px] h-[4px] absolute top-[33px]"></span>
-                <div className="text-[18px] font-medium text-black flex gap-5">
-                  <i className="fa-brands fa-facebook-f px-[16px] py-[13px] bg-[#f4f4f4] rounded-full cursor-pointer hover:bg-[#ff0336] ease-in duration-200 hover:text-white"></i>
-                  <i className="fa-brands fa-twitter p-[13.5px] bg-[#f4f4f4] rounded-full cursor-pointer hover:bg-[#ff0336] ease-in duration-200 hover:text-white"></i>
-                  <i className="fa-brands fa-instagram p-[13.5px] bg-[#f4f4f4] rounded-full cursor-pointer hover:bg-[#ff0336] ease-in duration-200 hover:text-white"></i>
-                  <i className="fa-brands fa-pinterest-p p-[13.5px] bg-[#f4f4f4] rounded-full cursor-pointer hover:bg-[#ff0336] ease-in duration-200 hover:text-white"></i>
-                </div>
+                <NetWorks />
               </div>
             </div>
           </div>
