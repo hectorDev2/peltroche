@@ -1,3 +1,1 @@
-import { ProductInterface } from "./Product.interface";
-
-export type { ProductInterface };
+export type { ProductInterface } from "./product.interface";

@@ -1,11 +1,10 @@
-import { BlogTypes } from "@/types";
 import { create } from "zustand";
 import { formatFakeBlog } from ".";
 import { persist } from "zustand/middleware";
 
 export interface BlogsStore {
-  blogs: BlogTypes[];
-  filteredBlogs: BlogTypes[];
+  blogs: any[];
+  filteredBlogs: any[];
   filterBlogs: any;
 }
 
@@ -16,7 +15,7 @@ export const useStoreBlog = create<any>(
       filteredBlogs: [],
       getBlogById: (slug: string) => {
         const { blogs } = get();
-        return blogs.find((blog: BlogTypes) => blog.slug === slug);
+        return blogs.find((blog: any) => blog.slug === slug);
       },
       filterBlogs(category: string) {
         set((state: any) => {
@@ -35,7 +34,7 @@ export const useStoreBlog = create<any>(
       },
       getCategories: () => {
         const { blogs } = get();
-        return [...new Set(blogs.map((blog: BlogTypes) => blog.category))];
+        return [...new Set(blogs.map((blog: any) => blog.category))];
       },
     }),
     {

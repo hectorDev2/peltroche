@@ -1,14 +1,15 @@
 import { PageWrapper } from "../../components/PageWrapper";
 
-import { API_URL } from "../../config";
+import { API_URL, API_URL_LOCAL } from "../../config";
 import { ProductInterface } from "@/types";
 import Image from "next/image";
 import Link from "next/link";
 import { toSlug } from "@/utils";
 
 export default async function Page() {
-  const res = await fetch(`${API_URL}/products?populate=*`);
-  if (res.ok) {
+  const res = await fetch(`${API_URL_LOCAL}/products?populate=*`);
+  if (!res.ok) {
+    console.log("error");
   }
   const { data: products } = await res.json();
   console.log(products);
@@ -24,13 +25,13 @@ export default async function Page() {
         <section className="login-section  place-content-center flex gap-5">
           {products.map(({ attributes }: ProductInterface) => (
             <Link
-              href={`/products/${toSlug(attributes.name)}`}
+              href={`/tienda/productos/${toSlug(attributes.name)}`}
               className="transform overflow-hidden bg-white duration-200 hover:scale-105 cursor-pointer"
             >
               <Image
-                width={500}
-                height={500}
-                src={attributes.images.data[0].attributes.url}
+                width={300}
+                height={300}
+                src={attributes.images.data[0].formats.thumbnail.url}
                 alt={attributes.name}
               />
               <div className="p-4 text-black/[0.9]">
