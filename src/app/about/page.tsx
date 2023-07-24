@@ -9,7 +9,7 @@ import Img3 from "../../../public/images/AboutPage/3.jpg";
 import Img4 from "../../../public/images/AboutPage/4.jpg";
 import Target from "../../../public/images/AboutPage/target.png";
 import Mountain from "../../../public/images/AboutPage/mountain.png";
-import { PageWrapper } from "../components/PageWrapper";
+import { PageWrapper } from "../../components/PageWrapper";
 
 export default function About() {
   return (

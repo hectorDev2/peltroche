@@ -1,12 +1,12 @@
 "use client";
 import { useStoreBlog } from "@/store/storeBlog";
-import { SideBarBlog } from "../components/Blog/SideBarBlog";
-import { PageWrapper } from "../components/PageWrapper";
+import { SideBarBlog } from "../../components/Blog/SideBarBlog";
+import { PageWrapper } from "../../components/PageWrapper";
 
 import dynamic from "next/dynamic";
 import { useStore } from "zustand";
 
-const BlogBox = dynamic(() => import("../components/BlogBox/BlogBox"), {
+const BlogBox = dynamic(() => import("../../components/BlogBox/BlogBox"), {
   ssr: false,
 });
 

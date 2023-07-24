@@ -1,8 +1,8 @@
 "use client";
 import { fakeVideosFit } from "@/store";
 import { useStoreBlog } from "@/store/storeBlog";
-import { SideBarBlog } from "../components/Blog/SideBarBlog";
-import { PageWrapper } from "../components/PageWrapper";
+import { SideBarBlog } from "../../components/Blog/SideBarBlog";
+import { PageWrapper } from "../../components/PageWrapper";
 import VideoBox from "./VideoBox";
 
 export default function BlogPage() {

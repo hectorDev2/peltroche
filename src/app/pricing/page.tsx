@@ -1,5 +1,5 @@
-import { PageWrapper } from "../components/PageWrapper";
-import Pricing from "../components/Pricing/Pricing";
+import { PageWrapper } from "../../components/PageWrapper";
+import Pricing from "../../components/Pricing/Pricing";
 
 export default function PricingPage() {
   return (

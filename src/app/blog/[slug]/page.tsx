@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useParams } from "next/navigation";
 import Link from "next/link";
 import { useStoreBlog } from "@/store/storeBlog";
-import { PageWrapper } from "@/app/components/PageWrapper";
+import { PageWrapper } from "@/components/PageWrapper";
 
 export default function DetailsSchedule() {
   const { slug } = useParams();

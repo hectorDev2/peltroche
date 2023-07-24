@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { AiOutlineInstagram, AiOutlineFacebook } from "react-icons/ai";
 import { BsTiktok } from "react-icons/bs";
-import { PageWrapper } from "../components/PageWrapper";
+import { PageWrapper } from "../../components/PageWrapper";
 import emailjs from "@emailjs/browser";
 import useField from "@/hooks/useField";
 import Image from "next/image";

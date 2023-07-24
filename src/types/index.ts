@@ -1,10 +1,3 @@
-import { StaticImageData } from "next/image";
+import { ProductInterface } from "./Product.interface";
 
-export interface BlogTypes {
-  title: string;
-  slug: string;
-  category: string;
-  content: string;
-  image: StaticImageData;
-  date: string;
-}
+export type { ProductInterface };

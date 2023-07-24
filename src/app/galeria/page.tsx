@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { PageWrapper } from "../components/PageWrapper";
+import { PageWrapper } from "../../components/PageWrapper";
 import { galleryImg } from "./GalleryFiles";
 import { motion } from "framer-motion";
 import { images, variants } from "@/animations";
