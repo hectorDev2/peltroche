@@ -36,7 +36,7 @@ export const Nav = () => {
       return;
     }
     toggleOpen();
-  }, [pathname]);
+  }, [pathname, toggleOpen]);
   return (
     <motion.nav
       initial={false}

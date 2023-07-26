@@ -11,24 +11,12 @@ import ReactMarkdown from "react-markdown";
 import Link from "next/link";
 
 const ProductDetails = async ({ params }: any) => {
-  const [product, setProduct] = useState<any>([]);
-  const notify = () => {
-    toast.success("Success. Check your cart!", {
-      position: "bottom-right",
-      autoClose: 5000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "dark",
-    });
-  };
+  const [product, setProduct] = useState<any>();
 
   const getProduct = async () => {
     let product: any;
     await axios
-      .get(`http://127.0.0.1:1337/api/products/${params.id}?populate=*`)
+      .get(`${API_URL_LOCAL}/products/${params.id}?populate=*`)
       .then((data) => {
         product = data.data;
       })
@@ -40,7 +28,7 @@ const ProductDetails = async ({ params }: any) => {
   };
 
   useEffect(() => {
-    if (product.length === 0) {
+    if (product) {
       getProduct().then((data) => {
         console.log(data.data);
 
@@ -48,7 +36,7 @@ const ProductDetails = async ({ params }: any) => {
       });
       return;
     }
-  }, []);
+  }, [getProduct, product]);
 
   return (
     <>

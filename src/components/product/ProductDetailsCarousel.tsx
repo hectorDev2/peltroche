@@ -2,6 +2,7 @@ import React from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
 import "./index.css";
+import Image from "next/image";
 const ProductDetailsCarousel = ({ images }: any) => {
   return (
     <div className="text-white text-[20px] w-full max-w-[1360px] mx-auto sticky top-[50px]">
@@ -13,7 +14,7 @@ const ProductDetailsCarousel = ({ images }: any) => {
         className="productCarousel"
       >
         {images?.reverse()?.map((img: any) => (
-          <img key={img} src={img} alt={img} />
+          <Image key={img} src={img} alt={img} />
         ))}
         {/* <img src="/p2.png" />
                 <img src="/p3.png" />
