@@ -4,7 +4,7 @@ import ProductDetailsCarousel from "@/components/product/ProductDetailsCarousel"
 
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { API_URL_LOCAL } from "@/config";
+import { API_URL, API_URL_LOCAL } from "@/config";
 import axios from "axios";
 import { formatProduct, getDiscountedPricePercentage } from "@/utils/helpers";
 import ReactMarkdown from "react-markdown";
@@ -16,7 +16,7 @@ const ProductDetails = async ({ params }: any) => {
   const getProduct = async () => {
     let product: any;
     await axios
-      .get(`${API_URL_LOCAL}/products/${params.id}?populate=*`)
+      .get(`${API_URL}/products/${params.id}?populate=*`)
       .then((data) => {
         product = data.data;
       })
