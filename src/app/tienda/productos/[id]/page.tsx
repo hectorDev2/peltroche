@@ -1,6 +1,5 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { IoMdHeartEmpty } from "react-icons/io";
 import ProductDetailsCarousel from "@/components/product/ProductDetailsCarousel";
 
 import { ToastContainer, toast } from "react-toastify";
@@ -8,7 +7,6 @@ import "react-toastify/dist/ReactToastify.css";
 import { API_URL_LOCAL } from "@/config";
 import axios from "axios";
 import { formatProduct, getDiscountedPricePercentage } from "@/utils/helpers";
-import Image from "next/image";
 import ReactMarkdown from "react-markdown";
 import Link from "next/link";
 

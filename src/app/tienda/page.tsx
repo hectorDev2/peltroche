@@ -25,6 +25,7 @@ export default async function Page() {
           <Link
             href={`/tienda/productos/${id}`}
             className="transform overflow-hidden bg-white duration-200 hover:scale-105 cursor-pointer"
+            key={id}
           >
             <Image
               width={300}
