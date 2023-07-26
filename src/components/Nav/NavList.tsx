@@ -47,7 +47,7 @@ function NavList() {
   const path = usePathname();
 
   return (
-    <>
+    <div className="navlist-nav">
       <ul className="flex items-center gap-9 text-white text-[16px] font-medium xl:none">
         {routes.map((route, index) => (
           <li
@@ -61,7 +61,7 @@ function NavList() {
           </li>
         ))}
       </ul>
-    </>
+    </div>
   );
 }
 
