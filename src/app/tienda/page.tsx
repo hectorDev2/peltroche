@@ -1,9 +1,8 @@
-import { PageWrapper } from "../../components/PageWrapper";
-
 import { API_URL, API_URL_LOCAL } from "../../config";
 import Image from "next/image";
 import Link from "next/link";
 import axios from "axios";
+import { formatAllProducts } from "@/utils/helpers";
 
 export default async function Page() {
   const res = axios
@@ -12,7 +11,7 @@ export default async function Page() {
     .catch(function (error) {
       throw error;
     });
-  const products = await res;
+  const products = formatAllProducts(await res);
 
   return (
     <>
@@ -30,7 +29,7 @@ export default async function Page() {
             <Image
               width={300}
               height={300}
-              src={attributes.images.data[0].attributes.formats.small.url}
+              src={attributes.images[0]}
               alt={attributes.name}
             />
             <div className="p-4 text-black/[0.9]">

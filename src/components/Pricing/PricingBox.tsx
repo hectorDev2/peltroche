@@ -1,4 +1,5 @@
 import Image, { StaticImageData } from "next/image";
+import Link from "next/link";
 
 function PricingBox({
   img,
@@ -38,9 +39,11 @@ function PricingBox({
             <p>Personal Trainer</p>
             <p>Cycling</p>
           </div>
-          <button className="mt-[30px] bg-gradient-to-b w-max mx-auto text-red-600 font-semibold from-slate-50 to-red-200 px-10 py-3  shadow-red-400 shadow-md border-b-4 hover border-b border-red-200 hover:shadow-sm transition-all duration-500">
-            suscribete
-          </button>
+          <Link href="https://buy.stripe.com/test_8wM16uefW10b8MM8wx" passHref>
+            <button className="mt-[30px] bg-gradient-to-b w-max mx-auto text-red-600 font-semibold from-slate-50 to-red-200 px-10 py-3  shadow-red-400 shadow-md border-b-4 hover border-b border-red-200 hover:shadow-sm transition-all duration-500">
+              suscribete
+            </button>
+          </Link>
         </div>
       </div>
     </>
