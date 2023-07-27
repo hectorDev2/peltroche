@@ -14,7 +14,7 @@ const ProductDetailsCarousel = ({ images }: any) => {
         className="productCarousel"
       >
         {images?.reverse()?.map((img: any) => (
-          <Image key={img} src={img} alt={img} />
+          <Image key={img} src={img} alt={img} width={500} height={500} />
         ))}
         {/* <img src="/p2.png" />
                 <img src="/p3.png" />

@@ -16,9 +16,9 @@ const ProductDetails = async ({ params }: any) => {
   const getProduct = async () => {
     let product: any;
     await axios
-      .get(`${API_URL}/products/${params.id}?populate=*`)
+      .get(`http://127.0.0.1:1337/api/products/${params.id}?populate=*`)
       .then((data) => {
-        product = data.data;
+        product = formatProduct(data.data.data);
       })
       .catch(function (error) {
         console.log(error);
@@ -28,21 +28,21 @@ const ProductDetails = async ({ params }: any) => {
   };
 
   useEffect(() => {
-    if (product) {
+    if (!product) {
       getProduct().then((data) => {
-        console.log(data.data);
-
-        setProduct(formatProduct(data.data));
+        console.log(data);
+        setProduct(data);
       });
       return;
     }
-  }, [getProduct, product]);
+    console.log(product);
+  }, [product]);
 
   return (
     <>
       <div className="login-banner relative justify-center flex">
         <h1 className="text-white absolute bottom-[25px] text-[3rem] font-bold">
-          {product.attributes?.name}
+          {product?.attributes?.name}
         </h1>
       </div>
       {product && (
@@ -52,7 +52,7 @@ const ProductDetails = async ({ params }: any) => {
             <div className="flex flex-col lg:flex-row md:px-10 gap-[50px] lg:gap-[100px]">
               {/* left column start */}
               <div className="w-full md:w-auto flex-[1.5] max-w-[500px] lg:max-w-full mx-auto lg:mx-0">
-                <ProductDetailsCarousel images={product.attributes?.images} />
+                <ProductDetailsCarousel images={product?.attributes?.images} />
               </div>
 
               <div className="flex-[1] py-3">

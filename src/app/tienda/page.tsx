@@ -6,7 +6,7 @@ import { formatAllProducts } from "@/utils/helpers";
 
 export default async function Page() {
   const res = axios
-    .get(`${API_URL}/products?populate=*`)
+    .get(`${API_URL_LOCAL}/products?populate=*`)
     .then(({ data }) => data.data)
     .catch(function (error) {
       throw error;
