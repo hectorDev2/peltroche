@@ -1,12 +1,13 @@
-import { API_URL, API_URL_LOCAL } from "../../config";
 import Image from "next/image";
 import Link from "next/link";
 import axios from "axios";
 import { formatAllProducts } from "@/utils/helpers";
 
 export default async function Page() {
+  console.log(process.env.NEXT_LOCAL_API_URL);
+
   const res = axios
-    .get(`${API_URL_LOCAL}/products?populate=*`)
+    .get(`${process.env.NEXT_LOCAL_API_URL}/products?populate=*`)
     .then(({ data }) => data.data)
     .catch(function (error) {
       throw error;

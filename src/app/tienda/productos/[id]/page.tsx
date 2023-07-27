@@ -1,22 +1,19 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import ProductDetailsCarousel from "@/components/product/ProductDetailsCarousel";
-
-import { ToastContainer, toast } from "react-toastify";
+import "./index.css";
 import "react-toastify/dist/ReactToastify.css";
-import { API_URL, API_URL_LOCAL } from "@/config";
 import axios from "axios";
-import { formatProduct, getDiscountedPricePercentage } from "@/utils/helpers";
-import ReactMarkdown from "react-markdown";
-import Link from "next/link";
+import { formatProduct } from "@/utils/helpers";
 
 const ProductDetails = async ({ params }: any) => {
   const [product, setProduct] = useState<any>();
 
+  console.log(process.env.NEXT_LOCAL_API_URL);
+
   const getProduct = async () => {
     let product: any;
     await axios
-      .get(`http://127.0.0.1:1337/api/products/${params.id}?populate=*`)
+      .get(`${process.env.NEXT_LOCAL_API_URL}/products/${params.id}?populate=*`)
       .then((data) => {
         product = formatProduct(data.data.data);
       })
@@ -30,12 +27,10 @@ const ProductDetails = async ({ params }: any) => {
   useEffect(() => {
     if (!product) {
       getProduct().then((data) => {
-        console.log(data);
         setProduct(data);
       });
       return;
     }
-    console.log(product);
   }, [product]);
 
   return (
@@ -46,72 +41,102 @@ const ProductDetails = async ({ params }: any) => {
         </h1>
       </div>
       {product && (
-        <div className="container  md:py-20">
-          <div className="w-full md:py-20">
-            <ToastContainer />
-            <div className="flex flex-col lg:flex-row md:px-10 gap-[50px] lg:gap-[100px]">
-              {/* left column start */}
-              <div className="w-full md:w-auto flex-[1.5] max-w-[500px] lg:max-w-full mx-auto lg:mx-0">
-                <ProductDetailsCarousel images={product?.attributes?.images} />
+        <div className="flex gap-5 container items-start justify-center py-12 2xl:px-20 md:px-6 px-4">
+          <div className="left">
+            <div className="xl:w-2/6 lg:w-2/5 w-80 md:block hidden">
+              <img
+                className="w-full"
+                alt="image of a girl posing"
+                src="https://i.ibb.co/QMdWfzX/component-image-one.png"
+              />
+            </div>
+            <div className="md:hidden">
+              <img
+                className="w-full"
+                alt="image of a girl posing"
+                src="https://i.ibb.co/QMdWfzX/component-image-one.png"
+              />
+              <div className="flex items-center justify-between mt-3 space-x-4 md:space-x-0">
+                <img
+                  alt="image-tag-one"
+                  className="md:w-48 md:h-48 w-full"
+                  src="https://i.ibb.co/f17NXrW/Rectangle-244.png"
+                />
+                <img
+                  alt="image-tag-one"
+                  className="md:w-48 md:h-48 w-full"
+                  src="https://i.ibb.co/cYDrVGh/Rectangle-245.png"
+                />
+                <img
+                  alt="image-tag-one"
+                  className="md:w-48 md:h-48 w-full"
+                  src="https://i.ibb.co/f17NXrW/Rectangle-244.png"
+                />
               </div>
+            </div>
+          </div>
+          <div className="xl:w-2/5 md:w-1/2 lg:ml-8 md:ml-6 md:mt-0 mt-6">
+            <div className="border-b border-gray-200 pb-6">
+              <p className="text-sm leading-none text-gray-600 dark:text-gray-300 ">
+                Balenciaga Fall Collection
+              </p>
+              <h1 className="lg:text-2xl text-xl font-semibold lg:leading-6 leading-7 text-gray-800 dark:text-white mt-2">
+                Balenciaga Signature Sweatshirt
+              </h1>
+            </div>
 
-              <div className="flex-[1] py-3">
-                <div className="flex flex-col mb-5">
-                  {/* PRODUCT TITLE */}
-                  <div className="text-[34px] font-semibold mb-2 leading-tight">
-                    {product.attributes?.name}
-                  </div>
-
-                  {/* PRODUCT SUBTITLE */}
-                  <div className="text-lg font-semibold mb-5">
-                    {product?.attributes?.description}
-                  </div>
-
-                  {/* PRODUCT PRICE */}
-                  <div className="flex items-center">
-                    <p className="mr-2 text-lg font-semibold">
-                      MRP : &#8377;{product?.attributes?.price}
-                    </p>
-                    {product?.attributes?.price && (
-                      <>
-                        <p className="text-base  font-medium line-through">
-                          &#8377;{product?.attributes?.price}
-                        </p>
-                        <p className="ml-auto text-base font-medium text-green-500">
-                          {getDiscountedPricePercentage(
-                            product?.attributes?.price,
-                            product?.attributes?.price
-                          )}
-                          % off
-                        </p>
-                      </>
-                    )}
-                  </div>
-
-                  <div className="text-md font-medium text-black/[0.5]">
-                    incl. of taxes
-                  </div>
-                  <div className="text-md font-medium text-black/[0.5] mb-20">
-                    {`(Also includes all applicable duties)`}
-                  </div>
+            <div>
+              <p className="xl:pr-48 text-base lg:leading-tight leading-normal text-gray-600 dark:text-gray-300 mt-7">
+                It is a long established fact that a reader will be distracted
+                by thereadable content of a page when looking at its layout. The
+                point of usingLorem Ipsum is that it has a more-or-less normal
+                distribution of letters.
+              </p>
+              <p className="text-base leading-4 mt-7 text-gray-600 dark:text-gray-300">
+                Product Code: 8BN321AF2IF0NYA
+              </p>
+              <p className="text-base leading-4 mt-4 text-gray-600 dark:text-gray-300">
+                Length: 13.2 inches
+              </p>
+              <p className="text-base leading-4 mt-4 text-gray-600 dark:text-gray-300">
+                Height: 10 inches
+              </p>
+              <p className="text-base leading-4 mt-4 text-gray-600 dark:text-gray-300">
+                Depth: 5.1 inches
+              </p>
+              <p className="md:w-96 text-base leading-normal text-gray-600 dark:text-gray-300 mt-4">
+                Composition: 100% calf leather, inside: 100% lamb leather
+              </p>
+            </div>
+            <button className="dark:bg-white dark:text-gray-900 dark:hover:bg-gray-100  focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 text-base flex items-center justify-center leading-none text-white bg-gray-800 w-full py-4 hover:bg-gray-700 focus:outline-none mb-5">
+              comprar
+            </button>
+            <div className="join join-vertical w-full">
+              <div className="collapse collapse-arrow join-item border border-base-300">
+                <input type="radio" name="my-accordion-4" checked={true} />
+                <div className="collapse-title text-xl font-medium">
+                  Click to open this one and close others
                 </div>
-
-                <div className="flex flex-row align-middle justify-center gap-5">
-                  {/* ADD TO CART BUTTON START */}
-                  <Link href="https://buy.stripe.com/test_9AQcPc7Ry5grgfe000">
-                    <button className="w-[300px] py-4 rounded-full bg-black text-white text-lg font-medium transition-transform active:scale-95 mb-3 hover:opacity-75">
-                      Comprar
-                    </button>
-                  </Link>
+                <div className="collapse-content">
+                  <p>hello</p>
                 </div>
-
-                <div>
-                  <div className="text-lg font-bold mb-5">
-                    <h2>Product Details</h2>
-                    <ReactMarkdown>
-                      {product?.attributes?.features}
-                    </ReactMarkdown>
-                  </div>
+              </div>
+              <div className="collapse collapse-arrow join-item border border-base-300">
+                <input type="radio" name="my-accordion-4" />
+                <div className="collapse-title text-xl font-medium">
+                  Click to open this one and close others
+                </div>
+                <div className="collapse-content">
+                  <p>hello</p>
+                </div>
+              </div>
+              <div className="collapse collapse-arrow join-item border border-base-300">
+                <input type="radio" name="my-accordion-4" />
+                <div className="collapse-title text-xl font-medium">
+                  Click to open this one and close others
+                </div>
+                <div className="collapse-content">
+                  <p>hello</p>
                 </div>
               </div>
             </div>

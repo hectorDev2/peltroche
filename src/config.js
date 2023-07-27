@@ -1,1 +1,2 @@
-export const {API_URL,API_URL_LOCAL}=process.env
+export const {NEXT_PUBLIC_API_URL,
+NEXT_LOCAL_API_URL}=process?.env
