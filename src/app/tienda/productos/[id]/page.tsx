@@ -8,12 +8,14 @@ import { formatProduct } from "@/utils/helpers";
 const ProductDetails = async ({ params }: any) => {
   const [product, setProduct] = useState<any>();
 
-  console.log(process.env.NEXT_LOCAL_API_URL);
+  console.log(process.env.NEXT_PUBLIC_API_URL);
 
   const getProduct = async () => {
     let product: any;
     await axios
-      .get(`${process.env.NEXT_LOCAL_API_URL}/products/${params.id}?populate=*`)
+      .get(
+        `${process.env.NEXT_PUBLIC_API_URL}/products/${params.id}?populate=*`
+      )
       .then((data) => {
         product = formatProduct(data.data.data);
       })
