@@ -3,24 +3,25 @@
 import { PageWrapper } from "@/components/PageWrapper";
 import { days } from "@/store";
 import moment from "moment";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import "./style/index.css";
+interface Classes {
+  name: string;
+  horario: string;
+  instructor: string;
+}
 
 interface DaySelect {
   key: string;
   slug: string;
-  classes: any;
+  classes: Classes[];
 }
 
 export default function DetailsSchedule() {
   const dayMoment = moment().format("dddd").toLowerCase();
-  const [daySelect, setDaySelect] = useState<DaySelect | undefined>(
+  const [daySelect, setDaySelect] = useState(
     days.find((item: DaySelect) => item.key == dayMoment)
   );
-
-  useEffect(() => {
-    console.log(daySelect);
-  }, [daySelect]);
 
   return (
     <>

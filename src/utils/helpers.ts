@@ -15,9 +15,15 @@ export const formatAllProducts = (data: any[]) => {
       ...item,
       attributes: {
         ...item.attributes,
-        images: item.attributes.images.data.map((image: any) => {
-          return image.attributes.url;
-        }),
+        images: item.attributes.images.data.map(
+          (image: {
+            attributes: {
+              url: string;
+            };
+          }) => {
+            return image.attributes.url;
+          }
+        ),
       },
     };
   });
@@ -35,9 +41,15 @@ export const formatProduct = (data: {
     ...data,
     attributes: {
       ...data.attributes,
-      images: data.attributes.images.data.map((image: any) => {
-        return image.attributes.url;
-      }),
+      images: data.attributes.images.data.map(
+        (image: {
+          attributes: {
+            url: string;
+          };
+        }) => {
+          return image.attributes.url;
+        }
+      ),
     },
   };
   console.log(dataFormatted);

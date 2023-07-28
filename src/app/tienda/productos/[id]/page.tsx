@@ -4,18 +4,23 @@ import "./index.css";
 import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
 import { formatProduct } from "@/utils/helpers";
+import { ProductFormatted } from "@/types/product-format.interface";
 
-const ProductDetails = async ({ params }: any) => {
-  const [product, setProduct] = useState<any>();
+const ProductDetails = async ({
+  params,
+}: {
+  params: {
+    id: string;
+  };
+}) => {
+  const [product, setProduct] = useState<ProductFormatted>();
 
-  console.log(process.env.NEXT_PUBLIC_API_URL);
+  console.log(process.env.NEXT_LOCAL_API_URL);
 
   const getProduct = async () => {
-    let product: any;
+    let product;
     await axios
-      .get(
-        `${process.env.NEXT_PUBLIC_API_URL}/products/${params.id}?populate=*`
-      )
+      .get(`${process.env.NEXT_LOCAL_API_URL}/products/${params.id}?populate=*`)
       .then((data) => {
         product = formatProduct(data.data.data);
       })

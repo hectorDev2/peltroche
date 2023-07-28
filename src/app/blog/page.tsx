@@ -5,17 +5,28 @@ import { PageWrapper } from "../../components/PageWrapper";
 
 import dynamic from "next/dynamic";
 import { useStore } from "zustand";
+import { StaticImageData } from "next/image";
 
+interface Blog {
+  id: number;
+  title: string;
+  date: string;
+  content: string;
+  description: string;
+  image: StaticImageData;
+  category?: string;
+  author?: string;
+}
 const BlogBox = dynamic(() => import("../../components/BlogBox/BlogBox"), {
   ssr: false,
 });
 
 export default function BlogPage() {
-  const allBlogs = useStore(useStoreBlog, (state: any) => state.blogs);
+  const allBlogs: Blog[] = useStore(useStoreBlog, (state: any) => state?.blogs);
 
-  const filteredBlogs = useStore(
+  const filteredBlogs: Blog[] = useStore(
     useStoreBlog,
-    (state: any) => state.filteredBlogs
+    (state: any) => state?.filteredBlogs
   );
   const blogs = filteredBlogs.length == 0 ? allBlogs : filteredBlogs;
 
@@ -33,7 +44,7 @@ export default function BlogPage() {
         <div className="py-[10rem] container gap-16 page-padding grid grid-cols-[64fr_35fr] md1000:grid-cols-1 md1000:gap-32">
           {/* blog */}
           <div className="flex flex-col gap-28">
-            {blogs.map((blog: any) => (
+            {blogs.map((blog: Blog) => (
               <BlogBox key={blog.title} blog={blog} />
             ))}
           </div>

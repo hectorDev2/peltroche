@@ -2,18 +2,20 @@ import Image from "next/image";
 import Link from "next/link";
 import axios from "axios";
 import { formatAllProducts } from "@/utils/helpers";
+import { ProductFormatted } from "@/types/product-format.interface";
 
 export default async function Page() {
-  console.log(process.env.NEXT_PUBLIC_API_URL);
+  console.log(process.env.NEXT_LOCAL_API_URL);
 
   const res = axios
-    .get(`${process.env.NEXT_PUBLIC_API_URL}/products?populate=*`)
+    .get(`${process.env.NEXT_LOCAL_API_URL}/products?populate=*`)
     .then(({ data }) => data.data)
     .catch(function (error) {
       throw error;
     });
 
   const products = formatAllProducts(await res);
+  console.log(products);
 
   return (
     <>
@@ -23,7 +25,7 @@ export default async function Page() {
         </h1>
       </div>
       <section className="login-section  place-content-center flex gap-5">
-        {products.map(({ attributes, id }: any) => (
+        {products.map(({ attributes, id }: ProductFormatted) => (
           <Link
             href={`/tienda/productos/${id}`}
             className="transform overflow-hidden bg-white duration-200 hover:scale-105 cursor-pointer"

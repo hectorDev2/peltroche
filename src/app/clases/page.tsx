@@ -4,6 +4,11 @@ import { useStoreBlog } from "@/store/storeBlog";
 import { SideBarBlog } from "../../components/Blog/SideBarBlog";
 import { PageWrapper } from "../../components/PageWrapper";
 import VideoBox from "./VideoBox";
+interface Video {
+  id: number;
+  title: string;
+  urlCode: string;
+}
 
 export default function BlogPage() {
   return (
@@ -20,7 +25,7 @@ export default function BlogPage() {
         <div className="py-[10rem] container gap-16 page-padding grid grid-cols-[64fr_35fr] md1000:grid-cols-1 md1000:gap-32">
           {/* blog */}
           <div className="flex flex-col gap-28">
-            {fakeVideosFit.map((video: any) => (
+            {fakeVideosFit.map((video: Video) => (
               <VideoBox key={video.title} video={video} />
             ))}
           </div>
