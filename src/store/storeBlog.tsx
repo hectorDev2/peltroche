@@ -1,11 +1,14 @@
 import { create } from "zustand";
 import { formatFakeBlog } from ".";
 import { persist } from "zustand/middleware";
+import axios from "axios";
+import { formatDataApi, formatProduct } from "@/utils/helpers";
 
 export interface BlogsStore {
   blogs: BlogInterface[];
   filteredBlogs: BlogInterface[];
   filterBlogs: BlogInterface[];
+  fetchPosts: () => void;
 }
 
 export interface BlogInterface {
@@ -28,44 +31,44 @@ export interface Image {
   blurHeight: number;
 }
 
-export const useStoreBlog = create<any>(
-  persist(
-    (set, get) => ({
-      blogs: formatFakeBlog,
-      filteredBlogs: [],
-      getBlogById: (slug: string) => {
-        const { blogs } = get();
-        return blogs.find((blog: BlogInterface) => blog.slug === slug);
-      },
-      filterBlogs(category: string) {
-        set(
-          (state: {
-            blogs: BlogInterface[];
-            filteredBlogs: BlogInterface[];
-          }) => {
-            console.log(state);
+export const useStoreBlog = create<any>((set: any, get: any) => ({
+  blogs: [],
+  filteredBlogs: [],
+  filterBlogs(category: string) {
+    set((state: { blogs: BlogInterface[]; filteredBlogs: BlogInterface[] }) => {
+      console.log(state);
 
-            if (category) {
-              console.log(category);
+      if (category) {
+        console.log(category);
 
-              return {
-                filteredBlogs: state.blogs.filter(
-                  (blog: BlogInterface) => blog.category === category
-                ),
-              };
-            }
+        return {
+          filteredBlogs: state.blogs.filter(
+            (blog: BlogInterface) => blog.category === category
+          ),
+        };
+      }
 
-            return { filteredBlogs: state.blogs };
-          }
-        );
-      },
-      getCategories: () => {
-        const { blogs } = get();
-        return [...new Set(blogs.map((blog: BlogInterface) => blog.category))];
-      },
-    }),
-    {
-      name: "blog-storage",
-    }
-  )
-);
+      return { filteredBlogs: state.blogs };
+    });
+  },
+  getCategories: () => {
+    const { blogs } = get();
+    return [...new Set(blogs.map((blog: BlogInterface) => blog.category))];
+  },
+  fetchPosts: async () => {
+    const posts: any = await axios.get(
+      `${process.env.NEXT_LOCAL_API_URL}/posts?populate=*`
+    );
+    console.log(posts);
+
+    await set({ blogs: formatDataApi(posts.data.data) });
+  },
+  getBlogBySlug: async (slug: string) => {
+    console.log(slug);
+    const post: any = await axios.get(
+      `${process.env.NEXT_LOCAL_API_URL}/posts?filters[slug][$eq]=${slug}&populate=*`
+    );
+
+    return formatDataApi(post.data.data);
+  },
+}));

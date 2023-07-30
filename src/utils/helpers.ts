@@ -9,39 +9,32 @@ export const getDiscountedPricePercentage = (
   return discountPercentage.toFixed(2);
 };
 
-export const formatAllProducts = (data: any[]) => {
+export const formatDataApi = (data: any[]) => {
   const dataFormatted = data.map((item) => {
     return {
-      ...item,
-      attributes: {
-        ...item.attributes,
-        images: item.attributes.images.data.map(
-          (image: {
-            attributes: {
-              url: string;
-            };
-          }) => {
-            return image.attributes.url;
-          }
-        ),
-      },
+      id: item.id,
+      ...item.attributes,
+      cover: item.attributes.cover.data[0].attributes.url,
     };
   });
 
   return dataFormatted;
 };
+export const formatInfoApi = (data: any[]) => {
+  return data.map((item: any) => {
+    return {
+      id: item.id,
+      ...item.attributes,
+    };
+  });
+};
 
-export const formatProduct = (data: {
-  id: any;
-  attributes: {
-    images: any;
-  };
-}) => {
-  const dataFormatted = {
-    ...data,
-    attributes: {
-      ...data.attributes,
-      images: data.attributes.images.data.map(
+export const formatDataWithImagesApi = (data: any) => {
+  const dataFormatted = data.map((item: any) => {
+    return {
+      id: item.id,
+      ...item.attributes,
+      images: item.attributes.images.data.map(
         (image: {
           attributes: {
             url: string;
@@ -50,9 +43,8 @@ export const formatProduct = (data: {
           return image.attributes.url;
         }
       ),
-    },
-  };
-  console.log(dataFormatted);
+    };
+  });
 
   return dataFormatted;
 };

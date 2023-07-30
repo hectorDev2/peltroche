@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import "./index.css";
 import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
-import { formatProduct } from "@/utils/helpers";
+import { formatDataWithImagesApi } from "@/utils/helpers";
 import { ProductFormatted } from "@/types/product-format.interface";
 
 const ProductDetails = async ({
@@ -13,7 +13,7 @@ const ProductDetails = async ({
     id: string;
   };
 }) => {
-  const [product, setProduct] = useState<ProductFormatted>();
+  const [product, setProduct] = useState<any>();
 
   console.log(process.env.NEXT_LOCAL_API_URL);
 
@@ -22,7 +22,8 @@ const ProductDetails = async ({
     await axios
       .get(`${process.env.NEXT_LOCAL_API_URL}/products/${params.id}?populate=*`)
       .then((data) => {
-        product = formatProduct(data.data.data);
+        console.log(data.data.data);
+        product = { ...data.data.data, id: params.id };
       })
       .catch(function (error) {
         console.log(error);
@@ -38,6 +39,7 @@ const ProductDetails = async ({
       });
       return;
     }
+    console.log(product);
   }, [product]);
 
   return (

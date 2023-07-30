@@ -1,9 +1,12 @@
-import { DotSpinner } from "@uiball/loaders";
-
+import "./style.css";
 import React from "react";
 
 const Loading = () => {
-  return <DotSpinner size={40} speed={0.9} color="black" />;
+  return (
+    <h2 className=" absolute top-0 bottom-0 text-[#00ADB5] text-center text-9xl">
+      loading
+    </h2>
+  );
 };
 
 export default Loading;

@@ -26,7 +26,7 @@ export default function BlogPage() {
           {/* blog */}
           <div className="flex flex-col gap-28">
             {fakeVideosFit.map((video: Video) => (
-              <VideoBox key={video.title} video={video} />
+              <VideoBox key={video.id} video={video} />
             ))}
           </div>
           <SideBarBlog />
