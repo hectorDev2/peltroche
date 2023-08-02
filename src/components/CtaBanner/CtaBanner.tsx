@@ -9,14 +9,6 @@ function CtaBanner() {
           <h3 className="text-[28px] font-bold mb-20">
             <span className="text-[#FF0336]">Llamanos:</span> 94339-9-939
           </h3>
-          {/* <MainButton
-            color={`text-white`}
-            bg={`bg-[#ff0336]`}
-            text="purchase now"
-            arrowColor={`text-white`}
-            cN="pricing-cta cta-banner-btn"
-            goTo="/contact"
-          /> */}
         </div>
       </section>
     </>
