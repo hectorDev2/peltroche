@@ -8,6 +8,7 @@ import { useStore } from "zustand";
 import { StaticImageData } from "next/image";
 import { useEffect } from "react";
 import { BlogI } from "@/types/Blog.interface";
+import { HeroCommon } from "@/components/HeroCommon";
 
 const BlogBox = dynamic(() => import("../../components/BlogBox/BlogBox"), {
   ssr: false,
@@ -33,13 +34,7 @@ export default function BlogPage() {
 
   return (
     <>
-      <section>
-        <div className="login-banner relative justify-center flex">
-          <h1 className="text-white absolute bottom-[25px] text-[3rem] font-bold">
-            Blog
-          </h1>
-        </div>
-      </section>
+      <HeroCommon title="Blog Peltroche" />
       <PageWrapper>
         {/* blog */}
         <div className="py-[10rem] container gap-16 page-padding grid grid-cols-[64fr_35fr] md1000:grid-cols-1 md1000:gap-32">

@@ -1,5 +1,6 @@
 "use client";
 
+import { HeroCommon } from "@/components/HeroCommon";
 import { PageWrapper } from "@/components/PageWrapper";
 import { days } from "@/store";
 import moment from "moment";
@@ -19,17 +20,14 @@ interface DaySelect {
 
 export default function DetailsSchedule() {
   const dayMoment = moment().format("dddd").toLowerCase();
-  const [daySelect, setDaySelect] = useState(
-    days.find((item: DaySelect) => item.key == dayMoment)
+
+  const [daySelect, setDaySelect] = useState<DaySelect | any>(
+    days.find((item: any) => item.key == dayMoment)
   );
 
   return (
     <>
-      <div className="login-banner relative justify-center flex">
-        <h1 className="text-white absolute bottom-[25px] text-[3rem] font-bold">
-          Calendario para los {daySelect?.slug}
-        </h1>
-      </div>
+      <HeroCommon title={`Horario semanal`} />
       <div className="flex flex-wrap gap-4 my-8 justify-center">
         {days.map((day, index) => (
           <p

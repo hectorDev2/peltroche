@@ -3,6 +3,7 @@ import Link from "next/link";
 import axios from "axios";
 import { formatDataApi, formatDataWithImagesApi } from "@/utils/helpers";
 import { ProductFormatted } from "@/types/product-format.interface";
+import { HeroCommon } from "@/components/HeroCommon";
 
 export default async function Page() {
   console.log(process.env.NEXT_LOCAL_API_URL);
@@ -19,11 +20,7 @@ export default async function Page() {
 
   return (
     <>
-      <div className="login-banner relative justify-center flex mb-5">
-        <h1 className="text-white absolute bottom-[25px] text-[3rem] font-bold">
-          Tienda
-        </h1>
-      </div>
+      <HeroCommon title="Tienda" />
       <section className="login-section  place-content-center flex gap-5">
         {products.map(({ images, id, price, name }: ProductFormatted) => (
           <Link

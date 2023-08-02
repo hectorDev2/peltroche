@@ -5,6 +5,7 @@ import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
 import { formatDataWithImagesApi } from "@/utils/helpers";
 import { ProductFormatted } from "@/types/product-format.interface";
+import { HeroCommon } from "@/components/HeroCommon";
 
 const ProductDetails = async ({
   params,
@@ -15,15 +16,14 @@ const ProductDetails = async ({
 }) => {
   const [product, setProduct] = useState<any>();
 
-  console.log(process.env.NEXT_LOCAL_API_URL);
-
   const getProduct = async () => {
     let product;
     await axios
       .get(`${process.env.NEXT_LOCAL_API_URL}/products/${params.id}?populate=*`)
       .then((data) => {
-        console.log(data.data.data);
-        product = { ...data.data.data, id: params.id };
+        product = { ...data.data.data.attributes, id: params.id };
+
+        return product;
       })
       .catch(function (error) {
         console.log(error);
@@ -44,11 +44,7 @@ const ProductDetails = async ({
 
   return (
     <>
-      <div className="login-banner relative justify-center flex">
-        <h1 className="text-white absolute bottom-[25px] text-[3rem] font-bold">
-          {product?.attributes?.name}
-        </h1>
-      </div>
+      <HeroCommon title={product?.name} />
       {product && (
         <div className="flex gap-5 container items-start justify-center py-12 2xl:px-20 md:px-6 px-4">
           <div className="left">

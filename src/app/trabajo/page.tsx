@@ -10,6 +10,7 @@ import Image from "next/image";
 import successImg from "../../../public/images/success.png";
 import { Modal } from "@/shared/Modal";
 import { NetWorks } from "@/shared/NetWorks";
+import { HeroCommon } from "@/components/HeroCommon";
 
 export default function WorkWithUs() {
   const [showModal, setShowModal] = useState(false);
@@ -59,11 +60,7 @@ export default function WorkWithUs() {
 
   return (
     <>
-      <div className="login-banner relative justify-center flex">
-        <h1 className="text-white absolute bottom-[25px] text-[3rem] font-bold">
-          trabaja con nosotros
-        </h1>
-      </div>
+      <HeroCommon title="Trabaja con nosotros" />
       <PageWrapper>
         {/* contact */}
         <div className="relative bg-white py-[12rem] page-padding grid grid-cols-2  container gap-10 items-center md1000:grid-cols-1 ">
