@@ -5,7 +5,6 @@ import { PageWrapper } from "../../components/PageWrapper";
 
 import dynamic from "next/dynamic";
 import { useStore } from "zustand";
-import { StaticImageData } from "next/image";
 import { useEffect } from "react";
 import { BlogI } from "@/types/Blog.interface";
 import { HeroCommon } from "@/components/HeroCommon";

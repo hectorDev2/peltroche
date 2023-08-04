@@ -98,6 +98,7 @@ function Navbar() {
               <Link
                 className={`${href == pathname && "text-[white]"}`}
                 href={href}
+                key={title}
               >
                 <li
                   key={title}

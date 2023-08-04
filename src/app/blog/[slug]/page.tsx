@@ -38,7 +38,7 @@ export default function DetailsBlog() {
             }`}
             width={500}
             height={300}
-            alt="blog_imgss"
+            alt="blog_imgs"
           />
           <p className="font-medium text-[14px] text-[#646464] pt-8 pb-4">
             <i className="fa-solid fa-layer-group text-[#ff0336] text-[16px]"></i>
@@ -48,7 +48,7 @@ export default function DetailsBlog() {
             <h2 className="text-[3rem] font-bold mb-6">{slug}</h2>
           </Link>
           <p className="font-medium text-[16px] text-[#646464] mb-24">
-            <ReactMarkdown>{post.content}</ReactMarkdown>
+            {post.content}
           </p>
         </div>
       )}

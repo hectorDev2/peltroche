@@ -1,10 +1,11 @@
 import React from "react";
 import Image from "next/image";
-import { BlogBoxProps } from "../BlogBox/BlogBox";
 import Link from "next/link";
 import { toSlug } from "@/utils";
 
-const RecentBlog = ({ blog }: BlogBoxProps) => {
+const RecentBlog = ({ blog }: any) => {
+  console.log(blog);
+
   const { image, title, date } = blog;
   return (
     <div className="flex gap-8">

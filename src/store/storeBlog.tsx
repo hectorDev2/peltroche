@@ -1,8 +1,6 @@
 import { create } from "zustand";
-import { formatFakeBlog } from ".";
-import { persist } from "zustand/middleware";
 import axios from "axios";
-import { formatDataApi, formatProduct } from "@/utils/helpers";
+import { formatDataApi } from "@/utils/helpers";
 
 export interface BlogsStore {
   blogs: BlogInterface[];
