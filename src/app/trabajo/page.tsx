@@ -1,14 +1,10 @@
 "use client";
-import Link from "next/link";
 import { useState } from "react";
-import { AiOutlineInstagram, AiOutlineFacebook } from "react-icons/ai";
-import { BsTiktok } from "react-icons/bs";
 import { PageWrapper } from "../../components/PageWrapper";
 import emailjs from "@emailjs/browser";
 import useField from "@/hooks/useField";
 import Image from "next/image";
 import successImg from "../../../public/images/success.png";
-import { Modal } from "@/shared/Modal";
 import { NetWorks } from "@/shared/NetWorks";
 import { HeroCommon } from "@/components/HeroCommon";
 
