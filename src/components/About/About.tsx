@@ -11,34 +11,20 @@ import GirlWind from "../../../public/images/who-we-are/wind.png";
 // import MainButton from "../MainButton";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import TitlePeltroche from "@/shared/TitlePeltroche";
 
 function About() {
   return (
     <>
       <section className="flex flex-col justify-between gap-2 about-section pb-[20rem]">
         <div className="container page-padding">
-          {/* about cards */}
-          <div className="about-cards flex gap-10 -mt-[8.5rem] md1000:flex-col">
-            {/* <AboutCarts /> */}
-          </div>
-
           {/* text-img div */}
           <div
             id="about"
             className=" grid grid-cols-[50fr,50fr] gap-[3rem] md1000:grid-cols-1"
           >
-            {/* about text */}
+            <TitlePeltroche title={"Sobre nosotros"} />
             <div className="mt-[10.5rem] relative md1000:items-center md1000:flex md1000:flex-col md1000:text-center md1000:w-[full]">
-              <div className="flex flex-row-reverse">
-                <p className="font-semibold text-white text-[15px] relative uppercase z-10 ">
-                  por semana
-                </p>
-                <Image
-                  src={TitleRed}
-                  alt="text_bg"
-                  className="w-[24rem] absolute -top-[10px]"
-                />
-              </div>
               <h2 className="text-[35px] font-bold leading-tight mb-6 w-[60rem] min800:w-[100%]">
                 Llevar tu salud y tu cuerpo al siguiente nivel
               </h2>

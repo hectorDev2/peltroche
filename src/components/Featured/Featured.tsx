@@ -1,25 +1,10 @@
-import Image from "next/image";
-import TitleRed from "../../../public/images/who-we-are/title-bg.svg";
-
 function Featured() {
   return (
     <>
       <section id="featured" className="page-padding py-[12.5rem] bg-white">
         <div className="container">
           {/* title */}
-          <div className="flex flex-col text-center items-center relative ">
-            <p className="font-semibold text-white text-[15px] relative uppercase z-10 ">
-              por semana
-            </p>
-            <Image
-              src={TitleRed}
-              alt="text_bg"
-              className="w-[24rem] absolute -top-[10px]"
-            />
-            <h2 className="text-[3.6rem] text-black font-bold my-10">
-              Nuestras clases
-            </h2>
-          </div>
+
           {/* grid */}
           <div className="grid grid-cols-4 grid-rows-2 gap-7 h-full mt-7 md1000:flex md1000:flex-col">
             <div className="item-0-div relative">

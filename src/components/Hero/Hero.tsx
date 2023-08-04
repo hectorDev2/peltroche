@@ -1,3 +1,4 @@
+import TitlePeltroche from "@/shared/TitlePeltroche";
 import Image from "next/image";
 import TitleBg from "../../../public/images/pricing/titlebg.svg";
 
@@ -14,22 +15,11 @@ function Hero() {
             className="flex flex-col text-white
            absolute hero-text min800:items-center min800:-right-[22rem] min620:-right-[20rem] min800:w-[80%] min540:-right-[17rem] min450:-right-[14rem] min375:-right-[11rem]"
           >
-            <p className="text-black text-[16px] uppercase font-medium relative z-10 pl-16 min800:pl-0 mb-8">
-              ENCUENTRA TU ENERGÍA
-            </p>
-            <Image
-              src={TitleBg}
-              alt="text_bg"
-              className=" w-[52%] absolute -top-3 title-white min800:w-[24rem] "
-            />
+            <TitlePeltroche title="entrena con nosotros" />
             <h1 className="font-bold text-[48px] uppercase mb-[4rem] min450:text-[40px]">
               Construye tu cuerpo <br />
               <span className="font-thin">fit & perfecto</span>
             </h1>
-
-            <button className={`fa-solid fa-arrow-right text-[#FF0336] `}>
-              nuestras clases
-            </button>
           </div>
         </div>
         {/* socials */}
