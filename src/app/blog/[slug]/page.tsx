@@ -1,16 +1,27 @@
 "use client";
 
 import Image from "next/image";
-import { useParams } from "next/navigation";
 import Link from "next/link";
 import { useStoreBlog } from "@/store/storeBlog";
-import { PageWrapper } from "@/app/components/PageWrapper";
+import { PageWrapper } from "@/components/PageWrapper";
+import { useEffect, useState } from "react";
+import { ReactMarkdown } from "react-markdown/lib/react-markdown";
 
-export default function DetailsSchedule() {
-  const { slug } = useParams();
-  const { getBlogById } = useStoreBlog();
-  const post = getBlogById(slug);
-  console.log(post, "post");
+export default function DetailsBlog({
+  params,
+}: {
+  params: {
+    slug: string;
+  };
+}) {
+  const { slug } = params;
+
+  const [post, setPost] = useState<any>();
+  const { getBlogBySlug } = useStoreBlog();
+
+  useEffect(() => {
+    getBlogBySlug(slug).then((res: any) => setPost(res[0]));
+  }, []);
 
   return (
     <PageWrapper>
@@ -25,23 +36,23 @@ export default function DetailsSchedule() {
         <div className="container grid items-center justify-center ">
           <Image
             className="m-auto mt-[50px]"
-            src={
-              post?.image ??
-              "https://cdn5.vectorstock.com/i/1000x1000/73/49/404-error-page-not-found-miss-paper-with-white-vector-20577349.jpg"
-            }
+            src={`${
+              post?.cover ??
+              "https://blog.eduonix.com/wp-content/uploads/2015/02/404-Error.jpg"
+            }`}
             width={500}
             height={300}
-            alt="blog_img"
+            alt="blog_imgss"
           />
           <p className="font-medium text-[14px] text-[#646464] pt-8 pb-4">
             <i className="fa-solid fa-layer-group text-[#ff0336] text-[16px]"></i>
-            &nbsp; By <b>Admin</b> |{post.date} | Yoga
+            &nbsp; By <b>{post.author}</b> |{post.category} | {post.updatedAt}
           </p>
           <Link href={`/blog/${slug}`}>
             <h2 className="text-[3rem] font-bold mb-6">{slug}</h2>
           </Link>
           <p className="font-medium text-[16px] text-[#646464] mb-24">
-            {post.content}
+            <ReactMarkdown>{post.content}</ReactMarkdown>
           </p>
         </div>
       )}

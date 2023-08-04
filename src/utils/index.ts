@@ -1,6 +1,6 @@
 const toSlug = (title: string) => {
   const slug = title
-    .toLowerCase()
+    ?.toLowerCase()
     .replace(/ /g, "-")
     .replace(/[^\w-]+/g, "");
 

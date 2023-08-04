@@ -9,16 +9,13 @@ import Img3 from "../../../public/images/AboutPage/3.jpg";
 import Img4 from "../../../public/images/AboutPage/4.jpg";
 import Target from "../../../public/images/AboutPage/target.png";
 import Mountain from "../../../public/images/AboutPage/mountain.png";
-import { PageWrapper } from "../components/PageWrapper";
+import { PageWrapper } from "../../components/PageWrapper";
+import { HeroCommon } from "@/components/HeroCommon";
 
 export default function About() {
   return (
     <>
-      <div className="login-banner relative justify-center flex">
-        <h1 className="text-white absolute bottom-[25px] text-[3rem] font-bold">
-          Sobre Peltroche
-        </h1>
-      </div>
+      <HeroCommon title="Sobre nosotros" />
       <PageWrapper>
         <section className="login-section">
           <div className="container page-padding ">

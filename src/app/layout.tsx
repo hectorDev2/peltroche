@@ -1,9 +1,9 @@
 import "./globals.css";
 import { Inter } from "next/font/google";
-import Navbar from "./components/Nav/Navbar";
-import Footer from "./components/Footer/Footer";
+import Footer from "../components/Footer/Footer";
 import { Analytics } from "@vercel/analytics/react";
-import IconWhatsapp from "./components/IconWhatsapp";
+import IconWhatsapp from "../components/IconWhatsapp";
+import Navbar from "@/shared/Navbar";
 
 const inter = Inter({ subsets: ["latin"] });
 

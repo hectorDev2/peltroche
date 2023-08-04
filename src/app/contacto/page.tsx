@@ -1,14 +1,11 @@
 import { NetWorks } from "@/shared/NetWorks";
-import { PageWrapper } from "../components/PageWrapper";
+import { PageWrapper } from "../../components/PageWrapper";
+import { HeroCommon } from "@/components/HeroCommon";
 
 export default function PricingPage() {
   return (
     <>
-      <div className="login-banner relative justify-center flex">
-        <h1 className="text-white absolute bottom-[25px] text-[3rem] font-bold">
-          Contactanos
-        </h1>
-      </div>
+      <HeroCommon title="Contactanos" />
       <PageWrapper>
         {/* contact */}
         <div className="bg-white py-[12rem] page-padding grid grid-cols-2 container gap-10 items-center md1000:grid-cols-1 ">

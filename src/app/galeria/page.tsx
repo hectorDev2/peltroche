@@ -1,18 +1,15 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { PageWrapper } from "../components/PageWrapper";
+import { PageWrapper } from "../../components/PageWrapper";
 import { galleryImg } from "./GalleryFiles";
 import { motion } from "framer-motion";
 import { images, variants } from "@/animations";
+import { HeroCommon } from "@/components/HeroCommon";
 export default function Gallery() {
   return (
     <>
-      <div className="login-banner relative justify-center flex">
-        <h1 className="text-white absolute bottom-[25px] text-[3rem] font-bold">
-          Gallery
-        </h1>
-      </div>
+      <HeroCommon title="nuestras fotos" />
       <PageWrapper>
         <section className="">
           <div className="container page-padding py-[10rem]">

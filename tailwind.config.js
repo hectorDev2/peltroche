@@ -23,5 +23,8 @@ module.exports = {
       min375: { max: "375px" },
     },
   },
-  plugins: [],
+  plugins: [
+    require('daisyui'),
+
+  ],
 }

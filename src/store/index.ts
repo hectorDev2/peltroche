@@ -5,6 +5,134 @@ import Img3 from "../../public/images/blogpage/3.jpg";
 import Img4 from "../../public/images/blogpage/4.jpg";
 import Img5 from "../../public/images/blogpage/5.jpg";
 
+const days = [
+  {
+    slug: "lunes",
+    key: "monday",
+    classes: [
+      {
+        name: "Brazos",
+        teacher: "Charly Perez",
+        horario: "2 p.m - 4 p.m",
+      },
+      {
+        name: "Baile Salsa",
+        teacher: "Charly Perez",
+        horario: "2 p.m - 4 p.m",
+      },
+      {
+        name: "Bachata",
+        teacher: "Charly Perez",
+        horario: "2 p.m - 4 p.m",
+      },
+    ],
+  },
+  {
+    slug: "martes",
+    key: "tuesday",
+    classes: [
+      {
+        name: "FullBody",
+        teacher: "Charly Perez",
+        horario: "2 p.m - 4 p.m",
+      },
+      {
+        name: "Box",
+        teacher: "Charly Perez",
+        horario: "2 p.m - 4 p.m",
+      },
+      {
+        name: "Dance",
+        teacher: "Charly Perez",
+        horario: "2 p.m - 4 p.m",
+      },
+    ],
+  },
+  {
+    slug: "miercoles",
+    key: "wednesday",
+    classes: [
+      {
+        name: "Poll Dance",
+        teacher: "Charly Perez",
+        horario: "2 p.m - 4 p.m",
+      },
+      {
+        name: "Box",
+        teacher: "Charly Perez",
+        horario: "2 p.m - 4 p.m",
+      },
+      {
+        name: "Dance",
+        teacher: "Charly Perez",
+        horario: "2 p.m - 4 p.m",
+      },
+    ],
+  },
+  {
+    slug: "jueves",
+    key: "thursday",
+    classes: [
+      {
+        name: "FullBody",
+        teacher: "Charly Perez",
+        horario: "2 p.m - 4 p.m",
+      },
+      {
+        name: "Box",
+        teacher: "Charly Perez",
+        horario: "2 p.m - 4 p.m",
+      },
+      {
+        name: "Dance",
+        teacher: "Charly Perez",
+        horario: "2 p.m - 4 p.m",
+      },
+    ],
+  },
+  {
+    slug: "viernes",
+    key: "friday",
+    classes: [
+      {
+        name: "FullBody",
+        teacher: "Charly Perez",
+        horario: "2 p.m - 4 p.m",
+      },
+      {
+        name: "Box",
+        teacher: "Charly Perez",
+        horario: "2 p.m - 4 p.m",
+      },
+      {
+        name: "Dance",
+        teacher: "Charly Perez",
+        horario: "2 p.m - 4 p.m",
+      },
+    ],
+  },
+  {
+    slug: "sabado",
+    key: "saturday",
+    classes: [
+      {
+        name: "FullBody",
+        teacher: "Charly Perez",
+        horario: "2 p.m - 4 p.m",
+      },
+      {
+        name: "Box",
+        teacher: "Charly Perez",
+        horario: "2 p.m - 4 p.m",
+      },
+      {
+        name: "Dance",
+        teacher: "Charly Perez",
+        horario: "2 p.m - 4 p.m",
+      },
+    ],
+  },
+];
 const fakeBlog = [
   {
     image: Img1,
@@ -137,4 +265,4 @@ const fakeVideosFit = [
   },
 ];
 
-export { formatFakeBlog, fakeVideosFit };
+export { formatFakeBlog, fakeVideosFit, days };
