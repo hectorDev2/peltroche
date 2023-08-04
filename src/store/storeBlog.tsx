@@ -1,5 +1,4 @@
 import { create } from "zustand";
-import axios from "axios";
 import { formatDataApi } from "@/utils/helpers";
 
 export interface BlogsStore {
@@ -34,8 +33,6 @@ export const useStoreBlog = create<any>((set: any, get: any) => ({
   filteredBlogs: [],
   filterBlogs(category: string) {
     set((state: { blogs: BlogInterface[]; filteredBlogs: BlogInterface[] }) => {
-      console.log(state);
-
       if (category) {
         console.log(category);
 
@@ -54,19 +51,30 @@ export const useStoreBlog = create<any>((set: any, get: any) => ({
     return [...new Set(blogs.map((blog: BlogInterface) => blog.category))];
   },
   fetchPosts: async () => {
-    const posts: any = await axios.get(
-      `${process.env.NEXT_LOCAL_API_URL}/posts?populate=*`
+    const posts = await fetch(
+      `${process.env.NEXT_LOCAL_API_URL}/posts?populate=*`,
+      {
+        cache: "no-cache",
+        next: {
+          tags: ["posts"],
+        },
+      }
     );
-    console.log(posts);
+    const postsJson = await posts.json();
 
-    await set({ blogs: formatDataApi(posts.data.data) });
+    await set({ blogs: formatDataApi(postsJson.data) });
   },
   getBlogBySlug: async (slug: string) => {
     console.log(slug);
-    const post: any = await axios.get(
-      `${process.env.NEXT_LOCAL_API_URL}/posts?filters[slug][$eq]=${slug}&populate=*`
+    const post = await fetch(
+      `${process.env.NEXT_LOCAL_API_URL}/posts?filters[slug][$eq]=${slug}&populate=*`,
+      {
+        cache: "no-cache",
+      }
     );
+    const postJson = await post.json();
+    console.log(postJson.data);
 
-    return formatDataApi(post.data.data);
+    return formatDataApi(postJson.data);
   },
 }));
