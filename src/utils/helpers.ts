@@ -30,6 +30,8 @@ export const formatInfoApi = (data: any[]) => {
 };
 
 export const formatDataWithImagesApi = (data: any) => {
+  console.log(data);
+
   const dataFormatted = data.map((item: any) => {
     return {
       id: item.id,

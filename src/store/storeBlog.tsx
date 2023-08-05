@@ -52,19 +52,20 @@ export const useStoreBlog = create<any>((set: any, get: any) => ({
   },
   fetchPosts: async () => {
     const posts = await fetch(
-      `${process.env.NEXT_PUBLIC_API_URL}/posts?populate=*`,
+      `${process.env.NEXT_LOCAL_API_URL}/posts?populate=*`,
       {
         cache: "no-cache",
       }
     );
     const postsJson = await posts.json();
+    console.log(postsJson.data);
 
     await set({ blogs: formatDataApi(postsJson.data) });
   },
   getBlogBySlug: async (slug: string) => {
     console.log(slug);
     const post = await fetch(
-      `${process.env.NEXT_PUBLIC_API_URL}/posts?filters[slug][$eq]=${slug}&populate=*`,
+      `${process.env.NEXT_LOCAL_API_URL}/posts?filters[slug][$eq]=${slug}&populate=*`,
       {
         cache: "no-cache",
       }
