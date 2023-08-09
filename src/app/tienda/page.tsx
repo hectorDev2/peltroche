@@ -5,8 +5,6 @@ import { ProductFormatted } from "@/types/product-format.interface";
 import { HeroCommon } from "@/components/HeroCommon";
 
 export default async function Page() {
-  console.log(process.env.NEXT_LOCAL_API_URL);
-
   const res = await fetch(
     `${process.env.NEXT_LOCAL_API_URL}/products?populate=*`,
     {

@@ -34,8 +34,6 @@ export const useStoreBlog = create<any>((set: any, get: any) => ({
   filterBlogs(category: string) {
     set((state: { blogs: BlogInterface[]; filteredBlogs: BlogInterface[] }) => {
       if (category) {
-        console.log(category);
-
         return {
           filteredBlogs: state.blogs.filter(
             (blog: BlogInterface) => blog.category === category
@@ -58,12 +56,10 @@ export const useStoreBlog = create<any>((set: any, get: any) => ({
       }
     );
     const postsJson = await posts.json();
-    console.log(postsJson.data);
 
     await set({ blogs: formatDataApi(postsJson.data) });
   },
   getBlogBySlug: async (slug: string) => {
-    console.log(slug);
     const post = await fetch(
       `${process.env.NEXT_LOCAL_API_URL}/posts?filters[slug][$eq]=${slug}&populate=*`,
       {
@@ -71,8 +67,6 @@ export const useStoreBlog = create<any>((set: any, get: any) => ({
       }
     );
     const postJson = await post.json();
-    console.log(postJson.data);
-
     return formatDataApi(postJson.data);
   },
 }));
