@@ -14,7 +14,7 @@ function BlogBox({ blog }: { blog: BlogI }) {
   } = blog;
   return (
     <>
-      <div>
+      <div className="flex flex-col items-center justify-center border-x-slate-800">
         <Image src={`${cover}`} alt="blog_img" width={500} height={300} />
         <p className="font-medium text-[14px] text-[#646464] pt-8 pb-4">
           <i className="fa-solid fa-layer-group text-[#ff0336] text-[16px]"></i>

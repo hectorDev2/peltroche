@@ -41,7 +41,7 @@ export default function DetailsSchedule() {
         ))}
       </div>
       <PageWrapper>
-        <div className="flex flex-col items-center justify-center ">
+        <div className="flex flex-col items-center justify-center my-[50px] ">
           <div className="flex flex-col gap-3">
             {/* row */}
 
