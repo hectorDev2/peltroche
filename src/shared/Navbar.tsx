@@ -80,6 +80,14 @@ function Navbar() {
               </motion.li>
             ))}
           </ul>
+          <div className="navbar__buttons-mobile">
+            <Link href="/tienda">
+              <button className=" navbar__buttons__store">
+                Tienda
+                <BiStoreAlt />
+              </button>
+            </Link>
+          </div>
         </div>
         {/* desktop */}
         <div

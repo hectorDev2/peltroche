@@ -11,7 +11,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2.7rem 2rem;
+  padding: 2.7rem 1.5rem;
   background-color: red;
   position: absolute;
   top: 0;
@@ -51,14 +51,21 @@
 .navbar__links a:hover {
   color: #ffffff;
 }
-
 @media (max-width: 1000px) {
   .navbar__links {
     display: none;
   }
+
+
 }
 
-.navbar__buttons {
+@media (max-width: 1025px) {
+  .navbar__links a {
+    font-size: 12px;
+  }
+}
+
+.navbar__buttons ,.navbar__buttons-mobile{
   display: flex;
   gap: 2.5rem;
   font-size: 1.6rem;
@@ -200,6 +207,7 @@
   position: relative;
   overflow: hidden;
   transition-duration: .3s;
+  margin-top:15px;
 }
 
 .svgIcon {
