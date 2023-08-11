@@ -8,7 +8,7 @@ export default function Product(props: any) {
       <p className="price">{props.price}</p>
       <p>{props.description}</p>
       <p>
-        <button>Add to Cart</button>
+        <button>comprar ahora</button>
       </p>
     </div>
   );

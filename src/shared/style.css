@@ -73,33 +73,7 @@
   }
 }
 
-.navbar__buttons__sign-in {
-  color: #010103;
-  cursor: pointer;
-  transition: all 0.3s;
-}
 
-.navbar__buttons__sign-in:hover {
-  color: #ff4d30;
-}
-
-.navbar__buttons__register {
-  background-color: #FF0336;
-  color: white;
-  padding: 1.5rem 3rem;
-  border-radius: 3px;
-  box-shadow: 0 10px 15px 0 rgba(255, 83, 48, 0.35);
-  transition: all 0.3s;
-}
-
-.navbar__buttons__register:hover {
-  box-shadow: 0 10px 15px 0 rgba(255, 83, 48, 0.5);
-  background-color: #fa4226;
-}
-
-.navbar__buttons a {
-  text-decoration: none;
-}
 
 .mobile-hamb {
   font-size: 2.8rem;
@@ -205,4 +179,57 @@
 
 .card button:hover {
   opacity: 0.7;
+}
+
+
+
+
+.navbar__buttons__store {
+  width: 130px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #FF0336;
+  border: none;
+  color: white;
+  font-weight: 600;
+  gap: 8px;
+  cursor: pointer;
+  box-shadow: 5px 5px 10px rgba(255, 162, 162, 0.103);
+  position: relative;
+  overflow: hidden;
+  transition-duration: .3s;
+}
+
+.svgIcon {
+  width: 16px;
+}
+
+.svgIcon path {
+  fill: white;
+}
+
+.navbar__buttons__store::before {
+  width: 130px;
+  height: 130px;
+  position: absolute;
+  content: "";
+  background-color: white;
+  border-radius: 50%;
+  left: -100%;
+  top: 0;
+  transition-duration: .3s;
+  mix-blend-mode: color;
+}
+
+.navbar__buttons__store:hover::before {
+  transition-duration: .3s;
+  transform: translate(100%, -50%);
+  border-radius: 0;
+}
+
+.navbar__buttons__store:active {
+  transform: translate(5px, 5px);
+  transition-duration: .3s;
 }

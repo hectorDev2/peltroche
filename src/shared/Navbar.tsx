@@ -7,6 +7,7 @@ import { CgMenuRightAlt } from "react-icons/cg";
 import { FaRegWindowClose } from "react-icons/fa";
 import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
+import { BiStoreAlt } from "react-icons/bi";
 import "./style.css";
 
 const routes = [
@@ -112,8 +113,11 @@ function Navbar() {
             ))}
           </ul>
           <div className="navbar__buttons">
-            <Link className="navbar__buttons__register" href="/tienda">
-              Tienda
+            <Link href="/tienda">
+              <button className=" navbar__buttons__store">
+                Tienda
+                <BiStoreAlt />
+              </button>
             </Link>
           </div>
 
