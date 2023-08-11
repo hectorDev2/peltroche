@@ -5,10 +5,12 @@ function PricingBox({
   img,
   price,
   title = "Beginners",
+  urlToPay = "https://buy.stripe.com/test_8wM16uefW10b8MM8wx",
 }: {
   img: StaticImageData;
   price: number | string;
   title: string;
+  urlToPay: string;
 }) {
   return (
     <>
@@ -39,11 +41,7 @@ function PricingBox({
             <p>Personal Trainer</p>
             <p>Cycling</p>
           </div>
-          <Link
-            target="_blank"
-            href="https://buy.stripe.com/test_8wM16uefW10b8MM8wx"
-            passHref
-          >
+          <Link target="_blank" href={urlToPay} passHref>
             <button className="mt-[30px] bg-gradient-to-b w-max mx-auto text-red-600 font-semibold from-slate-50 to-red-200 px-10 py-3  shadow-red-400 shadow-md border-b-4 hover border-b border-red-200 hover:shadow-sm transition-all duration-500">
               suscribete
             </button>
