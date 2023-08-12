@@ -28,8 +28,8 @@ export default function BlogPage() {
   const blogs = filteredBlogs.length == 0 ? allBlogs : filteredBlogs;
 
   useEffect(() => {
-    fetchPosts();
-  }, []);
+    if (blogs.length == 0) fetchPosts();
+  }, [blogs]);
 
   return (
     <>

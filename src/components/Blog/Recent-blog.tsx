@@ -4,8 +4,6 @@ import Link from "next/link";
 import { toSlug } from "@/utils";
 
 const RecentBlog = ({ blog }: any) => {
-  console.log(blog);
-
   const { image, title, date } = blog;
   return (
     <div className="flex gap-8">

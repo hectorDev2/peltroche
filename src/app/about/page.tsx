@@ -22,14 +22,9 @@ export default function About() {
             <div className="grid grid-cols-[1fr_1fr] h-[60rem] md1000:grid-cols-1">
               {/* title div -- */}
               <div className="flex flex-col !text-left relative items-right justify-center md1000:items-center md1000:!text-center">
-                <p className="text-white relative z-10 text-[15px] uppercase font-bold mb-8 ml-20 md1000:ml-3 ">
+                <h2 className=" text-[#ff0366] relative z-10 text-[15px] uppercase font-bold mb-8 ">
                   quienes somos
-                </p>
-                <Image
-                  src={TitleRed}
-                  alt="text_bg"
-                  className="w-[21rem] absolute top-[120px] min450:top-[84px] min375:top-[68px]"
-                />
+                </h2>
 
                 <h2 className="text-[3.6rem] max-w-[53rem] font-bold mb-4">
                   Nosotros te brindaremos el mejor equipo
@@ -58,7 +53,9 @@ export default function About() {
               <div className="grid grid-cols-2 grid-rows-2 w-full min620:grid-cols-1">
                 <div className="w-full bg-white h-[43rem] flex flex-col justify-center items-center text-center px-[100px] min800:px-[10px]">
                   <Image src={Target} alt="target_img" className="w-[9rem]" />
-                  <h2 className="text-[36px] font-bold mt-3">Our History</h2>
+                  <h2 className="text-[36px] font-bold mt-3">
+                    Nuestra historia
+                  </h2>
                   <p className="text-[16px] font-medium text-[#646464] mt-5">
                     Amet minim mollit non deserunt ullamco est sit aliqua dolor
                     do amet sint. Velit officia consequat duis enim velit mollit

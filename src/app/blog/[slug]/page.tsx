@@ -1,11 +1,9 @@
 "use client";
-
 import Image from "next/image";
 import Link from "next/link";
-import { useStoreBlog } from "@/store/storeBlog";
 import { PageWrapper } from "@/components/PageWrapper";
-import { useEffect, useState } from "react";
 import { ReactMarkdown } from "react-markdown/lib/react-markdown";
+import { usePost } from "../hooks/usePost";
 
 export default function DetailsBlog({
   params,
@@ -15,13 +13,7 @@ export default function DetailsBlog({
   };
 }) {
   const { slug } = params;
-
-  const [post, setPost] = useState<any>();
-  const { getBlogBySlug } = useStoreBlog();
-
-  useEffect(() => {
-    getBlogBySlug(slug).then((res: any) => setPost(res[0]));
-  }, []);
+  const { post } = usePost(slug);
 
   return (
     <PageWrapper>
@@ -42,7 +34,7 @@ export default function DetailsBlog({
             }`}
             width={500}
             height={300}
-            alt="blog_imgss"
+            alt="blog_imgs"
           />
           <p className="font-medium text-[14px] text-[#646464] pt-8 pb-4">
             <i className="fa-solid fa-layer-group text-[#ff0336] text-[16px]"></i>

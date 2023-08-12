@@ -1,22 +1,19 @@
 import Image from "next/image";
 import Link from "next/link";
-import axios from "axios";
-import { formatDataApi, formatDataWithImagesApi } from "@/utils/helpers";
+import { formatDataWithImagesApi } from "@/utils/helpers";
 import { ProductFormatted } from "@/types/product-format.interface";
 import { HeroCommon } from "@/components/HeroCommon";
 
 export default async function Page() {
-  console.log(process.env.NEXT_LOCAL_API_URL);
+  const res = await fetch(
+    `${process.env.NEXT_LOCAL_API_URL}/products?populate=*`,
+    {
+      cache: "no-cache",
+    }
+  );
+  const resJson = await res.json();
 
-  const res = axios
-    .get(`${process.env.NEXT_LOCAL_API_URL}/products?populate=*`)
-    .then(({ data }) => data.data)
-    .catch(function (error) {
-      throw error;
-    });
-
-  const products = formatDataWithImagesApi(await res);
-  console.log(products);
+  const products = formatDataWithImagesApi(resJson.data);
 
   return (
     <>

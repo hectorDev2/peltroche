@@ -11,12 +11,6 @@ function BlogBox({
   bgClass?: string;
   img?: string;
 }) {
-  const goTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
   return (
     <>
       <div className="w-[37rem] min540:w-[100%] shadow-xl flex flex-col px-[3rem] py-[5rem]">
