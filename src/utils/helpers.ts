@@ -10,7 +10,7 @@ export const getDiscountedPricePercentage = (
 };
 
 export const formatDataApi = (data: any[]) => {
-  const dataFormatted = data.map((item) => {
+  const dataFormatted = data?.map((item) => {
     return {
       id: item.id,
       ...item.attributes,
@@ -21,7 +21,7 @@ export const formatDataApi = (data: any[]) => {
   return dataFormatted;
 };
 export const formatInfoApi = (data: any[]) => {
-  return data.map((item: any) => {
+  return data?.map((item: any) => {
     return {
       id: item.id,
       ...item.attributes,
@@ -30,11 +30,11 @@ export const formatInfoApi = (data: any[]) => {
 };
 
 export const formatDataWithImagesApi = (data: any) => {
-  const dataFormatted = data.map((item: any) => {
+  const dataFormatted = data?.map((item: any) => {
     return {
       id: item.id,
       ...item.attributes,
-      images: item.attributes.images.data.map(
+      images: item.attributes?.images?.data?.map(
         (image: {
           attributes: {
             url: string;

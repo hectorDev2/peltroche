@@ -19,7 +19,7 @@ export default async function Page() {
     <>
       <HeroCommon title="Tienda" />
       <section className="login-section  my-[50px] place-content-center flex gap-5">
-        {products.map(({ images, id, price, name }: ProductFormatted) => (
+        {products?.map(({ images, id, price, name }: ProductFormatted) => (
           <Link
             href={`/tienda/productos/${id}`}
             className="transform overflow-hidden bg-white duration-200 hover:scale-105 cursor-pointer"
