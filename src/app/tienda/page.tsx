@@ -18,7 +18,7 @@ export default async function Page() {
   return (
     <>
       <HeroCommon title="Tienda" />
-      <section className="login-section  place-content-center flex gap-5">
+      <section className="login-section  my-[50px] place-content-center flex gap-5">
         {products.map(({ images, id, price, name }: ProductFormatted) => (
           <Link
             href={`/tienda/productos/${id}`}

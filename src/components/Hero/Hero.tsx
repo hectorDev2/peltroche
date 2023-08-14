@@ -1,6 +1,4 @@
 import TitlePeltroche from "@/shared/TitlePeltroche";
-import Image from "next/image";
-import TitleBg from "../../../public/images/pricing/titlebg.svg";
 
 function Hero() {
   return (
