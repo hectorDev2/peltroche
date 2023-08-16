@@ -5,7 +5,7 @@ import TrainingIcon from "../../../public/images/choose-us/training.png";
 import EquipmentsIcon from "../../../public/images/choose-us/bench-press.png";
 import BagIcon from "../../../public/images/choose-us/gym-bag.png";
 import BottleIcon from "../../../public/images/choose-us/bottle-of-water.png";
-import PlayImg from "../../../public/images/choose-us/play.png";
+import "./style.css";
 
 import Image from "next/image";
 import useModal from "@/hooks/useModal";
@@ -22,14 +22,26 @@ function ChooseUs() {
               src={VideoImg}
               alt="video_img"
               className="relative w-[94%] h-auto"
+            />
+            <button
+              className="playBtn absolute  top-[40%] right-[40%] md1000:top-[40%] md1000:right-[25%]"
               onClick={() => toggle()}
-            />
-            <Image
-              src={PlayImg}
-              alt="play_img"
-              className="absolute w-[2.4rem] top-[42%] left-[44%] z-10 cursor-pointer min450:left-[47%] min450:top-[44%] "
-            />
-            <span className="bg-white cursor-pointer p-14 absolute rounded-full top-[38.7%] left-[39.9%]"></span>
+            >
+              <span className="IconContainer">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="30"
+                  height="30"
+                  fill="currentColor"
+                  className="bi bi-play-circle-fill"
+                  viewBox="0 0 16 16"
+                >
+                  {" "}
+                  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814l-3.5-2.5z" />{" "}
+                </svg>
+              </span>
+              <p className="text pl-2">Play</p>
+            </button>
           </div>
           <Modal isShowing={isShowing} hide={() => toggle()} />
 
