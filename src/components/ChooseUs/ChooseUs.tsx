@@ -1,3 +1,4 @@
+"use client";
 import VideoImg from "../../../public/images/choose-us/main-img.png";
 import TitleRed from "../../../public/images/who-we-are/title-bg.svg";
 import TrainingIcon from "../../../public/images/choose-us/training.png";
@@ -7,8 +8,11 @@ import BottleIcon from "../../../public/images/choose-us/bottle-of-water.png";
 import PlayImg from "../../../public/images/choose-us/play.png";
 
 import Image from "next/image";
+import useModal from "@/hooks/useModal";
+import Modal from "@/shared/Modal";
 
 function ChooseUs() {
+  const { isShowing, toggle } = useModal();
   return (
     <>
       <section className="choose-section py-[12rem] ">
@@ -18,6 +22,7 @@ function ChooseUs() {
               src={VideoImg}
               alt="video_img"
               className="relative w-[94%] h-auto"
+              onClick={() => toggle()}
             />
             <Image
               src={PlayImg}
@@ -26,6 +31,7 @@ function ChooseUs() {
             />
             <span className="bg-white cursor-pointer p-14 absolute rounded-full top-[38.7%] left-[39.9%]"></span>
           </div>
+          <Modal isShowing={isShowing} hide={() => toggle()} />
 
           <div className="relative w-[50%] md1000:flex md1000:flex-col md1000:items-center md1000:text-center md1000:w-[85%]">
             <p className="text-white relative z-10 text-[16px] uppercase font-bold mb-14">
@@ -91,15 +97,6 @@ function ChooseUs() {
                   ducha
                 </p>
               </div>
-              {/* <MainButton
-                color={`!text-white`}
-                bg={`bg-[#595959]`}
-                text="our classes"
-                arrowColor={`!text-white`}
-                cN="choose-cta"
-                hover={`hover:bg-[#ff0336]`}
-                goTo="/classes"
-              /> */}
             </div>
           </div>
         </div>
