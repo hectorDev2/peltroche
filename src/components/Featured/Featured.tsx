@@ -6,7 +6,7 @@ function Featured() {
           {/* title */}
 
           {/* grid */}
-          <div className="grid grid-cols-4 grid-rows-2 gap-7 h-full mt-7 md1000:flex md1000:flex-col">
+          <div className="md:grid grid-cols-4 grid-rows-2 gap-7 h-full mt-7 flex flex-col">
             <div className="item-0-div relative">
               <div className="item-0 ease-in duration-[0.4s] p-6"></div>
               <div className="absolute z-10 bottom-10 left-10">
@@ -70,10 +70,10 @@ function Featured() {
         </div>
       </section>
       {/* featured cta */}
-      <div className="featured-cta flex justify-center text-left items-center md1000:bg-none md1000:bg-[#ff0336] ">
+      <div className="featured-cta flex justify-center text-left items-center bg-none bg-[#ff0336] ">
         <div className="container page-padding ">
-          <div className="flex items-center md1000:flex-col md1000:gap-12  md1000:text-center">
-            <h2 className="text-white font-bold text-[3.7rem] md1000:text-[3rem] max-w-6xl px-7 leading-[1.2] min450:text-[2.4rem] ">
+          <div className="flex items-center flex-col gap-12  text-center">
+            <h2 className="text-white font-bold md:text-[3.7rem] sm:text-[3rem] max-w-6xl px-7 leading-[1.2] text-[2.4rem] ">
               Siempre estamos brindando el mejor servicio para usted.
             </h2>
             {/* <MainButton

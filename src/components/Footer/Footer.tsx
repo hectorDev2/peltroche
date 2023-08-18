@@ -10,9 +10,9 @@ function Footer() {
       <footer className="bg-white">
         <div className="container page-padding py-[10rem]">
           {/* footer div all */}
-          <div className="flex justify-between  min620:flex-col min620:items-center min620:text-center min620:gap-[5rem] !text-left">
+          <div className="flex flex-wrap md:flex-nowrap justify-between   sm:items-center sm:text-center sm:gap-[5rem] !text-left">
             {/* logo side */}
-            <div className="flex flex-col min620:w-[280px] w-[500px] gap-8">
+            <div className="flex flex-col sm:w-[280px] w-[500px] gap-8">
               <Image src={FooterLogo} alt="footer_logo" className="w-[18rem]" />
               <p className="text-[15px] font-medium text-[#646464]">
                 Lleve su salud y su cuerpo al siguiente nivel con nuestro
@@ -20,7 +20,7 @@ function Footer() {
                 objetivos de acondicionamiento físico.
               </p>
               {/* socials */}
-              <div className="flex gap-7 text-[18px] text-[#646464] min540:justify-center">
+              <div className="flex gap-7 text-[18px] text-[#646464] sm:justify-center">
                 <Link
                   target="_blank"
                   href="https://www.instagram.com/peltroche_gym_lacultura/"
@@ -54,7 +54,7 @@ function Footer() {
             </div>
 
             {/* middle div */}
-            <div className="flex flex-col min620:w-[300px] gap-8 relative">
+            <div className="flex flex-col sm:w-[300px] gap-8 relative">
               <p className="text-[22px] font-bold footer-main">
                 Nuestras clases
               </p>
@@ -79,7 +79,7 @@ function Footer() {
             </div>
 
             {/* right div */}
-            <div className="flex flex-col min620:w-[300px] gap-8 relative">
+            <div className="flex flex-col sm:w-[300px] gap-8 relative">
               <p className="text-[22px] font-bold footer-main">
                 Horas de atencion
               </p>

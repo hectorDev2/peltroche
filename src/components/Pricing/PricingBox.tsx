@@ -1,5 +1,6 @@
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
+import { ButtonSubscribe } from "./ButtonSuscribe";
 
 function PricingBox({
   img,
@@ -14,7 +15,7 @@ function PricingBox({
 }) {
   return (
     <>
-      <div className="flex flex-col w-1/3 md1000:w-[40rem] bg-white shadow-xl relative min540:w-[100%]">
+      <div className="flex flex-col md:w-[30%] w-[25rem] bg-white shadow-xl relative sm:w-[100%]">
         <div
           style={{ transition: "all 0.3s" }}
           className="relative grayscale hover:grayscale-0"
@@ -41,10 +42,8 @@ function PricingBox({
             <p>Personal Trainer</p>
             <p>Cycling</p>
           </div>
-          <Link target="_blank" href={urlToPay} passHref>
-            <button className="mt-[30px] bg-gradient-to-b w-max mx-auto text-red-600 font-semibold from-slate-50 to-red-200 px-10 py-3  shadow-red-400 shadow-md border-b-4 hover border-b border-red-200 hover:shadow-sm transition-all duration-500">
-              suscribete
-            </button>
+          <Link className="mt-5" target="_blank" href={urlToPay} passHref>
+            <ButtonSubscribe />
           </Link>
         </div>
       </div>

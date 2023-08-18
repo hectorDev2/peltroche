@@ -33,23 +33,23 @@ function Pricing() {
             </p>
           </div>
           {/* pricing boxes */}
-          <div className="flex gap-10 mt-32 relative z-[2] md1000:flex-col md1000:items-center ">
+          <div className="flex flex-wrap gap-10 mt-32 relative z-[2]  items-center ">
             <PricingBox
               urlToPay="https://buy.stripe.com/test_8wM16uefW10b8MM8wx"
               img={Img1}
-              price="39"
+              price="150"
               title="Plan mensual"
             />
             <PricingBox
               urlToPay="https://buy.stripe.com/test_3csbL80p6gZ99QQfZ0"
               img={Img2}
-              price="65"
+              price="500"
               title="Plan semestral"
             />
             <PricingBox
               urlToPay="https://buy.stripe.com/test_bIY4iG1ta24fgfe4gj"
               img={Img3}
-              price="100"
+              price="1000"
               title="Plan anual"
             />
           </div>

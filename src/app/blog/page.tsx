@@ -28,7 +28,7 @@ export default function BlogPage() {
   const blogs = filteredBlogs.length == 0 ? allBlogs : filteredBlogs;
 
   useEffect(() => {
-    if (blogs.length == 0) fetchPosts();
+    if (blogs?.length == 0) fetchPosts();
   }, [blogs]);
 
   return (
@@ -36,7 +36,7 @@ export default function BlogPage() {
       <HeroCommon title="Blog Peltroche" />
       <PageWrapper>
         {/* blog */}
-        <div className="py-[10rem] container gap-16 page-padding grid grid-cols-[64fr_35fr] md1000:grid-cols-1 md1000:gap-32">
+        <div className="py-[10rem] container  page-padding grid md:grid-cols-[64fr_35fr] grid-cols-1 gap-32 md:gap-16">
           {/* blog */}
           <div className="flex flex-col gap-28">
             {blogs?.map((blog: BlogI) => (

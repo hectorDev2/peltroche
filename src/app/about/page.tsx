@@ -19,9 +19,9 @@ export default function About() {
       <PageWrapper>
         <section className="login-section">
           <div className="container page-padding ">
-            <div className="grid grid-cols-[1fr_1fr] h-[60rem] md1000:grid-cols-1">
+            <div className="grid  grid-cols-1 md:grid-cols-[1fr_1fr] h-[60rem]">
               {/* title div -- */}
-              <div className="flex flex-col !text-left relative items-right justify-center md1000:items-center md1000:!text-center">
+              <div className="flex flex-col !text-left relative  justify-center items-center ">
                 <h2 className=" text-[#ff0366] relative z-10 text-[15px] uppercase font-bold mb-8 ">
                   quienes somos
                 </h2>
@@ -37,7 +37,7 @@ export default function About() {
                 </p>
               </div>
               {/*  */}
-              <div className="relative w-[80%] -top-[90px] left-[40px] md1000:hidden">
+              <div className="relative w-[80%] -top-[90px] left-[40px] hidden  md:block">
                 <Image
                   src={GirlRunning}
                   alt="girl_running"
@@ -50,7 +50,7 @@ export default function About() {
             </div>
             {/*  */}
             <div className="mt-[10rem]">
-              <div className="grid grid-cols-2 grid-rows-2 w-full min620:grid-cols-1">
+              <div className="grid md:grid-cols-2 grid-rows-2 w-full sm:grid-cols-1">
                 <div className="w-full bg-white h-[43rem] flex flex-col justify-center items-center text-center px-[100px] min800:px-[10px]">
                   <Image src={Target} alt="target_img" className="w-[9rem]" />
                   <h2 className="text-[36px] font-bold mt-3">

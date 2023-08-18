@@ -81,7 +81,7 @@ function Navbar() {
             ))}
           </ul>
           <div className="navbar__buttons-mobile">
-            <Link href="/tienda">
+            <Link onClick={openNav} href="/tienda">
               <button className=" navbar__buttons__store">
                 Tienda
                 <BiStoreAlt />
@@ -124,7 +124,7 @@ function Navbar() {
             <Link href="/tienda">
               <button className=" navbar__buttons__store">
                 Tienda
-                <BiStoreAlt />
+                <BiStoreAlt width={30} />
               </button>
             </Link>
           </div>

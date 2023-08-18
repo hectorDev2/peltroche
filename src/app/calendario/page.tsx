@@ -28,7 +28,7 @@ export default function DetailsSchedule() {
   return (
     <>
       <HeroCommon title={`Horario semanal`} />
-      <div className="flex flex-wrap gap-4 my-8 justify-center">
+      <div className="flex md:flex-wrap gap-4 my-8 justify-center">
         {days.map((day, index) => (
           <p
             key={index}

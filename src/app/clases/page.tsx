@@ -16,7 +16,7 @@ export default function BlogPage() {
       <HeroCommon title="nuestras clases" />
       <PageWrapper>
         {/* blog */}
-        <div className="py-[10rem] container gap-16 page-padding grid grid-cols-[64fr_35fr] md1000:grid-cols-1 md1000:gap-32">
+        <div className="py-[10rem] container md:gap-16 page-padding grid md:grid-cols-[64fr_35fr] grid-cols-1 gap-32">
           {/* blog */}
           <div className="flex flex-col gap-28">
             {fakeVideosFit.map((video: Video) => (

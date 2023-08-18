@@ -10,6 +10,7 @@ import "react-multi-carousel/lib/styles.css";
 export const CarouselProducts = () => {
   const product = productData.map((item) => (
     <Product
+      key={item.id}
       name={item.name}
       url={item.imageurl}
       price={item.price}

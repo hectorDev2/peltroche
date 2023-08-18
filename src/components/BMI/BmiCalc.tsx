@@ -30,13 +30,13 @@ function BmiCalc() {
     <>
       <section className="bmi-section py-[6rem] relative">
         <div className="container page-padding ">
-          <span className="w-full h-full absolute bg-transparent min620:bg-[#00000063] top-0 left-0"></span>
-          <div className="text-white w-[52rem] min620:w-[100%] relative">
+          <span className="w-full h-full absolute bg-[#00000063] top-0 left-0"></span>
+          <div className="text-white w-[270px] sm:w-[100%] relative">
             <h2 className="text-[4rem] font-bold leading-[1.1] mb-8">
               Calcula tu{" "}
               <span className="text-[#FF0336]">Indice de Masa Corporal</span>
             </h2>
-            <p className="text-[16px] text-[#a1a1a1] min620:text-white">
+            <p className="text-[16px] text-[#a1a1a1] sm:text-white">
               Determine fácilmente su índice de masa corporal con nuestra
               herramienta de cálculo preciso.
             </p>
