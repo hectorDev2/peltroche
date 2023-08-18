@@ -17,7 +17,7 @@ export default function Gallery() {
               variants={variants}
               initial="hidden"
               animate="show"
-              className="grid grid-cols-3 gap-7 md1000:grid-cols-2 min540:grid-cols-1"
+              className="grid md:grid-cols-3 gap-7 grid-cols-2 ms:grid-cols-1"
             >
               {galleryImg.map((image) => (
                 <motion.div variants={images} key={image.id}>

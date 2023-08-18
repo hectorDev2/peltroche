@@ -13,7 +13,7 @@ function BlogBox({
 }) {
   return (
     <>
-      <div className="w-[37rem] min540:w-[100%] shadow-xl flex flex-col px-[3rem] py-[5rem]">
+      <div className="w-[37rem] sm:w-[100%] shadow-xl flex flex-col px-[3rem] py-[5rem]">
         {/* date */}
         <p className="text-[15px] font-bold text-[#323232] border-[#323232] border-solid rounded-full border-[1px] w-fit px-5 py-2 mb-6">
           {date}

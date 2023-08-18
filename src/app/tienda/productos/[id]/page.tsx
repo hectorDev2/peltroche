@@ -8,7 +8,7 @@ import ProductPage from "@/components/product/ProductPage";
 
 const fetchProduct = async (id: string) => {
   const productJson = await fetch(
-    `${process.env.NEXT_PUBLIC_API_URL}/products/${id}?populate=*`
+    `${process.env.NEXT_LOCAL_API_URL}/products/${id}?populate=*`
   );
 
   const arrayWithProduct = await productJson.json();

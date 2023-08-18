@@ -5,13 +5,13 @@ function Hero() {
     <>
       <section
         id="home"
-        className="hero-section w-full h-screen min800:flex min800:justify-center min800:text-center"
+        className="hero-section w-full h-screen flex justify-center text-center"
       >
         <div className="container-hero">
           {/* hero section */}
           <div
             className="flex flex-col text-white
-           absolute hero-text min800:items-center min800:-right-[22rem] min620:-right-[20rem] min800:w-[80%] min540:-right-[17rem] min450:-right-[14rem] min375:-right-[11rem]"
+           absolute hero-text min800:items-center lg:-right-[22rem]  lg:w-[80%] md:-right-[17rem] sm:-right-[14rem] -right-[11rem]"
           >
             <TitlePeltroche title="entrena con nosotros" />
             <h1 className="font-bold text-[48px] uppercase mb-[4rem] min450:text-[40px]">

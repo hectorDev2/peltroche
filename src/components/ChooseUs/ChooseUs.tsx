@@ -16,15 +16,15 @@ function ChooseUs() {
   return (
     <>
       <section className="choose-section py-[12rem] ">
-        <div className="container page-padding flex flex-row md1000:flex-col md1000:items-center gap-[7rem]">
-          <div className="video-div relative w-[50%] md1000:w-[85%] md1000:flex md1000:justify-center">
+        <div className="container page-padding flex md:flex-row flex-col items-center gap-[7rem]">
+          <div className="video-div relative md:w-[50%] w-[85%] flex justify-center">
             <Image
               src={VideoImg}
               alt="video_img"
               className="relative w-[94%] h-auto"
             />
             <button
-              className="playBtn absolute  top-[40%] right-[40%] md1000:top-[40%] md1000:right-[25%]"
+              className="playBtn absolute  md:top-[40%] md:right-[40%] top-[40%] right-[25%]"
               onClick={() => toggle()}
             >
               <span className="IconContainer">
@@ -43,21 +43,30 @@ function ChooseUs() {
               <p className="text pl-2">Play</p>
             </button>
           </div>
-          <Modal isShowing={isShowing} hide={() => toggle()} />
+          <Modal isShowing={isShowing} hide={() => toggle()}>
+            <iframe
+              className="w-[100%] h-[100%]"
+              src="https://www.youtube.com/embed/ch_fTApSoL4"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            ></iframe>
+          </Modal>
 
-          <div className="relative w-[50%] md1000:flex md1000:flex-col md1000:items-center md1000:text-center md1000:w-[85%]">
+          <div className="relative md:w-[50%] flex flex-col items-center text-center w-[85%]">
             <p className="text-white relative z-10 text-[16px] uppercase font-bold mb-14">
               porque elegirnos?
             </p>
             <Image
               src={TitleRed}
               alt="text_bg"
-              className="w-[22rem] absolute -top-[6px] -left-14 md1000:hidden "
+              className="w-[22rem] absolute -top-[6px] -left-14 md:block hidden "
             />
-            <h2 className=" text-[3.6rem] text-white font-bold leading-[1.2] max-w-3xl md1000:max-w-[80%]">
+            <h2 className=" text-[3.6rem] text-white font-bold leading-[1.2] md:max-w-3xl max-w-[80%]">
               ¡Podemos alcanzar tu objetivo fisico aquí!
             </h2>
-            <p className="text-[16.5px] text-[#b4b4b4] mt-7 max-w-3xl md1000:max-w-[80%]">
+            <p className="text-[16.5px] text-[#b4b4b4] mt-7 md:max-w-3xl max-w-[80%]">
               En Peltroche Gym, estamos dedicados a ayudarte a lograr el cuerpo
               de tus sueños. Nuestros entrenadores y nutricionistas expertos
               trabajarán con usted para crear un plan personalizado de
@@ -65,7 +74,7 @@ function ChooseUs() {
               objetivos específicos.
             </p>
 
-            <div className="grid grid-cols-2 grid-rows-2 gap-14 max-w-[44rem] mt-14 min450:flex min450:flex-col">
+            <div className="grid md:grid-cols-2 grid-rows-2 gap-14 max-w-[44rem] mt-14 min450:flex min450:flex-col">
               <div className="flex items-center gap-6">
                 <Image
                   className="bg-[#2b2b2b] hover:bg-[#ff0336] ease-in duration-200 w-[6.5rem] rounded-full p-4"

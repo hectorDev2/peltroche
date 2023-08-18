@@ -5,7 +5,7 @@ import { BsTiktok } from "react-icons/bs";
 
 export const NetWorks = () => {
   return (
-    <div className="flex gap-7 text-[18px] text-[#646464] min540:justify-center">
+    <div className="flex gap-7 text-[18px] text-[#646464] sm:justify-center">
       <Link
         target="_blank"
         href="https://www.instagram.com/peltroche_gym_lacultura/"

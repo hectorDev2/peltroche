@@ -28,13 +28,13 @@ function Testimonials() {
           </div>
 
           {/* testimonials wrapper */}
-          <div className="border-[#efefef] mt-[17rem] md1000:mt-[9rem] bg-white border-solid border-[9px] p-[30px] min540:h-[48rem] min375:h-[60rem]">
+          <div className="border-[#efefef] md:mt-[17rem] mt-[9rem] bg-white border-solid border-[9px] p-[10px]  md:p-[30px] sm:h-[48rem] min375:h-[60rem]">
             <div className="bg-black overflow-x-clip w-full h-[33rem] relative">
               {/* img */}
               <Image
                 alt="girl_img"
                 src={TestimonialImg}
-                className="absolute bottom-0 -left-10 z-20 h-[46rem] rounded-tr-[200px] md1000:hidden"
+                className="absolute bottom-0 -left-10 z-20 h-[46rem] rounded-tr-[200px] md:block hidden"
               />
 
               {/* all text-boxes */}
@@ -44,7 +44,7 @@ function Testimonials() {
               </div>
 
               {/* buttons */}
-              <div className="flex gap-3 absolute bottom-[25px] right-[35px] z-20 min540:-bottom-[52px] min540:right-[17px]">
+              <div className="flex gap-3 absolute bottom-[25px] right-[35px] z-20 sm:-bottom-[52px] sm:right-[17px]">
                 <button
                   title="left"
                   style={{ transition: "all 0.2s" }}

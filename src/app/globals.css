@@ -828,6 +828,7 @@ body {
 .icon-whatsapp{
   right: 10px;
   bottom: 10px;
+  z-index: 99;
   position: fixed;
 }
 .icon-whatsapp:hover{

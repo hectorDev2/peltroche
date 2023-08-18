@@ -9,13 +9,13 @@ export default function WorkWithUs() {
       <HeroCommon title="Trabaja con nosotros" />
       <PageWrapper>
         {/* contact */}
-        <div className="relative bg-white py-[12rem] page-padding grid grid-cols-2  container gap-10 items-center md1000:grid-cols-1 ">
+        <div className="relative bg-white py-[12rem] page-padding grid md:grid-cols-2  container gap-10 items-center grid-cols-1 ">
           {/* first col */}
 
           <FormWork />
           {/* second col ---*/}
 
-          <div className="md1000:w-[60%] md1000:flex md1000:flex-col md1000:mx-auto min800:w-[90%] min620:w-full">
+          <div className="md:w-[60%] flex flex-col mx-auto w-[90%] ">
             <h2 className="text-black text-[36px] font-bold leading-[1.2]">
               Unete al equipo Peltroche
             </h2>
@@ -29,7 +29,7 @@ export default function WorkWithUs() {
               formal, gratuito y se realiza a través de nuestros canales
               oficiales en facebook, instagram y Linkedin.
             </p>
-            <div className="grid grid-cols-2 grid-rows-2 gap-y-20 min620:grid-cols-1 min620:mx-auto">
+            <div className="grid grid-cols-2 grid-rows-2 gap-y-20 sm:grid-cols-1 sm:mx-auto">
               <div className="flex flex-col relative">
                 <h3 className="text-[2rem] font-bold mb-10">
                   Peltroche Gym & Fitness, La cultura

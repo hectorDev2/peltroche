@@ -124,7 +124,7 @@ function Navbar() {
             <Link href="/tienda">
               <button className=" navbar__buttons__store">
                 Tienda
-                <BiStoreAlt />
+                <BiStoreAlt width={30} />
               </button>
             </Link>
           </div>

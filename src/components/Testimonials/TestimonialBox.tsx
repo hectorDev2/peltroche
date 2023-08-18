@@ -13,7 +13,7 @@ function TestimonialBox({
   name: string;
 }) {
   return (
-    <div className="absolute flex flex-col bg-black  top-0 right-0 w-[60%] md1000:w-full h-full py-[47px] px-[50px] min540:py-[24px] min540:px-[30px] min540:h-[40rem] min375:h-[50rem]">
+    <div className="absolute flex flex-col bg-black  top-0 right-0 md:w-[60%] w-full md:h-full py-[47px] px-[20px] sm:py-[24px] sm:px-[30px] sm:h-[40rem] h-[50rem]">
       <Image alt="quote_img" src={Quotes} className="w-[6rem]" />
       <p className=" text-[16px] italic text-[#dedede] my-6 z-10">{text}</p>
       <h3 className="text-white text-[21px] mb-1 font-bold">{name}</h3>

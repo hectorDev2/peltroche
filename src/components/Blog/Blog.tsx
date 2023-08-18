@@ -26,7 +26,7 @@ function Blog() {
           </div>
 
           {/* blog boxes */}
-          <div className="flex gap-6 w-full mt-[5rem] md1200:justify-center flex-wrap">
+          <div className="flex gap-6 w-full mt-[5rem]  flex-wrap md:flex-nowrap">
             <BlogBox
               bgClass="box1Bg"
               date="22.03.2022"

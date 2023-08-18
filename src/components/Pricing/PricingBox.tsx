@@ -15,7 +15,7 @@ function PricingBox({
 }) {
   return (
     <>
-      <div className="flex flex-col w-1/3 md1000:w-[40rem] bg-white shadow-xl relative min540:w-[100%]">
+      <div className="flex flex-col md:w-[30%] w-[25rem] bg-white shadow-xl relative sm:w-[100%]">
         <div
           style={{ transition: "all 0.3s" }}
           className="relative grayscale hover:grayscale-0"

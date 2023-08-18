@@ -6,7 +6,7 @@ import { HeroCommon } from "@/components/HeroCommon";
 
 export default async function Page() {
   const res = await fetch(
-    `${process.env.NEXT_PUBLIC_API_URL}/products?populate=*`,
+    `${process.env.NEXT_LOCAL_API_URL}/products?populate=*`,
     {
       cache: "no-cache",
     }
