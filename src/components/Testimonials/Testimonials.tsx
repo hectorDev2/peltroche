@@ -8,6 +8,7 @@ import Logo5 from "../../../public/images/testimonials/logo5.png";
 
 import Image from "next/image";
 import TestimonialBoxes from "./TestimonialBoxes";
+import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
 
 function Testimonials() {
   return (
@@ -28,7 +29,7 @@ function Testimonials() {
           </div>
 
           {/* testimonials wrapper */}
-          <div className="border-[#efefef] md:mt-[17rem] mt-[9rem] bg-white border-solid border-[9px] p-[10px]  md:p-[30px] sm:h-[48rem] min375:h-[60rem]">
+          <div className="border-[#efefef] h-[100%] md:mt-[17rem] mt-[9rem] bg-white border-solid border-[9px] p-[10px]  md:p-[30px]  sm:h-[440px]">
             <div className="bg-black overflow-x-clip w-full h-[33rem] relative">
               {/* img */}
               <Image
@@ -48,16 +49,16 @@ function Testimonials() {
                 <button
                   title="left"
                   style={{ transition: "all 0.2s" }}
-                  className="py-5 px-7 bg-white text-black text-2xl hover:bg-[#FF0336] hover:text-white"
+                  className="py-3 px-7 bg-white text-black text-2xl hover:bg-[#FF0336] hover:text-white"
                 >
-                  <i className="fa-solid fa-arrow-left"></i>
+                  <AiOutlineArrowLeft size={10} />
                 </button>
                 <button
                   title="right"
                   style={{ transition: "all 0.2s" }}
-                  className="py-5 px-7 bg-white text-black text-2xl hover:bg-[#FF0336] hover:text-white"
+                  className="py-3 px-7 bg-white text-black text-2xl hover:bg-[#FF0336] hover:text-white"
                 >
-                  <i className="fa-solid fa-arrow-right"></i>
+                  <AiOutlineArrowRight size={10} />
                 </button>
               </div>
             </div>

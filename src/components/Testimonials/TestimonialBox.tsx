@@ -13,9 +13,9 @@ function TestimonialBox({
   name: string;
 }) {
   return (
-    <div className="absolute flex flex-col bg-black  top-0 right-0 md:w-[60%] w-full md:h-full py-[47px] px-[20px] sm:py-[24px] sm:px-[30px] sm:h-[40rem] h-[50rem]">
-      <Image alt="quote_img" src={Quotes} className="w-[6rem]" />
-      <p className=" text-[16px] italic text-[#dedede] my-6 z-10">{text}</p>
+    <div className="absolute text-sm z-20 leading-tight flex flex-col bg-black  top-0 right-0 md:w-[60%] w-full  h-[100%]  px-[10px] sm:py-[24px] sm:px-[30px] sm:h-[40rem] md:h-[100%]">
+      <Image alt="quote_img" src={Quotes} className="w-[6rem] absolute top-0" />
+      <p className=" text-[16px] italic text-[#dedede] py-5 z-10">{text}</p>
       <h3 className="text-white text-[21px] mb-1 font-bold">{name}</h3>
       <p className="text-[14px] font-medium text-[#dedede]">{job}</p>
       <Image

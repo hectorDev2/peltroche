@@ -71,7 +71,7 @@ export default function PricingPage() {
           </div>
 
           {/* second col ---*/}
-          <form className="  pt-[30px] pr-[50px] pb-[50px] pl-[45px] bg-[#f8f8f8] relative w-[65%] flex md:flex-col mx-auto mt-14 min800:w-[90%] sm:w-full">
+          <form className="  pt-[30px] pr-[50px] pb-[50px] pl-[45px] bg-[#f8f8f8] relative w-[65%] flex md:flex-col mx-auto mt-14 md:w-[90%] sm:w-full">
             <h3 className="text-[28px] font-bold mb-14">
               Dejanos tu informacion
             </h3>

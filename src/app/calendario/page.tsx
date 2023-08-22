@@ -48,7 +48,7 @@ export default function DetailsSchedule() {
             {daySelect?.classes?.map((item: any, index: number) => (
               <ul
                 key={index}
-                className="flex justify-between w-full  min800:flex-col min800:text-center"
+                className="flex justify-between w-full  md:flex-col md:text-center"
               >
                 {/* class name */}
                 <li className="flex flex-col py-[25px] px-[55px] bg-[#f2f2f2] w-full">

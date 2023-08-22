@@ -6,7 +6,7 @@ function Featured() {
           {/* title */}
 
           {/* grid */}
-          <div className="md:grid grid-cols-4 grid-rows-2 gap-7 h-full mt-7 flex flex-col">
+          <div className="lg:grid grid-cols-4 grid-rows-2 gap-7 h-full mt-7 flex flex-col">
             <div className="item-0-div relative">
               <div className="item-0 ease-in duration-[0.4s] p-6"></div>
               <div className="absolute z-10 bottom-10 left-10">
