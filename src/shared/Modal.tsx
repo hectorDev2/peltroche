@@ -25,7 +25,7 @@ const Modal = ({
               <button
                 id="closebutton"
                 onClick={() => hide()}
-                className="absolute top-5 right-5"
+                className="absolute top-5 right-5 m-0 p-2"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

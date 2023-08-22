@@ -82,7 +82,7 @@ function Navbar() {
           </ul>
           <div className="navbar__buttons-mobile">
             <Link onClick={openNav} href="/tienda">
-              <button className=" navbar__buttons__store">
+              <button className=" navbar__buttons__store mt-5 lg:mt-0">
                 Tienda
                 <BiStoreAlt />
               </button>
