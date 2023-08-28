@@ -37,7 +37,7 @@ function Testimonials() {
           </div>
 
           {/* testimonials wrapper */}
-          <div className="border-[#efefef] h-[100%] md:mt-[17rem] mt-[9rem] bg-white border-solid border-[9px] p-[10px]  md:p-[30px]  sm:h-[440px]">
+          <div className="border-[#efefef] h-[100%] md:mt-[10rem] mt-[9rem] bg-white border-solid border-[9px] p-[10px]  md:p-[30px]  sm:h-[440px]">
             <div className="bg-black overflow-x-clip w-full h-[33rem] relative">
               {/* img */}
               <Image
