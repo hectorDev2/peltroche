@@ -45,8 +45,7 @@ function ChooseUs() {
           </div>
           <Modal isShowing={isShowing} hide={() => toggle()}>
             <iframe
-              width="1424"
-              height="599"
+              className="w-[300px] h-[400px] md:w-[700px]"
               src="https://www.youtube.com/embed/jvgoV9hXAjU"
               title="Peltroche Gym &amp; Fitness - Sede La Cultura"
               frameBorder="0"

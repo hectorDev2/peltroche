@@ -37,7 +37,7 @@ function TrainerBox() {
             onMouseEnter={hoverBox}
             onMouseLeave={hoverBoxRemove}
             key={id}
-            className="relative cursor-pointer w-[270px] min450:w-full flex flex-col select-none"
+            className="relative cursor-pointer w-[270px] min450:w-full flex flex-col select-none -z-0"
           >
             {/* trainer img */}
             <Image

@@ -1,16 +1,24 @@
+"use client";
+
 import TestimonialImg from "../../../public/images/testimonials/testimonial-new.jpg";
 import TitleBg from "../../../public/images/pricing/titlebg.svg";
-import Logo1 from "../../../public/images/testimonials/logo1.png";
-import Logo2 from "../../../public/images/testimonials/logo2.png";
-import Logo3 from "../../../public/images/testimonials/logo3.png";
-import Logo4 from "../../../public/images/testimonials/logo4.png";
-import Logo5 from "../../../public/images/testimonials/logo5.png";
 
 import Image from "next/image";
 import TestimonialBoxes from "./TestimonialBoxes";
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
+import {
+  StoreTestimonials,
+  useStoreTestimonials,
+} from "@/store/storeTestimonial";
+import { Brands } from "./Brands";
 
 function Testimonials() {
+  const nextTestimonial = useStoreTestimonials(
+    (state: StoreTestimonials) => state.nextTestimonial
+  );
+  const previewTestimonial = useStoreTestimonials(
+    (state: StoreTestimonials) => state.previewTestimonial
+  );
   return (
     <>
       {/* testimonials div */}
@@ -35,7 +43,7 @@ function Testimonials() {
               <Image
                 alt="girl_img"
                 src={TestimonialImg}
-                className="absolute bottom-0 -left-10 z-20 h-[46rem] rounded-tr-[200px] md:block hidden"
+                className="absolute bottom-0 -left-10 z-2 h-[46rem] rounded-tr-[200px] md:block hidden"
               />
 
               {/* all text-boxes */}
@@ -45,18 +53,20 @@ function Testimonials() {
               </div>
 
               {/* buttons */}
-              <div className="flex gap-3 absolute bottom-[25px] right-[35px] z-20 sm:-bottom-[52px] sm:right-[17px]">
+              <div className="flex gap-3 absolute bottom-[25px] right-[35px] z-2 sm:-bottom-[52px] sm:right-[17px]">
                 <button
                   title="left"
                   style={{ transition: "all 0.2s" }}
-                  className="py-3 px-7 bg-white text-black text-2xl hover:bg-[#FF0336] hover:text-white"
+                  className="py-3 px-7 bg-white text-black text-2xl hover:bg-[#FF0336] hover:text-white z-2"
+                  onClick={() => previewTestimonial()}
                 >
                   <AiOutlineArrowLeft size={10} />
                 </button>
                 <button
                   title="right"
                   style={{ transition: "all 0.2s" }}
-                  className="py-3 px-7 bg-white text-black text-2xl hover:bg-[#FF0336] hover:text-white"
+                  onClick={() => nextTestimonial()}
+                  className="py-3 px-7 bg-white text-black text-2xl hover:bg-[#FF0336] hover:text-white z-2"
                 >
                   <AiOutlineArrowRight size={10} />
                 </button>
@@ -64,43 +74,7 @@ function Testimonials() {
             </div>
           </div>
         </div>
-
-        {/* brand logos */}
-        <div
-          className="flex gap-5 justify-center mt-32 border-b border-solid border-[#64646438] pb-28 flex-wrap
-        "
-        >
-          <Image
-            src={Logo1}
-            alt="logo"
-            className="scale-[.8] hover:invert"
-            style={{ transition: "all 0.3s" }}
-          />
-          <Image
-            src={Logo2}
-            alt="logo"
-            className=" scale-[.8] hover:invert"
-            style={{ transition: "all 0.3s" }}
-          />
-          <Image
-            src={Logo3}
-            alt="logo"
-            className=" scale-[.8] hover:invert"
-            style={{ transition: "all 0.3s" }}
-          />
-          <Image
-            src={Logo4}
-            alt="logo"
-            className=" scale-[.8] hover:invert"
-            style={{ transition: "all 0.3s" }}
-          />
-          <Image
-            src={Logo5}
-            alt="logo"
-            className=" scale-[.8] hover:invert"
-            style={{ transition: "all 0.3s" }}
-          />
-        </div>
+        <Brands />
       </section>
     </>
   );
