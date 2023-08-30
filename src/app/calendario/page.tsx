@@ -28,7 +28,7 @@ export default function DetailsSchedule() {
   return (
     <>
       <HeroCommon title={`Horario semanal`} />
-      <div className="flex md:flex-wrap gap-4 my-8 justify-center">
+      <div className="flex flex-wrap gap-4 my-8 justify-center">
         {days.map((day, index) => (
           <p
             key={index}
@@ -42,13 +42,13 @@ export default function DetailsSchedule() {
       </div>
       <PageWrapper>
         <div className="flex flex-col items-center justify-center my-[50px] ">
-          <div className="flex flex-col gap-3">
+          <div className="md:flex flex-col gap-3">
             {/* row */}
 
             {daySelect?.classes?.map((item: any, index: number) => (
               <ul
                 key={index}
-                className="flex justify-between w-full  min800:flex-col min800:text-center"
+                className=" justify-between w-full mb-2  md:flex md:text-center"
               >
                 {/* class name */}
                 <li className="flex flex-col py-[25px] px-[55px] bg-[#f2f2f2] w-full">

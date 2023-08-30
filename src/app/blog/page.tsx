@@ -29,7 +29,7 @@ export default function BlogPage() {
 
   useEffect(() => {
     if (blogs?.length == 0) fetchPosts();
-  }, [blogs]);
+  }, [blogs, fetchPosts]);
 
   return (
     <>

@@ -8,6 +8,6 @@ export const usePost = (slug: string) => {
 
   useEffect(() => {
     getBlogBySlug(slug).then((res: any) => setPost(res[0]));
-  }, []);
+  }, [getBlogBySlug, slug]);
   return { post };
 };

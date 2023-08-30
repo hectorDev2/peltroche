@@ -51,7 +51,7 @@ export default function About() {
             {/*  */}
             <div className="mt-[10rem]">
               <div className="grid md:grid-cols-2 grid-rows-2 w-full sm:grid-cols-1">
-                <div className="w-full bg-white h-[43rem] flex flex-col justify-center items-center text-center px-[100px] min800:px-[10px]">
+                <div className="w-full bg-white h-[43rem] flex flex-col justify-center items-center text-center  md:px-[10px]">
                   <Image src={Target} alt="target_img" className="w-[9rem]" />
                   <h2 className="text-[36px] font-bold mt-3">
                     Nuestra historia
@@ -79,7 +79,7 @@ export default function About() {
                   />
                 </div>
                 {/*  */}
-                <div className="w-full bg-white h-[43rem] flex flex-col justify-center items-center text-center px-[100px] min800:px-[10px]">
+                <div className="w-full bg-white h-[43rem] flex flex-col justify-center items-center text-center  md:px-[10px]">
                   <Image src={Mountain} alt="target_img" className="w-[9rem]" />
                   <h2 className="text-[36px] font-bold mt-3">Nuestras metas</h2>
                   <p className="text-[16px] font-medium text-[#646464] mt-5">

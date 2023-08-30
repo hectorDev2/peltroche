@@ -52,7 +52,7 @@ export const FormWork = () => {
   return (
     <>
       <form
-        className="flex flex-col pt-[30px] pr-[50px] pb-[50px] pl-[45px] bg-[#f8f8f8] relative w-[65%]  mx-auto mt-14 md:w-[90%] sm:w-full"
+        className="flex flex-col pt-[30px] px-5 md:px-[50px] pb-[50px] bg-[#f8f8f8] relative w-[90%]  mx-auto mt-14 md:w-[90%] sm:w-full"
         onSubmit={handleSubmit}
       >
         <h3 className="text-[28px] font-bold mb-14">Dejanos tu informacion</h3>

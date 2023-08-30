@@ -45,9 +45,9 @@ function ChooseUs() {
           </div>
           <Modal isShowing={isShowing} hide={() => toggle()}>
             <iframe
-              className="w-[100%] h-[100%]"
-              src="https://www.youtube.com/embed/ch_fTApSoL4"
-              title="YouTube video player"
+              className="w-[300px] h-[400px] md:w-[700px]"
+              src="https://www.youtube.com/embed/jvgoV9hXAjU"
+              title="Peltroche Gym &amp; Fitness - Sede La Cultura"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
@@ -61,7 +61,7 @@ function ChooseUs() {
             <Image
               src={TitleRed}
               alt="text_bg"
-              className="w-[22rem] absolute -top-[6px] -left-14 md:block hidden "
+              className="w-[22rem] absolute -top-[6px]  md:block hidden "
             />
             <h2 className=" text-[3.6rem] text-white font-bold leading-[1.2] md:max-w-3xl max-w-[80%]">
               ¡Podemos alcanzar tu objetivo fisico aquí!

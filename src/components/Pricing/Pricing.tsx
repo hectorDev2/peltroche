@@ -33,7 +33,7 @@ function Pricing() {
             </p>
           </div>
           {/* pricing boxes */}
-          <div className="flex flex-wrap gap-10 mt-32 relative z-[2]  items-center ">
+          <div className="flex  flex-wrap gap-10 mt-32 relative z-[2]  items-center ">
             <PricingBox
               urlToPay="https://buy.stripe.com/test_8wM16uefW10b8MM8wx"
               img={Img1}

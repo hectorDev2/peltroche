@@ -207,7 +207,6 @@
   position: relative;
   overflow: hidden;
   transition-duration: .3s;
-  margin-top:15px;
 }
 
 .svgIcon {
@@ -268,6 +267,7 @@
 }
 
 .modal {
+  width: 100%;
   position: absolute;
   top: 0;
   left: 0;

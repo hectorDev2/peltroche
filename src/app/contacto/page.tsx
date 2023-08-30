@@ -8,9 +8,9 @@ export default function PricingPage() {
       <HeroCommon title="Contactanos" />
       <PageWrapper>
         {/* contact */}
-        <div className="bg-white py-[12rem] page-padding grid md:grid-cols-2 container gap-10 items-center grid-cols-1 ">
+        <div className="bg-white py-5 md:py-[12rem] page-padding grid md:grid-cols-2 container gap-10 items-center grid-cols-1 ">
           {/* first col */}
-          <div className="w-[60%] flex :flex-col mx-auto md:w-[90%] ">
+          <div className="flex-col mx-auto w-[100%] ">
             <h2 className="text-black text-[36px] font-bold leading-[1.2]">
               ¡Estamos aquí para ayudarte! Para moldear tu cuerpo.
             </h2>
@@ -21,7 +21,7 @@ export default function PricingPage() {
               físico y nutrición que lo ayude a alcanzar sus objetivos
               específicos.
             </p>
-            <div className="grid grid-cols-2 grid-rows-2 gap-y-20 sm:grid-cols-1 sm:mx-auto">
+            <div className="grid md:grid-cols-2 grid-rows-2 gap-y-20 grid-cols-1 sm:mx-auto">
               <div className="flex flex-col relative">
                 <h3 className="text-[2rem] font-bold mb-10">
                   Peltroche Gym & Fitness, La cultura
@@ -42,36 +42,11 @@ export default function PricingPage() {
                   <br /> London, E1 8LG, USA
                 </p>
               </div>
-
-              {/*  */}
-              <div className="flex flex-col relative">
-                <h3 className="text-[2rem] font-bold mb-10">Opening Hours</h3>
-                <span className="bg-[#ff0336] w-[50px] h-[4px] absolute top-[33px]"></span>
-                <div className="text-[15px] font-medium text-[#646464]">
-                  <p>lunes a viernes: 7:30 am — 9:00 pm</p>
-                  <p>sabados: 7:30 am — 1:00 pm</p>
-                </div>
-              </div>
-              {/*  */}
-              <div className="flex flex-col relative">
-                <h3 className="text-[2rem] font-bold mb-10">Information</h3>
-                <span className="bg-[#ff0336] w-[50px] h-[4px] absolute top-[33px]"></span>
-                <div className="text-[15px] font-medium text-[#646464]">
-                  <p>+800-123-4567</p>
-                  <p>&nbsp; peltroche@xxx.com</p>
-                </div>
-              </div>
-              {/*  */}
-              <div className="flex flex-col relative">
-                <h3 className="text-[2rem] font-bold mb-10">Follow Us On</h3>
-                <span className="bg-[#ff0336] w-[50px] h-[4px] absolute top-[33px]"></span>
-                <NetWorks />
-              </div>
             </div>
           </div>
 
           {/* second col ---*/}
-          <form className="  pt-[30px] pr-[50px] pb-[50px] pl-[45px] bg-[#f8f8f8] relative w-[65%] flex md:flex-col mx-auto mt-14 min800:w-[90%] sm:w-full">
+          <form className="  pt-[30px] px-4 md:px-[50px] pb-[50px]  bg-[#f8f8f8] relative flex-col mx-auto mt-14 w-[100%] ">
             <h3 className="text-[28px] font-bold mb-14">
               Dejanos tu informacion
             </h3>

@@ -95,7 +95,7 @@ function Footer() {
                 7:00am - 19:00pm
               </p>
               <p className="text-[16px] text-[#646464] font-bold ">
-                Sunday - Closed
+                Domingo - Cerrado
               </p>
             </div>
           </div>
