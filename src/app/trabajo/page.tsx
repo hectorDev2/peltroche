@@ -11,11 +11,7 @@ export default function WorkWithUs() {
         {/* contact */}
         <div className="relative bg-white py-[12rem] page-padding grid md:grid-cols-2  container gap-10 items-center grid-cols-1 ">
           {/* first col */}
-
-          <FormWork />
-          {/* second col ---*/}
-
-          <div className="md:w-[60%] flex flex-col mx-auto w-[90%] ">
+          <div className=" flex flex-col mx-auto w-[90%] ">
             <h2 className="text-black text-[36px] font-bold leading-[1.2]">
               Unete al equipo Peltroche
             </h2>
@@ -29,54 +25,10 @@ export default function WorkWithUs() {
               formal, gratuito y se realiza a través de nuestros canales
               oficiales en facebook, instagram y Linkedin.
             </p>
-            <div className="grid grid-cols-2 grid-rows-2 gap-y-20 sm:grid-cols-1 sm:mx-auto">
-              <div className="flex flex-col relative">
-                <h3 className="text-[2rem] font-bold mb-10">
-                  Peltroche Gym & Fitness, La cultura
-                </h3>
-                <span className="bg-[#ff0336] w-[50px] h-[4px] absolute top-[25px]"></span>
-                <p className="text-[15px] font-medium text-[#646464]">
-                  85 Briston Mint Street,
-                  <br /> London, E1 8LG, USA
-                </p>
-              </div>
-              <div className="flex flex-col relative">
-                <h3 className="text-[2rem] font-bold mb-10">
-                  Peltroche Gym & Fitness Larapa
-                </h3>
-                <span className="bg-[#ff0336] w-[50px] h-[4px] absolute top-[25px]"></span>
-                <p className="text-[15px] font-medium text-[#646464]">
-                  85 Briston Mint Street,
-                  <br /> London, E1 8LG, USA
-                </p>
-              </div>
-
-              {/*  */}
-              <div className="flex flex-col relative">
-                <h3 className="text-[2rem] font-bold mb-10">Horario</h3>
-                <span className="bg-[#ff0336] w-[50px] h-[4px] absolute top-[33px]"></span>
-                <div className="text-[15px] font-medium text-[#646464]">
-                  <p>lunes a viernes: 7:30 am — 9:00 pm</p>
-                  <p>sabados: 7:30 am — 1:00 pm</p>
-                </div>
-              </div>
-              {/*  */}
-              <div className="flex flex-col relative">
-                <h3 className="text-[2rem] font-bold mb-10">Information</h3>
-                <span className="bg-[#ff0336] w-[50px] h-[4px] absolute top-[33px]"></span>
-                <div className="text-[15px] font-medium text-[#646464]">
-                  <p>+800-123-4567</p>
-                  <p>&nbsp; admin@peltroche.com</p>
-                </div>
-              </div>
-              {/*  */}
-              <div className="flex flex-col relative">
-                <h3 className="text-[2rem] font-bold mb-10">Siguenos</h3>
-                <span className="bg-[#ff0336] w-[50px] h-[4px] absolute top-[33px]"></span>
-                <NetWorks />
-              </div>
-            </div>
+            <NetWorks />
           </div>
+          <FormWork />
+          {/* second col ---*/}
         </div>
 
         {/* map */}
