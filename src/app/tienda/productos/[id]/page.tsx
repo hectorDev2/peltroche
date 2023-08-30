@@ -33,7 +33,7 @@ const ProductDetails = async ({
       fetchProduct(id).then((res) => setProduct(res));
       return;
     }
-  }, [product]);
+  }, [product, id]);
   return (
     <>
       <HeroCommon title={product?.name} />

@@ -1,5 +1,3 @@
-//TODO refactor use a common component, line 12,grid's elements
-
 function Featured() {
   return (
     <>
@@ -9,7 +7,6 @@ function Featured() {
 
           {/* grid */}
           <div className="lg:grid grid-cols-4 grid-rows-2 gap-7 h-full mt-7 flex flex-col">
-            //TODO refactor use a common component
             <div className="item-0-div relative">
               <div className="item-0 ease-in duration-[0.4s] p-6"></div>
               <div className="absolute z-10 bottom-10 left-10">
