@@ -11,10 +11,10 @@ function Hero() {
           {/* hero section */}
           <div
             className="flex flex-col text-white
-           absolute hero-text  md:items-center lg:-right-[22rem]  lg:w-[80%] md:-right-[17rem] sm:-right-[14rem] left-[35%] sm:left-[50%] lg:left-[60%]"
+           absolute w-[280px]  md:w-[100%]  md:items-center right-[18%]  top-[40%]  lg:w-[80%] lg:left-[8%] md:-left-[4%] sm:-right-[14rem] left-[10%]  "
           >
             <TitlePeltroche title="entrena con nosotros" />
-            <h1 className="font-bold text-[48px] uppercase mb-[4rem] sm:text-[40px]">
+            <h1 className="font-bold w-[280px] sm:w-[300px] md:w-[440px] text-[28px] uppercase mb-[4rem] sm:text-[40px]">
               Construye tu cuerpo <br />
               <span className="font-thin">fit & perfecto</span>
             </h1>
