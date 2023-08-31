@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { useState } from "react";
 import { ReactMarkdown } from "react-markdown/lib/react-markdown";
 
@@ -8,8 +9,9 @@ const ProductPage = ({ product }: any) => {
   const [amount, setAmount] = useState(1);
 
   return (
-    <div className="flex  pt-[100px] justify-between lg:flex-row gap-16 lg:items-center container">
-      <div className="flex flex-col gap-4 w-2/5">
+    <div className="md:flex  px-0 md:px-7 pt-[50px] justify-between lg:flex-row gap-16 lg:items-center container">
+      <h1 className=" sm:hidden text-3xl font-bold text-center">{name}</h1>
+      <div className="flex flex-col gap-4 md:w-2/5">
         <img
           src={activeImg}
           alt=""
@@ -55,10 +57,11 @@ const ProductPage = ({ product }: any) => {
         </div>
       </div>
       {/* ABOUT */}
-      <div className="flex flex-col gap-4 w-4/5">
+      <div className="flex flex-col gap-4 px-7 sm:px-0 sm:w-4/5">
+        <h1 className="hidden sm:block text-3xl font-bold">{name}</h1>
+
         <div>
           <span className=" text-[#ff0336] font-semibold">{description}</span>
-          <h1 className="text-3xl font-bold">{name}</h1>
         </div>
         <p className="text-gray-700">
           <ReactMarkdown>{features}</ReactMarkdown>
@@ -80,9 +83,11 @@ const ProductPage = ({ product }: any) => {
               +
             </button>
           </div>
-          <button className="bg-[#ff0336] text-white  font-semibold py-3 px-16 rounded-xl h-full">
-            Add to Cart
-          </button>
+          <Link href={"https://buy.stripe.com/test_aEUeXkgo46kv9QQfZ2"}>
+            <button className="bg-[#ff0336] text-white  font-semibold py-3 px-16 rounded-xl h-full">
+              Comprar
+            </button>
+          </Link>
         </div>
       </div>
     </div>

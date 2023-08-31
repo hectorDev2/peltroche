@@ -11,7 +11,7 @@ export default function PricingPage() {
         <div className="bg-white py-5 md:py-[12rem] page-padding grid md:grid-cols-2 container gap-10 items-center grid-cols-1 ">
           {/* first col */}
           <div className="flex-col mx-auto w-[100%] ">
-            <h2 className="text-black text-[36px] font-bold leading-[1.2]">
+            <h2 className="text-black  text-[26px] md:text-[36px] font-bold leading-[1.2]">
               ¡Estamos aquí para ayudarte! Para moldear tu cuerpo.
             </h2>
             <p className="text-[16px] w-[95%] text-[#646464] font-medium my-[40px]">

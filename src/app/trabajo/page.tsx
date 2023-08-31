@@ -9,10 +9,10 @@ export default function WorkWithUs() {
       <HeroCommon title="Trabaja con nosotros" />
       <PageWrapper>
         {/* contact */}
-        <div className="relative bg-white py-[12rem] page-padding grid md:grid-cols-2  container gap-10 items-center grid-cols-1 ">
+        <div className="relative bg-white py-[3rem] md:py-[6rem] page-padding grid md:grid-cols-2  container gap-10 items-center grid-cols-1 ">
           {/* first col */}
-          <div className=" flex flex-col mx-auto w-[90%] ">
-            <h2 className="text-black text-[36px] font-bold leading-[1.2]">
+          <div className=" flex flex-col mx-auto md:w-[90%] w-[100%]">
+            <h2 className="text-black  text-[26px] md:text-[36px] font-bold leading-[1.2]">
               Unete al equipo Peltroche
             </h2>
             <p className="text-[16px] w-[95%] text-[#646464] font-medium my-[40px]">

@@ -84,7 +84,7 @@ function Navbar() {
             <Link onClick={openNav} href="/tienda">
               <button className=" navbar__buttons__store mt-5 lg:mt-0">
                 Tienda
-                <BiStoreAlt />
+                <BiStoreAlt style={{ width: "15px", height: "15px" }} />
               </button>
             </Link>
           </div>
@@ -124,7 +124,7 @@ function Navbar() {
             <Link href="/tienda">
               <button className=" navbar__buttons__store">
                 Tienda
-                <BiStoreAlt width={30} />
+                <BiStoreAlt style={{ width: "15px", height: "15px" }} />
               </button>
             </Link>
           </div>
