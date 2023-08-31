@@ -24,9 +24,14 @@ const Modal = ({
             <div className="bg-black w-[100%] md:w-[600px] lg:w-[700px] md:h-[500px] h-[300px] p-12 grid place-content-center relative -z-1">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-[50px] w-[50px] absolute right-0 "
+                className="h-[40px] w-[40px]  hover:scale-110"
+                style={{
+                  color: "red",
+                  position: "absolute",
+                  top: "15px",
+                  right: "15px",
+                }}
                 fill="none"
-                color="bg-red-600"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
                 onClick={() => hide()}
