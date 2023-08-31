@@ -19,13 +19,13 @@ export default function DetailsBlog({
     <PageWrapper>
       <section>
         <div className="page-padding login-banner relative justify-center flex">
-          <h1 className="text-white absolute bottom-[25px] text-[3rem] font-bold">
+          <h1 className="text-white text-center absolute bottom-[25px] text-[3rem] font-bold">
             Blog
           </h1>
         </div>
       </section>
       {post && (
-        <div className="container grid items-center justify-center ">
+        <div className=" mx-[10%] grid items-center justify-center ">
           <Image
             className="m-auto mt-[50px]"
             src={`${
