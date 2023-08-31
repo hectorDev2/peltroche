@@ -6,7 +6,7 @@ import { HeroCommon } from "@/components/HeroCommon";
 
 export default async function Page() {
   const res = await fetch(
-    `${process.env.NEXT_LOCAL_API_URL}/products?populate=*`,
+    `${process.env.NEXT_PUBLIC_API_URL}/products?populate=*`,
     {
       cache: "no-cache",
     }
@@ -18,7 +18,7 @@ export default async function Page() {
   return (
     <>
       <HeroCommon title="Tienda" />
-      <section className="login-section  my-[50px] place-content-center flex gap-5">
+      <section className="  mx-[5%] md:my-[50px] place-content-center md:flex gap-5">
         {products?.map(({ images, id, price, name }: ProductFormatted) => (
           <Link
             href={`/tienda/productos/${id}`}
